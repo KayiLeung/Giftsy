@@ -4,7 +4,7 @@ module.exports = {
     context: __dirname,
     entry: "./frontend/giftsy_redux.jsx",
     output: {
-        path: path.join(__dirname),
+        path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
         filename: "bundle.js"
     },
     module: {
