@@ -11,10 +11,6 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # def show
-  #   @user = User[]
-
-  # end
 
   private
 
