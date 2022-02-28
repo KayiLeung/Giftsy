@@ -6,23 +6,21 @@ import { login, logout, signup } from "./util/session_api_util";
 
 document.addEventListener('DOMContentLoaded', () => {
     const rootEl = document.getElementById('root');
-    const store = configureStore();
+
+    let store;
+    if (window.currentUser) {
+        const preloadedState = {
+            entities: {
+                users: { [window.currentUser.id]: window.currentUser }
+            },
+            session: { id: window.currentUser.id }
+        };
+        store = configureStore(preloadedState);
+        delete window.currentUser;
+    } else {
+        store = configureStore();
+    }
 
     ReactDOM.render(<Root store={store} />, rootEl)
-
-    // window.store = store;
-    // window.signup = signup;
-    // window.login = login;
-    // window.logout = logout;
-    // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
 })
 
-
-
-// window.user1 = {
-//                 email: 'user1@test.com', 
-//                 fname: 'emma', 
-//                 lname: 'edward', 
-//                 password:'password'
-//                }
