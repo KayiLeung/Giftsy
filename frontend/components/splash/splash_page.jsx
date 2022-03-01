@@ -3,20 +3,14 @@ import { Link } from 'react-router-dom';
 
 
 
-const Splash = ({ currentUser, logout, openModal }) => {
-    const sessionLinks = () => {
-        
-        return (<hgroup className="header-group">
+const Splash = ({ currentUser, logout }) => {
+    const sessionLinks = () => (
+        <hgroup className="header-group">
             <h2 className="greeting">Explore one-of-a-kind finds from independent makers</h2>
-            <nav className="login-signup">
-                <button onClick={() => openModal('login')} >login</button>
-                <br />
-                
-                <button onClick={() => openModal('signup')}>signup</button>
-            </nav>
 
-        </hgroup>)
-    };
+
+        </hgroup>
+    );
     const personalGreeting = () => (
         <hgroup className="header-group">
             <h2 className="greeting">Welcome back, {currentUser.fname}!</h2>
@@ -29,8 +23,12 @@ const Splash = ({ currentUser, logout, openModal }) => {
     return (
         <section>
             <div>
-            <h1 id='logo'>Giftsy</h1>
-                
+                <h1 id='logo'>Giftsy</h1>
+                <nav className="login-signup">
+                    <Link to="/login">Sign in</Link>
+                    &nbsp;or&nbsp;
+                    <Link to="/signup">Register</Link>
+                </nav>
             </div>
             {currentUser ? (
                 <div>
@@ -42,14 +40,14 @@ const Splash = ({ currentUser, logout, openModal }) => {
                     {sessionLinks()}
                 </div>
             )}
-            </section>
+        </section>
 
 
 
 
 
 
-        )
+    )
 };
 
 

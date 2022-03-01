@@ -1,21 +1,23 @@
 import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
+import { closeModal } from '../../actions/modal_action';
 import LoginFormContainer from '../sessionForm/login_form_container'
 import SignupFormContainer from '../sessionForm/signup_form_container'
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal, closeModal, signupForm, loginForm }) {
     if (!modal) {
         return null;
     }
-    let component;
+    let component, otherForm;
     switch (modal) {
         case 'login':
             otherForm = signupForm;
+            debugger
             component = <LoginFormContainer />;
             break;
         case 'signup':
             otherForm = loginForm;
+            debugger
             component = <SignupFormContainer />;
             break;
         default:

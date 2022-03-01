@@ -40,6 +40,7 @@ class SignUpForm extends React.Component {
             <div>
                 <h2>Create your account</h2>
                 <h3>Registration is easy.</h3>
+                Please {this.props.formType} or {this.props.otherForm}
                 <form onSubmit={this.handleSubmit} className='session-form-box'>
                     <label>Email Address
                         <br />

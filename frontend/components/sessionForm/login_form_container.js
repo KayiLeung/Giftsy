@@ -1,24 +1,23 @@
 import { connect } from 'react-redux'
-import { closeModal, openModal } from '../../actions/modal'
+// import { closeModal, openModal } from '../../actions/modal_action'
 import { login } from '../../actions/session_actions'
 import LoginForm  from './login_form'
 
-const mSTP = (state, ownProps) => {
-    return ({
-        formType: 'login',
-        errors: Object.values(state.errors)
-    })
-}
+const mSTP = ({ errors, session }) => ({
+    session,
+    errors: errors.session,
+    formType: 'Sign in'
+});
 
 const mDTP = dispatch => {
     return {
         action: (user) => dispatch(login(user)),
-        otherForm: (
-            <button onClick={ () => dispatch(openModal('signup'))}>
-                signup
-            </button>
-        ),
-        closeModal: () => dispatch(closeModal())
+        // otherForm: (
+        //     <button onClick={ () => dispatch(openModal('signup'))}>
+        //         signup
+        //     </button>
+        // ),
+        // closeModal: () => dispatch(closeModal())
     };
 };
 

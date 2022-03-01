@@ -15,4 +15,5 @@
  */
 
 
-/* @import './splash/splash.scss' */
+@import './splash/splash.scss';
+@import './splash/modal.scss'

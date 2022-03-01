@@ -46,7 +46,7 @@ class LoginForm extends React.Component {
         return (
             <div>
                 <h2>Welcome to Giftsy</h2>
-                
+                Please {this.props.formType} or {this.props.otherForm}
                 <form onSubmit={this.handleSubmit} className='session-form-box'>
                     <label>Email address
                         <br />
