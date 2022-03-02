@@ -1,10 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { closeModal } from '../../actions/modal_action';
 import LoginFormContainer from '../sessionForm/login_form_container'
 import SignupFormContainer from '../sessionForm/signup_form_container'
 
-function Modal({ modal, closeModal, signupForm, loginForm }) {
+function Modal({ modal , closeModal, signupForm, loginForm }) {
     if (!modal) {
         return null;
     }
@@ -12,12 +14,10 @@ function Modal({ modal, closeModal, signupForm, loginForm }) {
     switch (modal) {
         case 'login':
             otherForm = signupForm;
-            debugger
             component = <LoginFormContainer />;
             break;
         case 'signup':
-            otherForm = loginForm;
-            debugger
+            otherForm = loginForm
             component = <SignupFormContainer />;
             break;
         default:
@@ -37,14 +37,14 @@ function Modal({ modal, closeModal, signupForm, loginForm }) {
 
 const mapStateToProps = state => {
     return {
-        modal: state.ui.modal,
-        currentUser: state.entities.users[state.session.id]
+        modal: state.ui.modal
     };
+
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
     };
 };
 

@@ -1,4 +1,4 @@
-class rating < ApplicationRecord
+class Rating < ApplicationRecord
     validates :buyer_id, :product_id presence: true
 
 

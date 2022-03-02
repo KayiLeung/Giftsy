@@ -1,5 +1,5 @@
 import React from 'react';
-
+// import NavBarContainer from '../nav_bar/nav_bar_container'
 
 
 const Greeting = ({ currentUser, logout, openModal }) => {
@@ -19,9 +19,13 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     );
 
     return (
-        currentUser ?
+        <div>
+
+        {currentUser ?
             personalGreeting(currentUser, logout) :
-            sessionLinks()
+            sessionLinks()}
+            {/* <NavBarContainer /> */}
+        </div>
     );
 };
 

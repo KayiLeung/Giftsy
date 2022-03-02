@@ -1,24 +1,24 @@
 import { connect } from 'react-redux'
-// import { closeModal, openModal } from '../../actions/modal_action'
+import { withRouter } from 'react-router-dom';
+import { closeModal, openModal } from '../../actions/modal_action';
 import { login } from '../../actions/session_actions'
-import LoginForm  from './login_form'
+import SessionForm from './session_form';
 
-const mSTP = ({ errors, session }) => ({
-    session,
-    errors: errors.session,
-    formType: 'Sign in'
+const mSTP = (state) => ({
+    errors: state.entities.errors,
+    formType: 'login',
 });
 
 const mDTP = dispatch => {
     return {
         action: (user) => dispatch(login(user)),
-        // otherForm: (
-        //     <button onClick={ () => dispatch(openModal('signup'))}>
-        //         signup
-        //     </button>
-        // ),
-        // closeModal: () => dispatch(closeModal())
+        otherForm: (
+            <button className="session-button" onClick={() => dispatch(openModal('signup'))}>
+                Sign-up
+            </button>
+        ),
+        closeModal : () => dispatch(closeModal())
     };
 };
 
-export default connect(mSTP, mDTP)(LoginForm)
+export default connect(mSTP, mDTP)(SessionForm)

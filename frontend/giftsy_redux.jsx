@@ -5,7 +5,7 @@ import Root from './components/root'
 import { login, logout, signup } from "./util/session_api_util";
 
 document.addEventListener('DOMContentLoaded', () => {
-    const rootEl = document.getElementById('root');
+    
 
     let store;
     if (window.currentUser) {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
-
+    const rootEl = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, rootEl)
 })
 

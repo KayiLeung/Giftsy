@@ -1,52 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { MdLogin } from 'react-icons/io5';
+// import { Link } from 'react-router-dom';
+// import NavigrationBar from '../nav_bar/nav_bar';
 
-
-
-const Splash = ({ currentUser, logout }) => {
+const Splash = ({ currentUser, logout , openModal}) => {
     const sessionLinks = () => (
-        <hgroup className="header-group">
-            <h2 className="greeting">Explore one-of-a-kind finds from independent makers</h2>
-
-
-        </hgroup>
+        <header className='session'>
+            <h1 id='logo'>Giftsy</h1>
+            <button className="session-button" onClick={() => openModal('signup')}>Sign In</button>
+            <h2 className="greeting">Hello!</h2>
+        </header>
     );
     const personalGreeting = () => (
-        <hgroup className="header-group">
+        <header className='session'>
+            <h1 id='logo'>Giftsy</h1>
+            <button className="session-button" onClick={logout}>Log Out</button>
             <h2 className="greeting">Welcome back, {currentUser.fname}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
-        </hgroup>
+        </header>
     );
 
 
-
-    return (
+        return (
         <section>
             <div>
-                <h1 id='logo'>Giftsy</h1>
-                <nav className="login-signup">
-                    <Link to="/login">Sign in</Link>
-                    &nbsp;or&nbsp;
-                    <Link to="/signup">Register</Link>
-                </nav>
+                
             </div>
             {currentUser ? (
                 <div>
-                    {personalGreeting()}
+                    {personalGreeting(currentUser, logout)}
                 </div>
-
             ) : (
                 <div>
                     {sessionLinks()}
                 </div>
             )}
         </section>
-
-
-
-
-
-
     )
 };
 

@@ -1,23 +1,23 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { FaGithub, ImLinkedin, GoSignIn, AiOutlineShoppingCart, CgProfile} from 'react-icons/io5';
+import UserAccount from "./account";
 
-const navBar = () => {
-    return (
-        <>
-        <nav>
-            <NavLink to='/'>
-            <h1>logo</h1>
-            </NavLink>
-            <Bars/>    
-            <NavMenu>
-                <NavLink>search</NavLink>    
-                <NavLink>sign in</NavLink>
-                <NavLink>cart</NavLink>
-                
-            </NavMenu>  
-        </nav>
-        </>
-    )
+class NavigrationBar extends React.Component{
+
+// ({ currentUser, signIn, logOut, setModalToOpen}) => {
+//     debugger
+//    return(
+//        <div>
+//            <div className='nav-bar-signup-login'>
+//             <UserAccount 
+//                 currentUser={currentUser}
+//                 logout={logOut}  
+//                 setModalToOpen={setModalToOpen}  
+//             />
+//            </div>
+//        </div>
+//    )
+
 }
 
-export default navBar
+export default NavigrationBar;

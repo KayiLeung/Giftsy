@@ -1,4 +1,4 @@
-class order < ApplicationRecord
+class Order < ApplicationRecord
     validates :buyer_id, :product_id, presence: true
 
     belongs_to :buyer,
