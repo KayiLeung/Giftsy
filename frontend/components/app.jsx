@@ -6,26 +6,24 @@ import Modal from "./modal/modal";
 import UserShowContainer from './userShowPage/user_show_page_container'
 import SplashContainer from './splash/splash_container'
 import NavigrationBar from "./nav_bar/nav_bar";
-import ProductShowContainer from './products/products_container'
+import ProductIndexContainer from './products/product_index_container'
+
+import Footer from "./footer/footer";
 
 
 
 
 const App = () => (
-    <div>
+    <div className='app'>
         <Modal />
-        <section>
             {/* <NavigrationBar /> */}
-            <SplashContainer />
-        </section> 
-
+        <SplashContainer />
+        <ProductIndexContainer/>
         <Switch>
-        {/* <AuthRoute path="/login" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} /> */}
-        <Route path='/users/:userId' component={UserShowContainer} />
-        <Route path='/products/:productId' component={ProductShowContainer} />
-
+            <Route path='/users/:userId' component={UserShowContainer} />
+            {/* <Route path='/products/:productId' component={ProductShowContainer} /> */}
         </Switch>
+        <Footer />
     </div>
 );
 

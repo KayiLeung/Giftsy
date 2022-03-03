@@ -1,0 +1,29 @@
+.foot-line{
+    border: none;
+}
+
+.footer-blue{
+    background-color: cornflowerblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-deep-blue{
+    position: relative;
+    justify-content: space-between;
+    background-color: rgb(86, 86, 187);
+    display: flex;
+
+    .footer-left > p{
+        position: relative;
+        color: white;
+        justify-content: space-evenly;
+    }
+
+    .footer-right > ul {
+        display: flex;
+        color: white;
+        text-decoration: none;
+        justify-content: space-between;
+    }
+}
+

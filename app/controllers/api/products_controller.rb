@@ -1,6 +1,7 @@
 class Api::ProductsController < ApplicationController
     def index 
-        @posts = Post.all
+        # debugger
+        @products = Product.all
         render :index
     end
 

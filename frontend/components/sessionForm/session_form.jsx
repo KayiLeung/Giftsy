@@ -94,11 +94,11 @@ class SessionForm extends React.Component {
                 <div className="login-form-container">
                     {this.renderErrors()}
                     <form onSubmit={this.handleSubmit} className='session-form-box'>
+                        <div onClick={this.props.closeModal} className="close-x">X</div>
                         <h2>Create your account</h2>
                         <h3>Registration is easy.</h3>
                         Please { this.props.formType } or { this.props.otherForm }
                         <br />
-                        <div onClick={this.props.closeModal} className="close-x">X</div>
                         <label>Email Address
                             <br />
                             <input

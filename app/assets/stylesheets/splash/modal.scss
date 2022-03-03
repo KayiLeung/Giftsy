@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
 
+ 
+ 
  .modal-background {
    position: fixed;
    top: 0;
@@ -14,19 +19,25 @@
    position: absolute;
    top: 50%;
    left: 50%;
-   border: cadetblue;
+   background-color: white;
    transform: translate(-50%, -50%);
+    border-radius: 30px;
  }
 
  .close-x {
-   position: absolute;
+   position:-webkit-sticky;
    top: 5px;
    right: 5px;
    cursor: pointer;
+   justify-content:right;
  }
 
  .login-form-container {
    display: flex;
    justify-content: center;
-   color: rgb(160, 158, 155);
+   padding: 15px;
+   block-size: auto;
+    border-radius: 30px;
+   border:2px solid rgb(107, 101, 92);
+   color: rgb(107, 101, 92);
  }
