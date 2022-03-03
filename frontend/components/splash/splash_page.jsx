@@ -1,29 +1,52 @@
 import React from 'react';
-import { MdLogin } from 'react-icons/io5';
-// import { Link } from 'react-router-dom';
-// import NavigrationBar from '../nav_bar/nav_bar';
+// import { MdLogin } from 'react-icons/io5';
+import BottomNavBar from '../nav_bar/bottom_nav_bar';
+import SearchBar from '../nav_bar/search_bar';
 
-const Splash = ({ currentUser, logout , openModal}) => {
+const Splash = ({ currentUser, logout, openModal }) => {
     const sessionLinks = () => (
-        <header className='session'>
-            <h1 id='logo'>Giftsy</h1>
-            <button className="session-button" onClick={() => openModal('signup')}>Sign In</button>
-            <h2 className="greeting">Hello!</h2>
-        </header>
+        <>
+            {/* <button className="nav-side" onClick={() => openModal('login')}>Sign In</button> */}
+            <div className='nav-buttons'>
+                <h2 className="greeting">
+                    Find things you'll love. Support independent sellers. Only on Giftsy.
+                </h2>
+            </div>
+        </>
+
     );
     const personalGreeting = () => (
-        <header className='session'>
-            <h1 id='logo'>Giftsy</h1>
-            <button className="session-button" onClick={logout}>Log Out</button>
+        <div>
+            {/* <button className="nav-buttons" onClick={logout}>Log Out</button> */}
             <h2 className="greeting">Welcome back, {currentUser.fname}!</h2>
-        </header>
+        </div>
     );
 
+    const signIn = (e) => {
+        openModal('login')
+    }
 
-        return (
-        <section>
+
+    return (
+        <header>
             <div>
-                
+                <div className='nav-bar'>
+                    <ul className='top-nav'>
+                        <div className='nav-side'>
+                            <li className="nav-side"><h2 className='giftsy'>Giftsy</h2></li>
+                            <li className='nav-searchbar'><SearchBar /></li>
+                            <li className='nav-buttons'>
+                                <a href=""><button className='nav-contact-button'>Linkedin</button></a>
+                                <a href=""><button className='nav-contact-button'>Github</button></a>
+                                <a href=""><button className='nav-contact-button'>Cart</button></a>
+                                {currentUser ? (<button className="nav-contact-button" onClick={logout}>Log Out</button>) :
+                               ( <button className="nav-contact-button" onClick={() => signIn()}>Sign In</button>)
+                            }
+                            </li>
+                        </div>
+                    </ul>
+                    <BottomNavBar />
+                </div>
             </div>
             {currentUser ? (
                 <div>
@@ -34,7 +57,9 @@ const Splash = ({ currentUser, logout , openModal}) => {
                     {sessionLinks()}
                 </div>
             )}
-        </section>
+        </header>
+
+   
     )
 };
 

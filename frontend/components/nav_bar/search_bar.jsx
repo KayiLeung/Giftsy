@@ -1,16 +1,15 @@
 import React from "react";
-import { ImSearch} from 'react-icon/io5'
+// import { ImSearch} from 'react-icon/io5'
 
 class SearchBar extends React.Component {
 
     
     render() {
         return (
-            <form>
-                <label className='search-bar'>Search</label>
-                <input type="text"
+            <form className='search-form'>
+                <input type="text" placeholder='search for gift'
                 onChange={e => handleChange(e)} />
-                <button className={search-button}><ImSearch/></button>
+                <button>hi</button>
             </form>
         )
     }

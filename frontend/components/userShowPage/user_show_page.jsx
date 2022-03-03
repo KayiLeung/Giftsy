@@ -14,7 +14,7 @@ class UserShowPage extends React.Component {
     render() {
         return (
             <div className='user-info'>
-               <h1>{this.props.user.fname}</h1>
+                <h1>{this.props.currentUser.fname}</h1>
             </div>
         )
     }

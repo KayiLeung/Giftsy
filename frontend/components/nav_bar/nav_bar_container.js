@@ -1,23 +1,21 @@
 import { connect } from 'react-redux';
 import { openModal } from '../../actions/modal_action';
 import { logout } from '../../actions/session_actions';
+import NavigrationBar from './nav_bar'
 
 
-import Greeting from './greeting';
-
-const mapStateToProps = ({ session }) => ({
-    currentUser: session.currentUser
-});
-
-const mapDispatchToProps = dispatch => {
+const mSTP = ({ session, entities: { users } }) => {
     return {
+        currentUser: users[session.id]
+    }
+}
 
+
+const mDTP = dispatch => {
+    return {
         logout: () => dispatch(logout()),
         openModal: modal => dispatch(openModal(modal))
     }
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Greeting);
+export default connect(mSTP, mDTP)(NavigrationBar);

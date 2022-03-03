@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
+.nav-side{
+    display: inline;
+    text-align: center;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+.giftsy{
+    color: chocolate;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.nav-contact-button {
+    color: rgb(79, 76, 76);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    font-family:$open-sans ;
+
+    
+}
+
+.nav-contact-button:hover{
+     background-color: burlywood;
+        color: white;
+}
+
+
+.top-nav{
+    background-color: white;
+}

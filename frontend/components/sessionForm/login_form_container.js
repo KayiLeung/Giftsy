@@ -3,9 +3,10 @@ import { withRouter } from 'react-router-dom';
 import { closeModal, openModal } from '../../actions/modal_action';
 import { login } from '../../actions/session_actions'
 import SessionForm from './session_form';
+import { clearErrors } from '../../actions/errors_action';
 
 const mSTP = (state) => ({
-    errors: state.entities.errors,
+    errors: Object.values(state.errors.sessionErrors),
     formType: 'login',
 });
 
@@ -17,7 +18,8 @@ const mDTP = dispatch => {
                 Sign-up
             </button>
         ),
-        closeModal : () => dispatch(closeModal())
+        closeModal : () => dispatch(closeModal()),
+        clearErrors: () => dispatch(clearErrors()),
     };
 };
 

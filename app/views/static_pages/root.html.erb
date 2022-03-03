@@ -1,3 +1,6 @@
+<head>
+
+
 <% if is_logged_in? %>
     <script type="text/javascript">
         window.currentUser = <%= render(
@@ -6,5 +9,6 @@
         ).html_safe %>
     </script>
 <% end %>
-
+<script src="https://kit.fontawesome.com/a8fa9fea79.js" crossorigin="anonymous"></script>
 <main id="root"></main>
+</head>

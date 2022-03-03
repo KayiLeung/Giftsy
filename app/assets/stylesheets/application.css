@@ -17,3 +17,4 @@
 @import './reset.scss';
 @import './splash/modal.scss';
 @import './splash/splash.scss';
+@import './splash/navBar/nav-bar.scss'

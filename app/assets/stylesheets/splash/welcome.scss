@@ -1,16 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
 
-#logo {
+//Font Variables
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
+
+.session-logo {
     color: #f26521;
-    font-size: 75px;
+    font-size: 50px;
 }
 
 .greeting{
     color:black;
     font-weight: lighter;
     font-display: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:$open-sans;
+    font-weight: lighter;
+    color:black;
     background-color: #feead2;
     padding: 50px;
     text-align: center;
+    font-size: 50px;
 
 }
+

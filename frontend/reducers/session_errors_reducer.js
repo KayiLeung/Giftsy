@@ -2,7 +2,6 @@ import { CLEAR_ERRORS, RECEIVE_ERRORS } from '../actions/errors_action';
 
 
 export default (state = [], action) => {
-    Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ERRORS:
             return action.errors;

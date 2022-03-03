@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { closeModal } from '../../actions/modal_action';
 import LoginFormContainer from '../sessionForm/login_form_container'
 import SignupFormContainer from '../sessionForm/signup_form_container'

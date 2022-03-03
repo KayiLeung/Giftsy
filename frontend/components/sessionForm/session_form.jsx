@@ -1,6 +1,4 @@
 import React from "react";
-import Modal from 'react-modal'
-import { withRouter } from "react-router-dom";
 
 
 class SessionForm extends React.Component {
@@ -14,6 +12,7 @@ class SessionForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.loginDemo = this.loginDemo.bind(this)
+        this.renderErrors = this.renderErrors.bind(this)
     }
     handleInput(type) {
         return e => this.setState({
@@ -43,7 +42,7 @@ class SessionForm extends React.Component {
             return (
                 <ul className="form-errors">
                     {this.props.errors.map((error, i) => (
-                        <li key={`error-${i}`} className="session-errors">
+                        <li key={i} className="session-errors">
                             {error}
                         </li>
                     ))}
@@ -93,13 +92,13 @@ class SessionForm extends React.Component {
         return (
             <div>
                 <div className="login-form-container">
+                    {this.renderErrors()}
                     <form onSubmit={this.handleSubmit} className='session-form-box'>
                         <h2>Create your account</h2>
                         <h3>Registration is easy.</h3>
                         Please { this.props.formType } or { this.props.otherForm }
                         <br />
                         <div onClick={this.props.closeModal} className="close-x">X</div>
-                        { this.renderErrors() }
                         <label>Email Address
                             <br />
                             <input

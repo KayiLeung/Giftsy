@@ -1,8 +1,12 @@
 class Api::ProductsController < ApplicationController
+    def index 
+        @posts = Post.all
+        render :index
+    end
 
     def show
-        @product = Product.all
-        render 'api/ratings/product'
+        @product = Product.find(params[:id])
+        render :show
     end
 
     def create 
