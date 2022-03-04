@@ -22,7 +22,8 @@ class ProductIndex extends React.Component {
                 {
                     this.props.products.map((product, idx) => 
                         <div className='product-thumbnail' key={idx}>
-                            <img class="index-products" src={product.photoUrl} alt="" />
+                            {/* <p className='grid-products-title'>Title: {product.title}</p> */}
+                            <img className="grid-products" src={product.photoUrl} alt="" />
                         </div>
                         )
                 }

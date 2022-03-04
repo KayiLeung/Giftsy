@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../footer/footer';
-// import { MdLogin } from 'react-icons/io5';
+import BottomNavBarContainer from '../nav_bar/bottom_nav_bar_container'
 import BottomNavBar from '../nav_bar/bottom_nav_bar';
 import SearchBar from '../nav_bar/search_bar';
 

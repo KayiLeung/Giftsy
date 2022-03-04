@@ -1,8 +1,40 @@
-.index-products{
-    grid: inherit;
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 25px;
+.thumbnail-container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, [col]150px);
+    grid-template-rows: repeat(4, [row] auto);
+    color: black;
+    justify-content: space-evenly;
+    margin: 50px;
+    position: sticky;
+ 
+           
+}
 
+.grid-products .grid-products{
+    background-color: white;
+}
+
+.grid-products-title{
+    display: inline-block;
+    border: black;
+    color: white
+}
+
+.grid-products{
+    // display: flex;
+    // width: 100px;
+    // height: 100px;
+    // border-radius: 50px;
+    // justify-content: space-between;
+    grid-column: 1;
+    grid-row: 2;
+    block-size: inherit;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    border-right: rgb(219, 219, 219) 1px solid;
+    border-bottom: rgb(219, 219, 219) 2px solid;
+       
+    
 }

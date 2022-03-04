@@ -22,7 +22,8 @@ export const fetchAllProducts = () => dispatch => {
             return (
                 dispatch(receiveAllProducts(products))
             )
-        }))
+        })
+    )
 }
 
 export const fetchProduct = productId => dispatch => (

@@ -1,22 +1,33 @@
-.foot-line{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
+
+.footer-line{
     border: none;
+}
+.footer-light-blue{
+    background-color: lightskyblue;
+    height: 100px;
 }
 
 .footer-blue{
-    background-color: cornflowerblue;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(31, 54, 97);
+    height: 100px;
 }
 
 .footer-deep-blue{
     position: relative;
-    justify-content: space-between;
-    background-color: rgb(86, 86, 187);
+    justify-content: last baseline;
+    justify-content: space-around;
+    background-color: rgb(12, 12, 70);
     display: flex;
+    height: 100px;
 
     .footer-left > p{
         position: relative;
         color: white;
         justify-content: space-evenly;
+        font-family: $open-sans;
     }
 
     .footer-right > ul {
@@ -24,6 +35,8 @@
         color: white;
         text-decoration: none;
         justify-content: space-between;
+        font-family: $open-sans;
+        content: $roboto-slab;
     }
 }
 
