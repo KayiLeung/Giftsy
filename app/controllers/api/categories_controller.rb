@@ -13,7 +13,7 @@ class Api::CategoriesController < ApplicationController
     def create 
         @category = Category.new(category_params)
         if @category.save
-            render : json: ['category created']
+            render : json: ['category created!!!!!!!']
         else
             render :json: @category.errors.full_messages
         end
