@@ -6,23 +6,26 @@ class Api::RatingsController < ApplicationController
 
 
    def create
-    @rating = Rating.new(raing_params)
+        @rating = Rating.new(raing_params)
 
-    if @rating.save
-        render json: ['Rated!']
-    else
-        render json: @rating.errors.full_messages
+        if @rating.save
+            render json: ['Rated!']
+        else
+            render json: @rating.errors.full_messages
+        end
    end
 
 
    def update
-    @rating = Rating.find(params[:id])
+        @rating = Rating.find(params[:id])
 
-    if @rating.update(raing_params)
-        redner json: ['Rating updated']
-    else 
-        render json @rating.errors.full_messages
+        if @rating.update(raing_params)
+            redner json: ['Rating updated']
+        else 
+            render json @rating.errors.full_messages
+        end
     end
+
 
     def destroy
         @review = Review.find(params[:id])
