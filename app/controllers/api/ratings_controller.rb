@@ -30,7 +30,7 @@ class Api::RatingsController < ApplicationController
     def destroy
         @review = Review.find(params[:id])
         @review.destroy
-        redner json: ['deleted']
+        render json: ['deleted']
     end
 
     private
