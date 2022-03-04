@@ -1,9 +1,8 @@
-# json.array! @products do |product|
-#     json.extract! product :id, :title, :price, :description, :seller_id, :quantity
-#     # [{"id": 1, "title": "cup".....}, {"id": 2, "title": "plate"....}]
-    # json.photoUrl url_for(product.photo)
-    # { ["photoUrl" : "url"]}
-# end
+    # json.array! @products do |product|
+    #     json.extract! product :id, :title, :price, :description, :seller_id, :quantity
+    #     # [{"id": 1, "title": "cup".....}, {"id": 2, "title": "plate"....}]
+    #     json.photoUrl url_for(product.photo)
+    # end
 # debugger
 
 @products.each do |product|

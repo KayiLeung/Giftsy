@@ -12,6 +12,9 @@ class ProductIndex extends React.Component {
 
     render(){
         // debugger
+
+
+
         return(
         <div className='product-show-container'>
             <div className='product-show-page'>
@@ -19,14 +22,15 @@ class ProductIndex extends React.Component {
                 {
                     this.props.products.map((product, idx) => 
                         <div className='product-thumbnail' key={idx}>
-                        <p>The cost of {product.title} ${product.price}</p>
+                            <img class="index-products" src={product.photoUrl} alt="" />
                         </div>
                         )
                 }
-                <h1>this is product index page</h1>
                 </div>
             </div>
         </div>
+
+
         )
     }
 }
