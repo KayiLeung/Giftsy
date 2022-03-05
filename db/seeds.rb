@@ -13,13 +13,25 @@ Category.delete_all
 # ApplicationRecord.connection.reset_pk_sequence!('users')
 
 category1 = Category.create!(category: 'Wedding')
+categorypic1 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/category_image/wedding.jpg')
+category1.photo.attach(io: categorypic1, filename: 'wedding.jpg')
+
 category2 = Category.create!(category: "Father's Day")
 category3 = Category.create!(category: "Mother's Day")
+
 category4 = Category.create!(category: "Birthday")
+categorypic4 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/category_image/happy-birthday-cupcake.jpg')
+category4.photo.attach(io: categorypic4, filename: 'happy-birthday-cupcake.jpg')
+
 category5 = Category.create!(category: "New Born")
+categorypic5 = UrI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/category_image/newborn.jpg')
+category5.photo.attach(io: categorypic5, filename: 'newborn.jpg')
+
 category6 = Category.create!(category: "Anniversary")
 category7 = Category.create!(category: "Housewarming")
 category8 = Category.create!(category: "Retirement")
+
+categoryRandom = Category.create!(category: "Lucky Pick")
 
 user1 = User.create!(email: 'user1001@test.com', password: 'password', fname:  'Dave', lname: 'Potter' )
 user2 = User.create!(email: 'user1002@test.com', password: 'password', fname:  'Raquel', lname: 'Aguilar' )
@@ -73,27 +85,27 @@ product4 = Product.create!(
 productpic4 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/mothers_day_2.jpg')
 product4.photo.attach(io: productpic4 , filename: 'mothers_day_2.jpg')
 
-# product5= Product.create!(
-#     title: "Sweet 16 Neon Sign Custom Name Sweet 16 Party Decorations Birthday Neon Sign Party Decor Best Friend Birthday Gifts for her",
-#     description: "Gorgeous, insanely high quality neon sign made by hand and built to last. Make a statement and design the mood in any room with this gorgeous neon sign sure to create the vibe you've always dreamed of!  Sign comes in 6+ sizes between 60 and 120cm in width. Available in 10 stunning color options",
-#     quantity: 10,
-#     price: 29.60,
-#     seller_id: user2.id,
-#     category_id: category4.id
-# )
-# productpic5 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/sweet16.jpg')
-# product5.photo.attach(io: productpic5, filename: 'sweet16.jpg.jpg')
+product5= Product.create!(
+    title: "Sweet 16 Neon Sign Custom Name Sweet 16 Party Decorations Birthday Neon Sign Party Decor Best Friend Birthday Gifts for her",
+    description: "Gorgeous, insanely high quality neon sign made by hand and built to last. Make a statement and design the mood in any room with this gorgeous neon sign sure to create the vibe you've always dreamed of!  Sign comes in 6+ sizes between 60 and 120cm in width. Available in 10 stunning color options",
+    quantity: 10,
+    price: 29.60,
+    seller_id: user2.id,
+    category_id: category4.id
+)
+productpic5 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/sweet16.jpg')
+product5.photo.attach(io: productpic5, filename: 'sweet16.jpg.jpg')
 
-# product6 = Product.create!(
-#     title: "Gifts For Him Pokemon Terrarium Sleepy Charmander Terrarium Pokeball Charmander gifts Pokemon go Best Pokemon Gifts For Kids",
-#     description: "Gorgeous, insanely high quality neon sign made by hand and built to last. Make a statement and design the mood in any room with this gorgeous neon sign sure to create the vibe you've always dreamed of!  Sign comes in 6+ sizes between 60 and 120cm in width. Available in 10 stunning color options",
-#     quantity: 10,
-#     price: 60.00,
-#     seller_id: user1.id,
-#     category_id: category4.id
-# )
-# productpic6 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/pokemon.jpg')
-# product6.photo.attach(io: productpic6, filename: 'pokemon.jpg')
+product6 = Product.create!(
+    title: "Gifts For Him Pokemon Terrarium Sleepy Charmander Terrarium Pokeball Charmander gifts Pokemon go Best Pokemon Gifts For Kids",
+    description: "Gorgeous, insanely high quality neon sign made by hand and built to last. Make a statement and design the mood in any room with this gorgeous neon sign sure to create the vibe you've always dreamed of!  Sign comes in 6+ sizes between 60 and 120cm in width. Available in 10 stunning color options",
+    quantity: 10,
+    price: 60.00,
+    seller_id: user1.id,
+    category_id: category4.id
+)
+productpic6 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/pokemon.jpg')
+product6.photo.attach(io: productpic6, filename: 'pokemon.jpg')
 
 # product7 = Product.create!(
 #     title: "Hand Casting Kit Couples - Plaster Hand Mold Casting Kit, DIY Kits for Adults and Kids, Wedding Gifts for Couple",

@@ -4,13 +4,14 @@ export const FETCHCATEGORIES = 'FETCHCATEGORIES'
 export const FETCHCATEGORY = 'FETCHCATEGORY'
 
 export const receiveAllCategories = categories => {
+    // debugger
     return {
         type: FETCHCATEGORIES,
         categories
     }
 }
 
-export const receivecategory = category => {
+export const receiveCategory = category => {
     return {
         type: FETCHCATEGORY,
         category
@@ -18,8 +19,9 @@ export const receivecategory = category => {
 }
 
 export const fetchAllCategories = () => dispatch => {
+    // debugger
     return (
-        CategoryApiUtil.fetchcategories()
+        CategoryApiUtil.fetchCategories()
             .then(categories => dispatch(receiveAllCategories(categories)))
     )
 }
@@ -27,6 +29,6 @@ export const fetchAllCategories = () => dispatch => {
 export const fetchCategory = categoryId => dispatch => {
     return (
         CategoryApiUtil.fetchCategory(categoryId)
-            .then(category => dispatch(receivecategory(category)))
+            .then(category => dispatch(receiveCategory(category)))
     )
 }

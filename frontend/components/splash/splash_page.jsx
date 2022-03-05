@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../footer/footer';
 import BottomNavBarContainer from '../nav_bar/bottom_nav_bar_container'
-import BottomNavBar from '../nav_bar/bottom_nav_bar';
+// import BottomNavBar from '../nav_bar/bottom_nav_bar';
 import SearchBar from '../nav_bar/search_bar';
 
 const Splash = ({ currentUser, logout, openModal }) => {
@@ -46,7 +46,8 @@ const Splash = ({ currentUser, logout, openModal }) => {
                             </li>
                         </div>
                     </ul>
-                    <BottomNavBar />
+                    {/* <BottomNavBar /> */}
+                    <BottomNavBarContainer/>
                 </div>
             </div>
             {currentUser ? (
