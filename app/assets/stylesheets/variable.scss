@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
+$roboto-slab: 'Roboto Slab', serif;   
+$open-sans: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Playfair+Display&family=Poppins:wght@100&family=Roboto:wght@100&display=swap');
+$product-review: 'Karla', sans-serif;
+$product-title: 'Roboto Slab', serif;
+$product-description: 'Roboto', sans-serif;
+$product-price: 'Karla', sans-serif;
+$logo :'Playfair Display', serif;
+
+//color
+
+$logo: orange;
+$greetingBanner: #feead2;
+
+//color // nav
+$navTextColor:rgb(79, 76, 76);
+
+$hoverColor: burlywood;
+$hoverFont: white;
+
+
+// color // footer
+$lightBlue:lightskyblue;
+$blue: rgb(31, 54, 97);
+$deepBlue:rgb(12, 12, 70);
+$footerColor: white;
+
+
+@mixin margin() {
+    
+}

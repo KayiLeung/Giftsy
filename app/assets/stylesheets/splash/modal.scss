@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
-$roboto-slab: 'Roboto Slab', serif;   
-$open-sans: 'Open Sans', sans-serif;
-
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
+// $roboto-slab: 'Roboto Slab', serif;   
+// $open-sans: 'Open Sans', sans-serif;
+$modalColor : white;
  
  
  .modal-background {
@@ -19,7 +19,7 @@ $open-sans: 'Open Sans', sans-serif;
    position: absolute;
    top: 50%;
    left: 50%;
-   background-color: white;
+   background-color: $modalColor;
    transform: translate(-50%, -50%);
     border-radius: 30px;
  }

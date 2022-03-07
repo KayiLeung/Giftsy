@@ -12,26 +12,26 @@ Product.delete_all
 Category.delete_all
 # ApplicationRecord.connection.reset_pk_sequence!('users')
 
-category1 = Category.create!(category: 'Wedding')
+category1 = Category.create!(title: 'Wedding')
 categorypic1 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/category_image/wedding.jpg')
 category1.photo.attach(io: categorypic1, filename: 'wedding.jpg')
 
-category2 = Category.create!(category: "Father's Day")
-category3 = Category.create!(category: "Mother's Day")
+category2 = Category.create!(title: "Father's Day")
+category3 = Category.create!(title: "Mother's Day")
 
-category4 = Category.create!(category: "Birthday")
+category4 = Category.create!(title: "Birthday")
 categorypic4 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/category_image/happy-birthday-cupcake.jpg')
 category4.photo.attach(io: categorypic4, filename: 'happy-birthday-cupcake.jpg')
 
-category5 = Category.create!(category: "New Born")
-categorypic5 = UrI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/category_image/newborn.jpg')
+category5 = Category.create!(title: "New Born")
+categorypic5 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/category_image/newborn.jpg')
 category5.photo.attach(io: categorypic5, filename: 'newborn.jpg')
 
-category6 = Category.create!(category: "Anniversary")
-category7 = Category.create!(category: "Housewarming")
-category8 = Category.create!(category: "Retirement")
+category6 = Category.create!(title: "Anniversary")
+category7 = Category.create!(title: "Housewarming")
+category8 = Category.create!(title: "Retirement")
 
-categoryRandom = Category.create!(category: "Lucky Pick")
+categoryRandom = Category.create!(title: "Lucky Pick")
 
 user1 = User.create!(email: 'user1001@test.com', password: 'password', fname:  'Dave', lname: 'Potter' )
 user2 = User.create!(email: 'user1002@test.com', password: 'password', fname:  'Raquel', lname: 'Aguilar' )
@@ -107,99 +107,99 @@ product6 = Product.create!(
 productpic6 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/pokemon.jpg')
 product6.photo.attach(io: productpic6, filename: 'pokemon.jpg')
 
-# product7 = Product.create!(
-#     title: "Hand Casting Kit Couples - Plaster Hand Mold Casting Kit, DIY Kits for Adults and Kids, Wedding Gifts for Couple",
-#     description: "Preserve Precious Memories – Whether it's a bridal shower gift, wedding gift or just some fun for your family, this hand molding kit is a great way to capture the moment. The Dylan & Rylie hand molds casting kit is the ideal baby hand and footprint kit or a sweet gift for couples. It also makes a great Mr. and Mrs. gift, anniversary gift for her or Christmas gifts for parents.",
-#     quantity: 10,
-#     price: 29.99,
-#     seller_id: user1.id,
-#     category_id: category5.id
-# )
-# productpic7 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new_born_1.jpg')
-# product7.photo.attach(io: productpic7, filename: 'new_born_1.jpg')
+product7 = Product.create!(
+    title: "Hand Casting Kit Couples - Plaster Hand Mold Casting Kit, DIY Kits for Adults and Kids, Wedding Gifts for Couple",
+    description: "Preserve Precious Memories – Whether it's a bridal shower gift, wedding gift or just some fun for your family, this hand molding kit is a great way to capture the moment. The Dylan & Rylie hand molds casting kit is the ideal baby hand and footprint kit or a sweet gift for couples. It also makes a great Mr. and Mrs. gift, anniversary gift for her or Christmas gifts for parents.",
+    quantity: 10,
+    price: 29.99,
+    seller_id: user1.id,
+    category_id: category5.id
+)
+productpic7 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new_born_1.jpg')
+product7.photo.attach(io: productpic7, filename: 'new_born_1.jpg')
 
 
-# product8 = Product.create!(
-#     title: "Baby Handprint & Footprint Keepsake Photo Frame Kit",
-#     description: "A PERFECT HANDPRINT & FOOTPRINT TO CHERISH - Capture the timeless beauty of your baby's tiny little hands and feet with our complete keepsake and photo frame kit - with clay, roller, double-sided tape, stencil kit, table stand, and wall brackets for easy display on a nursery wall, table, or mantel.",
-#     quantity: 10,
-#     price: 19.95,
-#     seller_id: user1.id,
-#     category_id: category5.id
+product8 = Product.create!(
+    title: "Baby Handprint & Footprint Keepsake Photo Frame Kit",
+    description: "A PERFECT HANDPRINT & FOOTPRINT TO CHERISH - Capture the timeless beauty of your baby's tiny little hands and feet with our complete keepsake and photo frame kit - with clay, roller, double-sided tape, stencil kit, table stand, and wall brackets for easy display on a nursery wall, table, or mantel.",
+    quantity: 10,
+    price: 19.95,
+    seller_id: user1.id,
+    category_id: category5.id
 
-# )
-# productpic8 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new_born_gift_2.jpg')
-# product8.photo.attach(io: productpic8, filename: 'new_born_gift_2.jpg')
+)
+productpic8 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new_born_gift_2.jpg')
+product8.photo.attach(io: productpic8, filename: 'new_born_gift_2.jpg')
 
-# product9 = Product.create!(
-#     title: "Husband Wife Mug Gift, Hubby Wifey Mug Wedding Gift, Unique Wedding for Couple",
-#     description: "THE BEST GIFTS FOR COUPLES. Awesome wedding gifts, best wedding anniversary gifts you can find at very reasonable price. Best wedding gifts for the couple, honeymoon gifts, bride and groom, They are ac cute and fun couples gift either way that will be great for the newlyweds!",
-#     quantity: 10,
-#     price: 26.00,
-#     seller_id: user1.id,
-#     category_id: category1.id
-# )
-# productpic9 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/wedding_gift_1.jpg')
-# product9.photo.attach(io: productpic9, filename: 'wedding_gift_1.jpg')
+product9 = Product.create!(
+    title: "Husband Wife Mug Gift, Hubby Wifey Mug Wedding Gift, Unique Wedding for Couple",
+    description: "THE BEST GIFTS FOR COUPLES. Awesome wedding gifts, best wedding anniversary gifts you can find at very reasonable price. Best wedding gifts for the couple, honeymoon gifts, bride and groom, They are ac cute and fun couples gift either way that will be great for the newlyweds!",
+    quantity: 10,
+    price: 26.00,
+    seller_id: user1.id,
+    category_id: category1.id
+)
+productpic9 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/wedding_gift_1.jpg')
+product9.photo.attach(io: productpic9, filename: 'wedding_gift_1.jpg')
 
-# product10 = Product.create!(
-#     title: "Malden International Designs Silkscreened Corinthians Verse Mr & Mrs Wood Picture Frame, 5x7, Off White",
-#     description: "ELEGANT DESIGN: 
-#     Frame holds (1) 5” x 7” vertical Photo within a 4.5” x 6.5” display opening with raised white wood moulding. 
-#     Features white and light gray MDF wood with a subtle distressed swirl pattern and the phrase “Mr. & Mrs. Love Is Patient Love Is Kind ” 
-#     screenprinted in gray script text",
-#     quantity: 10,
-#     price: 17.95,
-#     seller_id: user1.id,
-#     category_id: category1.id
-# )
-# productpic10 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/wedding_gift.jpg')
-# product10.photo.attach(io: productpic10, filename: 'wedding_gift.jpg')
+product10 = Product.create!(
+    title: "Malden International Designs Silkscreened Corinthians Verse Mr & Mrs Wood Picture Frame, 5x7, Off White",
+    description: "ELEGANT DESIGN: 
+    Frame holds (1) 5” x 7” vertical Photo within a 4.5” x 6.5” display opening with raised white wood moulding. 
+    Features white and light gray MDF wood with a subtle distressed swirl pattern and the phrase “Mr. & Mrs. Love Is Patient Love Is Kind ” 
+    screenprinted in gray script text",
+    quantity: 10,
+    price: 17.95,
+    seller_id: user1.id,
+    category_id: category1.id
+)
+productpic10 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/wedding_gift.jpg')
+product10.photo.attach(io: productpic10, filename: 'wedding_gift.jpg')
 
-# product11 = Product.create!(
-#     title: 'Custom Family & Pet Name Welcome Mat | Custom Names Doormat | Welcome Mat | Housewarming Gift | ', 
-#     description: "The perfect decoration for any front porch that can be personalized.
+product11 = Product.create!(
+    title: 'Custom Family & Pet Name Welcome Mat | Custom Names Doormat | Welcome Mat | Housewarming Gift | ', 
+    description: "The perfect decoration for any front porch that can be personalized.
 
-# Makes a great gift for him, her, nana and papa, weddings, housewarming, mothers day and more. The perfect gift for any new or existing home owner.", 
-#     quantity: 10, 
-#     price: 19.99, 
-#     seller_id: user3.id,
-#     category_id: category7.id
-# )
-# productpic11 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/housewarming_2.jpg')
-# product11.photo.attach(io: productpic11, filename:'housewarming_2.jpg')
+Makes a great gift for him, her, nana and papa, weddings, housewarming, mothers day and more. The perfect gift for any new or existing home owner.", 
+    quantity: 10, 
+    price: 19.99, 
+    seller_id: user3.id,
+    category_id: category7.id
+)
+productpic11 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/housewarming_2.jpg')
+product11.photo.attach(io: productpic11, filename:'housewarming_2.jpg')
 
-# product12 = Product.create!(
-#     title: 'Personalized, Engraved Cutting Board with Wreath Design for Housewarming', 
-#     description: "Create a cherished family heirloom with this engraved, name and date cutting board! We will take your name and date and laser engrave it into our high quality, hardwood cutting boards. The perfect gift to remember a loved one!", 
-#     quantity: 10, 
-#     price: 27.99, 
-#     seller_id: user3.id,
-#     category_id: category7.id
-# )
-# productpic12 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/housewarming_1.jpeg')
-# product12.photo.attach(io: productpic12, filename:'housewarming_1.jpeg')
+product12 = Product.create!(
+    title: 'Personalized, Engraved Cutting Board with Wreath Design for Housewarming', 
+    description: "Create a cherished family heirloom with this engraved, name and date cutting board! We will take your name and date and laser engrave it into our high quality, hardwood cutting boards. The perfect gift to remember a loved one!", 
+    quantity: 10, 
+    price: 27.99, 
+    seller_id: user3.id,
+    category_id: category7.id
+)
+productpic12 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/housewarming_1.jpeg')
+product12.photo.attach(io: productpic12, filename:'housewarming_1.jpeg')
 
-# product13 = Product.create!(
-#     title: 'Retired Long Sleeve Shirt, Retirement Gift,Funny Retirement Long Sleeve Shirt, Retiree Gift ,Retired Quotes, Retired Not My Problem Anymore', 
-#     description: "Retired. Officially retired. It's the first day of the rest of your life and we've got you covered with this super-soft, unisex shirt. Perfect for retirement parties, retiree gifts, and any other occasion that calls for a little celebration.",
-#     quantity: 10, 
-#     price: 14.99, 
-#     seller_id: user3.id,
-#     category_id: category8.id
-# )
-# productpic13 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/retiredment_2.jpg')
-# product13.photo.attach(io: productpic13, filename:'retiredment_2.jpg')
+product13 = Product.create!(
+    title: 'Retired Long Sleeve Shirt, Retirement Gift,Funny Retirement Long Sleeve Shirt, Retiree Gift ,Retired Quotes, Retired Not My Problem Anymore', 
+    description: "Retired. Officially retired. It's the first day of the rest of your life and we've got you covered with this super-soft, unisex shirt. Perfect for retirement parties, retiree gifts, and any other occasion that calls for a little celebration.",
+    quantity: 10, 
+    price: 14.99, 
+    seller_id: user3.id,
+    category_id: category8.id
+)
+productpic13 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/retiredment_2.jpg')
+product13.photo.attach(io: productpic13, filename:'retiredment_2.jpg')
 
-# product14 = Product.create!(
-#     title: 'Not My Problem Anymore Im Retired Round Rocks Glass-Retirement Gift for Men, Just Retired Glass, Gift For Retirement, Old Fashioned Glass', 
-#     description: "This Not My Problem Anymore Im Retired Round Rocks Glass is laser etched creating a beautiful frosted effect that is dishwasher safe and will hold up for years.",
-#     quantity: 10, 
-#     price: 16.99, 
-#     seller_id: user3.id,
-#     category_id: category8.id
-# )
-# productpic14 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/retirement_1.jpg')
-# product14.photo.attach(io: productpic14, filename: 'retirement_1.jpg')
+product14 = Product.create!(
+    title: 'Not My Problem Anymore Im Retired Round Rocks Glass-Retirement Gift for Men, Just Retired Glass, Gift For Retirement, Old Fashioned Glass', 
+    description: "This Not My Problem Anymore Im Retired Round Rocks Glass is laser etched creating a beautiful frosted effect that is dishwasher safe and will hold up for years.",
+    quantity: 10, 
+    price: 16.99, 
+    seller_id: user3.id,
+    category_id: category8.id
+)
+productpic14 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/retirement_1.jpg')
+product14.photo.attach(io: productpic14, filename: 'retirement_1.jpg')
 
 

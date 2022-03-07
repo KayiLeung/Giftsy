@@ -1,33 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
-$roboto-slab: 'Roboto Slab', serif;   
-$open-sans: 'Open Sans', sans-serif;
+@import './variable.scss';
+
 .nav-buttons{
     position: static;
     justify-content: space-between;
 }
 
 
-.bottom-nav{
+.bottom-nav-container{
+    display: inline;
     text-align: center;
-    display: block;
-    justify-content:space-between;
-    background-color: white;
-    position: static;
+    display: flex;
+    justify-content: space-between;
 }
 .nav-categroy {
     background-color: white;
-    color: rgb(79, 76, 76);
+    color: navTextColor;
     font-family: $open-sans;
     text-align: center;
-    padding: 14px 66px;
+    padding: 5px 5px;
     text-decoration: none;
     border: none;
     justify-content: space-between;
+    &:hover{
+        background-color: $hoverColor;
+        color: hoverFont;
+    }
 }
 
 
 
-.nav-categroy:hover{
-    background-color: burlywood;
-    color: white;
-}

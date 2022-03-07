@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
-$roboto-slab: 'Roboto Slab', serif;   
-$open-sans: 'Open Sans', sans-serif;
+@import './variable.scss';
+
+
 
 .footer-line{
     border: none;
 }
 .footer-light-blue{
-    background-color: lightskyblue;
+    background-color: $lightBlue;
     height: 100px;
 }
 
 .footer-blue{
-    background-color: rgb(31, 54, 97);
+    background-color: $blue;
     height: 100px;
 }
 
@@ -19,7 +19,7 @@ $open-sans: 'Open Sans', sans-serif;
     position: relative;
     justify-content: last baseline;
     justify-content: space-around;
-    background-color: rgb(12, 12, 70);
+    background-color: $deepBlue;
     display: flex;
     height: 100px;
 
@@ -32,7 +32,7 @@ $open-sans: 'Open Sans', sans-serif;
 
     .footer-right > ul {
         display: flex;
-        color: white;
+        color: $footerColor;
         text-decoration: none;
         justify-content: space-between;
         font-family: $open-sans;

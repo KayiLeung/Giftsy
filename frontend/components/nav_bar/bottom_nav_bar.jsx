@@ -1,39 +1,40 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 
 class BottomNavBar extends React.Component{
     constructor(props){
-        debugger
+        // debugger
         super(props)
     }
     componentDidMount() {
-        debugger
+        // debugger
         this.props.fetchAllCategories()
     }
+
+
  
     render() {
-        debugger
+        // debugger
         return (
             <div className='nav-bar'>
-                <ul className='bottom-nav'>
-                    <>
-                    {/* {
-                        this.props.categories.map((category, idx) => (
-                            <button className='nav-categroy' key={category.id}>
-                                {category.category}
-                            </button>
-                        ))
-                    } */}
-                        {
-                            this.props.categories.map((category, idx) => {
-                                if (category.category  !== 'Lucky Pick')
-                                return (
-                                <button className='nav-categroy' key={category.id}>
-                                    {category.category}
-                                </button>
-                            )})
-                        }
-                    </>
+                <ul className='bottom-nav-container'>
+                    {
+                        this.props.categories.map((category, idx) => {
+                            if (category.title !== 'Lucky Pick')
+                            return (
+                            <div className='nav-category'>
+                                <Link 
+                                className='category-button'
+                                key={category.id}
+                                to={`/categories/${category.id}`}>
+                                    {category.title}
+                                </Link>
+                            </div>
+                            )
+                        })
+                    }
+            
                 </ul>
             </div>
         )

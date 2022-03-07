@@ -1,30 +1,28 @@
-import React from "react";
+import React, {Component} from "react";
 
 class CategoryIndex extends React.Component {
-    
-    componentDidMount(){
-        this.props.fetchCategory()
+    constructor(props) {
+        super(props)
+    }
+    componentDidMount() {
+        this.props.fetchAllCategories()
     }
 
-
-
     render() {
-
-        const categoryPicNav = 'New Born'
         return (
-            <div className='category-nav'>
-                <ul className='category-nav-bar'>
+            <div className='nav-bar'>
+                <ul className='bottom-nav'>
                     <>
-                    {
+                        {
                             this.props.categories.map((category, idx) => {
-                                if (category.category === categoryPicNav)
+                                if (category.title !== 'Lucky Pick')
                                     return (
                                         <button className='nav-categroy' key={category.id}>
-                                            {category.category}
+                                            {category.title}
                                         </button>
                                     )
                             })
-                    }
+                        }
                     </>
                 </ul>
             </div>

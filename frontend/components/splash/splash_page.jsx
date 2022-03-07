@@ -1,31 +1,16 @@
 import React from 'react';
-import Footer from '../footer/footer';
-import BottomNavBarContainer from '../nav_bar/bottom_nav_bar_container'
-// import BottomNavBar from '../nav_bar/bottom_nav_bar';
-import SearchBar from '../nav_bar/search_bar';
+import SearchBar from '../search/search_bar'
+import { Link } from 'react-router-dom';
+import { FaGithub, FaLinkedinIn, FaShoppingCart} from 'react-icons/fa';
 
-const Splash = ({ currentUser, logout, openModal }) => {
-    const sessionLinks = () => (
-        <>
-            {/* <button className="nav-side" onClick={() => openModal('login')}>Sign In</button> */}
-            <div className='nav-buttons'>
-                <h2 className="greeting">
-                    Find things you'll love. Support independent sellers. Only on Giftsy.
-                </h2>
-            </div>
-        </>
+const Splash = ({ currentUser, logout, openModal}) => {
 
-    );
-    const personalGreeting = () => (
-        <div>
-            {/* <button className="nav-buttons" onClick={logout}>Log Out</button> */}
-            <h2 className="greeting">Welcome back, {currentUser.fname}!</h2>
-        </div>
-    );
 
     const signIn = (e) => {
         openModal('login')
     }
+
+
 
 
     return (
@@ -34,31 +19,21 @@ const Splash = ({ currentUser, logout, openModal }) => {
                 <div className='nav-bar'>
                     <ul className='top-nav'>
                         <div className='nav-side'>
-                            <li className="nav-side"><h2 className='giftsy'>Giftsy</h2></li>
+                            {/* <button onClick={()=>index()}><h1 className='giftsy'>Giftsy</h1></button> */}
+                            <Link to="/" ><p className='giftsy'>Giftsy</p></Link>
                             <li className='nav-searchbar'><SearchBar /></li>
                             <li className='nav-buttons'>
-                                <a href=""><button className='nav-contact-button'>Linkedin</button></a>
-                                <a href=""><button className='nav-contact-button'>Github</button></a>
-                                <a href=""><button className='nav-contact-button'>Cart</button></a>
+                                <a href=""><button className='nav-contact-button'>< FaLinkedinIn /></button></a>
+                                <a href=""><button className='nav-contact-button'>< FaGithub /></button></a>
+                                <a href=""><button className='nav-contact-button'><FaShoppingCart/></button></a>
                                 {currentUser ? (<button className="nav-contact-button" onClick={logout}>Log Out</button>) :
                                ( <button className="nav-contact-button" onClick={() => signIn()}>Sign In</button>)
                             }
                             </li>
                         </div>
                     </ul>
-                    {/* <BottomNavBar /> */}
-                    <BottomNavBarContainer/>
                 </div>
             </div>
-            {currentUser ? (
-                <div>
-                    {personalGreeting(currentUser, logout)}
-                </div>
-            ) : (
-                <div>
-                    {sessionLinks()}
-                </div>
-            )}
         </header>
 
 

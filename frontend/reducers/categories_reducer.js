@@ -1,6 +1,6 @@
 import { FETCHCATEGORIES, FETCHCATEGORY } from "../actions/catergory_action";
 const categoryReducer = (state={}, action) => {
-    debugger
+    // debugger
     Object.freeze(state)
     const nextState = Object.assign({}, state)
     switch (action.type) {

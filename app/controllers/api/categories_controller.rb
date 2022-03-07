@@ -7,8 +7,11 @@ class Api::CategoriesController < ApplicationController
     end
 
     def show
-        @category = Category.find(params[:id])
-        render 'api/categories/show'
+        # debugger
+        # @category = Category.find(params[:id])
+        @category = Category.find_by(id: params[:id])
+        # debugger
+        render :show
     end
 
     def create 
