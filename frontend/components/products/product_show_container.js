@@ -9,7 +9,6 @@ const mSTP = (state, ownProps) => {
     return {
         product: state.entities.products[ownProps.match.params.productId],
         users: state.entities.users,
-        // ratings: state.entities.ratings
     }
 }
 

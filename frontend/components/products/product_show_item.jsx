@@ -10,7 +10,6 @@ class ProductShowPage extends React.Component{
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params.productId)
-            // .then(this.props.fetchAllRatings(this.props.match.params.productId))
         this.props.fetchUsers();
     }
 
@@ -36,11 +35,15 @@ class ProductShowPage extends React.Component{
             <RatingIndexContainer
                 product={product}
                 users={users}
-                // ratings={productRatings}
-                key={product.id}
+                key={`index-${product.id}`}
             />
+            {/* pass in report index? */}
             <br /><br />
-            {/* <RatingFormContainer/> */}
+            <RatingFormContainer
+                product={product}
+                users={users}
+                key={`form-${product.id}`}
+            />
 
             </div>
         )

@@ -31,11 +31,17 @@ export const fetchRating = ratingId => dispatch => (
         .then(rating => dispatch(receiveRating(rating)))
 
 )
-
-export const createRating = (productId, rating) => dispatch => (
-    RatingApiUtil.createRating(productId,rating)
-        .then(rating => dispatch(receiveRating(rating)))
-)
+export const createRating = (productId, rating) => dispatch => {
+        return( 
+        RatingApiUtil.createRating(productId,rating)
+                .then((rating) =>{
+                        debugger
+                return  (
+                        dispatch(receiveRating(rating))
+                )
+                })
+        )
+}
 
 export const updateRating = (productId, rating) => dispatch => (
     RatingApiUtil.updateRating(productId, rating)

@@ -14,12 +14,13 @@ export const receiveRating = (ratingId) => {
     }))
 }
 
-export const createRating = (productId, rating) => {
+export const createRating = (rating, productId) => {
+    debugger
     return (
         $.ajax({
-            method: 'CREATE',
+            method: 'POST',
             url: `/api/products/${productId}/ratings`,
-            date: {rating}
+            data: {rating}
         })
     )
 } 
@@ -29,7 +30,7 @@ export const updateRating = (productId, rating) => {
         $.ajax({
             method: 'PATCH',
             url: `/api/products/${productId}/${rating.id}`,
-            date: { rating }
+            data: { rating }
         })
     )
 }

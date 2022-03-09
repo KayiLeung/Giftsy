@@ -3,24 +3,22 @@
 .product-show-container{
     margin: 20px;
     height: 100%;
-    display: block;
-    font-size: 14px;
-    height: 500px;
+    background-color: lightcyan;
+    display: flex;
+    justify-content: space-between;
+
 
     .product-show-image-div{
-        // width: 200px;
-        // height: 200px;
         display: flex;
         justify-content: space-around;
-    }
 
-    .product-show-image{
-        width: 400px;
-        height: 400px;
+        .product-show-image{
+        size: 100%;
         border-radius: 50px;
-    }
+        width: 50%;
+        }
 
-    .product-show-details{
+        .product-show-details{
         line-height: 30px;
         width: 50%;
             .review{
@@ -30,16 +28,20 @@
 
                 font-size: 30px;
                 font-family:$product-title;
+                background-color: lightgray;
             }
             .description{
                 font-family:$product-description;
                 font-size: 15px;
+                background-color: lightpink;
             }
             .price{
                 font-weight: 50px;
                 font-size: 30px;
                 font-family: $product-price;
             }
+        }
     }
+
 }
 

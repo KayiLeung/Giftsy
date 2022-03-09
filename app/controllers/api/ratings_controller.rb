@@ -12,8 +12,9 @@ class Api::RatingsController < ApplicationController
 
 
     def create
-        @rating = Rating.new(raing_params)
-
+        debugger
+        @rating = Rating.new(rating_params)
+        debugger
         if @rating.save
             render :show
         else
@@ -42,6 +43,6 @@ class Api::RatingsController < ApplicationController
     private
 
     def rating_params
-        params.require(:rating).permit(:score, :buyer_id, :product_id)
+        params.require(:rating).permit(:score, :buyer_id, :product_id, :comment)
     end
 end

@@ -1,47 +1,60 @@
 import React from "react";
 import Rating from '@mui/material/Rating';
-import withRouter from 'react-router-dom'
-import Box from '@mui/material/Box';
 
+
+//pass in product and users already
 class RatingForm extends React.Component {
     constructor(props) {
-        debugger
+        // debugger
         super(props);
 
         this.state = {
-            score: 1,
-            comment: ''
+            score: 2.5,
+            comment: '',
         }
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
 
     handleSubmit(e) {
-        e.preventDefault();
         debugger
+        e.preventDefault();
         if (!this.props.user) {
-            debugger
             this.props.openModal('login')
         } else {
-            const productId = this.props.match.params.productId;
-            const rating = Object.assign({}, this.state, {
-                product_id: productId,
-                buyer_id: this.props.user.id
-            })
+            debugger
+            const productId = this.props.product.id;
+            const buyerId = this.props.user
+            debugger
+            const rating = Object.assign(
+                {}, {...this.state, 
+                    buyer_id: buyerId,
+                    product_id: productId
+                }
+                )
+                debugger
         this.props.createRating(rating, productId);
             
         }
+
+    }
+
+    componentDidMount(){
+        this.props.fetchProduct(this.props.match.params.productId)
+
     }
 
     handleInput(field) {
         return e => this.setState({[field] : e.currentTarget.value})
     }
 
-    componentDidMount() {
-        // this.props.
-    }
-
     render() {
-        debugger
+        const {users, product, user, currentUser} = this.props
+        console.log('users:',users)
+        console.log('user:',user)
+        console.log('currentUser:', currentUser)
+        // debugger
+        if (!users && product) return null
         return(
             <div>
                 <div>
@@ -55,7 +68,7 @@ class RatingForm extends React.Component {
                             <Rating
                                 style={{color: 'black'}}
                                 name='Rating Rank'
-                                value={this.state.score}
+                                value={this.state.score.toString()}
                                 precision={0.5}
                                 onChange={this.handleInput('score')} 
                             />

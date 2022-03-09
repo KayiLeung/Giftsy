@@ -11,7 +11,7 @@ import { fetchUsers } from "../../actions/user_actions";
 import RatingIndex from './rating_index'
 
 const mSTP = (state, ownProps) => {
-    debugger
+    // debugger
     // users: state.entities.users,
     // product: state.entities.products[ownProps.match.params.productId]
     //get users and product from parent component Product show page
@@ -25,7 +25,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    debugger
+    // debugger
     return {
         createRating: (rating, productId) => dispatch(createRating(rating, productId)),
         updateRating: (rating, productId) => dispatch(updateRating(rating, productId)),

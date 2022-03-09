@@ -3,30 +3,27 @@ import Rating from '@mui/material/Rating';
 
 class RatingIndex extends React.Component{
     constructor(props) {
-        debugger
+        // debugger
         super(props)
     }
 
     componentDidMount() {
-        debugger
+        // debugger
         this.props.fetchAllRatings();
-        // this.props.fetchUsers();
     }
 
     render(){
-        debugger
+        // debugger
         const {ratings, users, currentUser, product} = this.props
         const productId = product.id
         const productRatings = ratings.filter(rating => rating.product_id === productId)
         
-        let currentUserId = undefined;
-        if (currentUser) return currentUserId = currentUser.id
- 
+    
         if (!ratings && !users) return null;
         return (
 
             <div className='rating-index-container'>
-            { productRatings.map((rating, idx) => {
+                {productRatings.map((rating, idx) => {
                 return (
                 <div className='rating-details'>
                     <Rating
@@ -34,7 +31,7 @@ class RatingIndex extends React.Component{
                         name='Rating Rank'
                         value={rating.score}
                         precision={0.5}
-                        key={rating.id}
+                        key={`rating-${rating.id}`}
                     />
                     <p></p>
                     <p>customer: {users[rating.buyer_id].fname}</p>
