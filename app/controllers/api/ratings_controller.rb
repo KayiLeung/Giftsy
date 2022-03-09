@@ -1,26 +1,32 @@
 class Api::RatingsController < ApplicationController
+    
+    def index
+        @ratings = Rating.all
+        render :index
+    end
+
     def show
-        @rating = Rating.all
-        render 'api/ratings/index'
+        @rating = Rating.find(params[:id])
+        render :show
     end
 
 
-   def create
+    def create
         @rating = Rating.new(raing_params)
 
         if @rating.save
-            render json: ['Rated!']
+            render :show
         else
             render json: @rating.errors.full_messages
         end
-   end
+    end
 
 
-   def update
+    def update
         @rating = Rating.find(params[:id])
 
         if @rating.update(raing_params)
-            redner json: ['Rating updated']
+            render 'api/ratings/show'
         else 
             render json @rating.errors.full_messages
         end

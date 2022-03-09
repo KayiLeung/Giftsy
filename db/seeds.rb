@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'open-uri'
+# require 'open-uri'
 
 User.delete_all
 Product.delete_all
@@ -202,4 +202,17 @@ product14 = Product.create!(
 productpic14 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/retirement_1.jpg')
 product14.photo.attach(io: productpic14, filename: 'retirement_1.jpg')
 
-
+rating1 = Rating.create!(score: 4 ,buyer_id: user2.id,product_id: product1.id ,comment:'Love it!')
+rating2 = Rating.create!(score: 5 ,buyer_id: user4.id,product_id: product2.id ,comment:'Love it!')
+rating3 = Rating.create!(score: 5 ,buyer_id: user3.id,product_id: product3.id ,comment:'Love it!')
+rating4 = Rating.create!(score: 3 ,buyer_id: user4.id,product_id: product4.id ,comment:'Love it!')
+rating5 = Rating.create!(score: 4 ,buyer_id: user1.id,product_id: product5.id ,comment:'Love it!')
+rating6 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product6.id ,comment:'Love it!')
+rating7 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product7.id ,comment:'Love it!')
+rating8 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product8.id ,comment:'Love it!')
+rating9 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product9.id ,comment:'Love it!')
+rating10 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product10.id ,comment:'Love it!')
+rating11 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product11.id ,comment:'Love it!')
+rating12 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product12.id ,comment:'Love it!')
+rating13 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product13.id ,comment:'Love it!')
+rating14 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product14.id ,comment:'Love it!')

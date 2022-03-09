@@ -1,8 +1,7 @@
 import {connect} from 'react-redux'
-import React from 'react'
+import { fetchAllProducts } from '../../actions/product_action'
 import Search from './search'
-import { fetchProducts } from '../../actions/product_action'
-import { fetchProduct } from '../../util/product_api_util'
+
 
 const mSTP = state => {
     return {
@@ -13,7 +12,7 @@ const mSTP = state => {
 const mDTP = dispatch => {
 
     return {
-        fetchProducts: () => dispatch(fetchProducts())
+        fetchAllProducts: () => dispatch(fetchAllProducts())
     }
 }
 

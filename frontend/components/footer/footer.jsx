@@ -8,7 +8,7 @@ const Footer = () => {
     
     
     return (
-        <footer >
+        <footer className='footer-container'>
             <hr className='footer-line'/>
             <div className='footer-light-blue'>
                 <p> </p>

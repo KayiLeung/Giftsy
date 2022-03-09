@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:index, :show, :create]
     resource :session, only: [:create, :destroy]
-    resources :products, only: [:show, :index]
+    resources :products, only: [:show, :index] do
+      resources :ratings, only:[:create, :update, :destroy]
+    end
     resources :categories, only: [:show, :index]
+    resources :ratings, only: [:index, :show]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

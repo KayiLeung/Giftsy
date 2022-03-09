@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from '../search/search_bar'
+import Search from '../search/search'
 import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedinIn, FaShoppingCart} from 'react-icons/fa';
 
@@ -14,14 +14,14 @@ const Splash = ({ currentUser, logout, openModal}) => {
 
 
     return (
-        <header>
             <div>
+                <header>
                 <div className='nav-bar'>
                     <ul className='top-nav'>
                         <div className='nav-side'>
                             {/* <button onClick={()=>index()}><h1 className='giftsy'>Giftsy</h1></button> */}
                             <Link to="/" ><p className='giftsy'>Giftsy</p></Link>
-                            <li className='nav-searchbar'><SearchBar /></li>
+                            <li className='nav-searchbar'><Search /></li>
                             <li className='nav-buttons'>
                                 <a href=""><button className='nav-contact-button'>< FaLinkedinIn /></button></a>
                                 <a href=""><button className='nav-contact-button'>< FaGithub /></button></a>
@@ -33,9 +33,12 @@ const Splash = ({ currentUser, logout, openModal}) => {
                         </div>
                     </ul>
                 </div>
+                </header>
+                <main>
+                    
+                </main>
             </div>
-        </header>
-
+        
 
     )
 };

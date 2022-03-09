@@ -1,6 +1,7 @@
 import React from "react";
 import CircleCategoryIndexConstainer from "../category/circle_category_container";
 import {Link} from 'react-router-dom'
+import Footer from "../footer/footer";
 
 class ProductIndex extends React.Component {
     constructor(props) {
@@ -50,6 +51,7 @@ class ProductIndex extends React.Component {
             </div>
         
             <CircleCategoryIndexConstainer/>
+            <main>
             <div className='product-show-container'>
                 <div className='product-show-page'>
                     <div className='thumbnail-container'>
@@ -65,8 +67,9 @@ class ProductIndex extends React.Component {
                     </div>
                 </div>
             </div>
+            </main>
             </header>
-
+  
 
         )
     }
