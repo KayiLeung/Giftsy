@@ -23,10 +23,9 @@ class BottomNavBar extends React.Component{
                         this.props.categories.map((category, idx) => {
                             if (category.title !== 'Lucky Pick')
                             return (
-                            <div className='nav-category'>
+                                <div className='nav-category' key={`category-${category.id}-${idx}`}>
                                 <Link 
                                 className='category-button'
-                                key={category.id}
                                 to={`/categories/${category.id}`}>
                                     {category.title}
                                 </Link>

@@ -18,33 +18,48 @@ class ProductShowPage extends React.Component{
         if (!product) {
             return null;
         }
-        // debugger
+        console.log( product.photoUrl)
+        debugger
         return (
-            <div className='product-show-container'>
-                <div className='product-show-image-div'>
-                    <img className="product-show-image" src={product.photoUrl} alt="" />
+            <div className='product-whole-container'>
+            <div className='product-show-page'>
+                <div className='left-container'>
+                    <img className="product-show-image" src={product.photoUrl}  />
+                </div>
+                <div className='right-container'>
                     <div className='product-show-details-div'>
                         <ul className='product-show-details'>
                                 <li className='review'>1451 sales ★★★★★</li>
+                                <br />
                                 <li className='product-title'>{product.title}</li>
+                                <br />
                                 <li className='description'>{product.description}</li>
+                                <br />
                                 <li className='price'>${product.price}+</li>
+                
                         </ul>
                     </div>
                 </div>
-            <RatingIndexContainer
-                product={product}
-                users={users}
-                key={`index-${product.id}`}
-            />
-            {/* pass in report index? */}
-            <br /><br />
-            <RatingFormContainer
-                product={product}
-                users={users}
-                key={`form-${product.id}`}
-            />
-
+            </div>
+            <br />
+            <div className='bottom-container'>
+                <div className='rated-reviews'>
+                <RatingIndexContainer
+                    product={product}
+                    users={users}
+                    key={`index-${product.id}`}
+                />
+                {/* pass in report index? */}
+            </div>
+                <br /><br />
+                    <div className='rated-form'>
+                    <RatingFormContainer
+                        product={product}
+                        users={users}
+                        key={`form-${product.id}`}
+                    />
+                    </div>
+                </div>
             </div>
         )
     }

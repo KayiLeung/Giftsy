@@ -35,22 +35,24 @@ export const createRating = (productId, rating) => dispatch => {
         return( 
         RatingApiUtil.createRating(productId,rating)
                 .then((rating) =>{
-                        debugger
-                return  (
-                        dispatch(receiveRating(rating))
-                )
+                return  (dispatch(receiveRating(rating)))
                 })
         )
 }
 
-export const updateRating = (productId, rating) => dispatch => (
-    RatingApiUtil.updateRating(productId, rating)
-        .then(rating => dispatch(receiveRating(rating)))
-)
+export const updateRating = (rating) => dispatch => {
+        // debugger
+        return (
+        RatingApiUtil.updateRating(rating)
+                .then(rating => {
+                 return ( dispatch(receiveRating(rating)))
+                })
+        )
+}
 
 
-export const deleteRating = (productId,ratingId)  => dispatch => (
-    RatingApiUtil.deleteRating(ratingId, productId)
+export const deleteRating = (ratingId)  => dispatch => (
+    RatingApiUtil.deleteRating(ratingId)
         .then(() => dispatch(removeRating(ratingId)))
 )
 

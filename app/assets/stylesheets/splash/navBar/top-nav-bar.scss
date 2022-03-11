@@ -9,9 +9,15 @@
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    margin-left: 36px;
+    margin-right: 36px;
+    // max-width: 1400px;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
 
 }
 .nav-side > a {
+    
     text-decoration: none;
 }
 

@@ -1,47 +1,158 @@
 @import '../../variable.scss';
 // @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&family=Roboto+Slab:wght@100&display=swap');
-.product-show-container{
-    margin: 20px;
-    height: 100%;
-    background-color: lightcyan;
-    display: flex;
-    justify-content: space-between;
+// .product-show-container{
+//     margin: 20px;
+//     height: 100%;
+//     display: flex;
+//     justify-content: space-between;
 
 
-    .product-show-image-div{
-        display: flex;
-        justify-content: space-around;
+//     .right-container{
+//         display: flex;
+//         justify-content: space-around;
 
-        .product-show-image{
-        size: 100%;
-        border-radius: 50px;
-        width: 50%;
-        }
+//     .product-show-image{
+//     size: 50%;
+//     border-radius: 50px;
+//     width: 50%;
+//     }
 
-        .product-show-details{
-        line-height: 30px;
-        width: 50%;
-            .review{
-                font-family: $product-review;
-            }
-            .product-title{
+    
+//     }
 
-                font-size: 30px;
-                font-family:$product-title;
-                background-color: lightgray;
-            }
-            .description{
-                font-family:$product-description;
-                font-size: 15px;
-                background-color: lightpink;
-            }
-            .price{
-                font-weight: 50px;
-                font-size: 30px;
-                font-family: $product-price;
-            }
-        }
-    }
-
+// }
+.product-whole-container{
+    margin: 36px;
 }
 
+
+
+.product-show-page{
+    display: flex;
+    flex-direction: row;
+    // flex-direction: row-reverse;
+    align-content: stretch;
+    align-items: center;
+    justify-content: space-around;
+
+    .left-container{
+        width: 40%;
+        justify-content: center;
+    }
+    .right-container{
+        width: 40%;
+        justify-content: center;
+        margin-bottom: auto;
+    }
+    .product-show-image{
+        width: 100%;
+    }
+}
+
+
+.product-show-details{
+    line-height: 30px;
+    width: 100%;
+        .review{
+            font-family: $product-review;
+        }
+        .product-title{
+
+            font-size: 30px;
+            font-family:$Exo2 ;
+
+        }
+        .description{
+            font-family:$product-description;
+            font-size: 15px;
+
+        }
+        .price{
+            font-weight: 50px;
+            font-size: 30px;
+            font-family: $product-price;
+        }
+}
+///////rating-rating index
+
+//from rating_index_item
+
+.bottom-container{
+    width: 40%;
+    margin: 36px;
+}
+
+
+.rating-container{
+    display: flex;
+
+
+    // //from rating form
+    // .rating-form-container{
+    //     flex-wrap: nowrap;
+    //     display: block;
+    //     display: flex;
+    //     justify-content: stretch;
+    //     label{
+    //         font-family: $product-description;
+    //     }
+    //     button{
+    //         font-family: $product-description;
+    //         display: inline;
+    //         border: none;
+    //         background-color: red;
+    //     }
+    //     textarea{
+    //         font-family: $product-description;
+    //     }
+    // }
+}
+
+.rated-form{
+    font-family: $product-description;
+}
+.rating-index-details{
+    padding: 20px;
+
+    #customer-fname{
+
+        font-family: $product-title;
+    }
+
+    #customer-comment{
+        font-family: $product-description;
+
+
+    }
+}
+.customer-ratings{
+    padding-bottom: 10px;
+}
+
+
+.rating-edit-delete-btn{
+    a{
+        text-decoration: none;
+        color: rgb(126, 119, 119);
+        font-family: $product-review;
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    button{
+        border: none;
+        color: rgb(126, 119, 119);
+        font-family: $product-review;
+        background-color: none;
+        font-size: 11px;
+        
+    &hover{
+        background: rgb(126, 119, 119);
+        color: black;
+        cursor: pointer;
+        
+    }
+
+
+    }
+}

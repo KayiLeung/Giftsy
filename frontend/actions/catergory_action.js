@@ -27,7 +27,7 @@ export const fetchAllCategories = () => dispatch => {
 }
 
 export const fetchCategory = category => dispatch => {
-    debugger
+    // debugger
     return (
         CategoryApiUtil.fetchCategory(category)
             .then(category => dispatch(receiveCategory(category)))

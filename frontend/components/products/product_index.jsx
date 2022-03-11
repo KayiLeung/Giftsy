@@ -1,7 +1,8 @@
 import React from "react";
 import CircleCategoryIndexConstainer from "../category/circle_category_container";
 import {Link} from 'react-router-dom'
-import Footer from "../footer/footer";
+import { FaShippingFast } from 'react-icons/fa'
+
 
 class ProductIndex extends React.Component {
     constructor(props) {
@@ -17,7 +18,6 @@ class ProductIndex extends React.Component {
         // debugger
         const sessionLinks = () => (
             <>
-                {/* <button className="nav-side" onClick={() => openModal('login')}>Sign In</button> */}
                 <div className='nav-buttons'>
                     <h2 className="greeting">
                         Find things you'll love. Support independent sellers. Only on Giftsy.
@@ -29,7 +29,6 @@ class ProductIndex extends React.Component {
 
         const personalGreeting = () => (
             <div>
-                {/* <button className="nav-buttons" onClick={logout}>Log Out</button> */}
                 <h2 className="greeting">Welcome back, {currentUser.fname}!</h2>
             </div>
         );
@@ -37,38 +36,48 @@ class ProductIndex extends React.Component {
         
         const {currentUser, logout} = this.props
         return(
+            <>
             <header>
-            <div>
-                {currentUser ? (
-                    <div>
-                        {personalGreeting(currentUser, logout)}
-                    </div>
-                ) : (
-                    <div>
-                        {sessionLinks()}
-                    </div>
-                )}
-            </div>
-        
-            <CircleCategoryIndexConstainer/>
-            <main>
-            <div className='product-show-container'>
-                <div className='product-show-page'>
-                    <div className='thumbnail-container'>
-                    {
-                        this.props.products.map((product, idx) => 
-                            <div className='product-thumbnail' key={idx}>
-                                <Link to={`/products/${product.id}`}><img className="grid-products" src={product.photoUrl} alt="" /></Link>
-                            </div>
-                            )
-                    }
-            
-                            
+                <div>
+                    {currentUser ? (
+                        <div>
+                            {personalGreeting(currentUser, logout)}
+                        </div>
+                    ) : (
+                        <div>
+                            {sessionLinks()}
+                        </div>
+                    )}
+                </div>
+            </header>
+            <section className='circle-cat-section'>
+                <div className='circle-container'>
+                    <CircleCategoryIndexConstainer/>
+                </div>
+            </section>
+            <section className='product-index-page'>
+                <div className='product-show-container'>
+                    <div className='product-show-page'>
+                        <div className='thumbnail-container'>
+                        {
+                            this.props.products.map((product, idx) => 
+                                <div className={`product-thumbnail`} key={idx}>
+                                    <Link to={`/products/${product.id}`}>
+                                        <img className="grid-products" src={product.photoUrl} alt="" />
+                                    </Link>
+                                    <p id='price-tag'> <FaShippingFast />{` $${product.price}`}</p>
+                                    
+                                </div>
+                                )
+                        }
+                             
+                                
+                        </div>
                     </div>
                 </div>
-            </div>
-            </main>
-            </header>
+            </section>
+            
+            </>
   
 
         )

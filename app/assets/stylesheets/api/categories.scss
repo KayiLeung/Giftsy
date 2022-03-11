@@ -3,93 +3,40 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import '../variable.scss';
 
+//from product index
+// .circle-container{
 
-
-// .small-category{
-
-//     display: flex !important;
-//      flex-direction:  column ;
-
-    
-// }
-    
-// .small-category-details > a{
-//     display: block;
-//     display: flex !important;
-//     flex-direction: column;
-        
 // }
 
-// .circle-products{
-
-//         width: 100px;
-//         height: 100px;
-//         border-radius:  50px;
-//         background-color: blueviolet;
-//         flex-direction: row;
-//         display: flex;
-// }
-
-// cat show
-
-// .category-show-container{
-//     display: flex;
-//     flex-direction: column;
-//     margin-top: 100px;
-//     justify-content:space-around;
-//     background-color: khaki;
-// }
-
-// .catproduct-thumbnail{
-//     object-fit: cover;
-//     border-radius:25%;
-//     width: 300px;
-//     height:300px; 
-//     display: flex;
-//     flex-direction: column;
-// }
-
-.small-category-container{
-    justify-content: center;
-    display: flex;
-    overflow-x: auto !important;
-        padding-left: 12px !important;
-            padding-right: 12px !important;
-
-}
-
+//from circle category
 .circle-cat{
-    justify-content: space-between;
-    width: 100;
-    max-width: 984px;
+    display: flex;
     list-style: none;
-    .cat{
-        box-sizing: inherit;
-        margin: 0;
-                display: list-item;
-    text-align: -webkit-match-parent;
-    .cat > div {
-        flex-direction: column !important;
-        display: flex !important;
-        box-sizing: inherit;
-        margin: 0;
+    justify-content: center;
+    margin: 36px;
 
-    .cat > div > a{
-        text-decoration: none;
 
-    }}}
-}
+    .circle-products{
+        max-width: 150px;
+        max-height: 150px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius:  50%;
 
-.circle-products{
-    width: 100px;
-    height: 100px;
-    border-radius:  50px;
-    background-color: rgb(145, 165, 155);
-}
+        display: flex;
+        justify-content: space-between;
+    
+    }
 
-.circle-products > li{
+    #text{
     text-decoration: none;
     display: list-item;
-    text-align: -webkit-match-parent;
-    font-family: $roboto-slab;
+    text-align: center;
+    padding: 5px;
+    font-family: $product-price;
 }
+
+}
+
+
+

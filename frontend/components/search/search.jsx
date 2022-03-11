@@ -44,30 +44,33 @@ class Search extends React.Component {
     render() {
    
         return (
-            <div className="search-bar">
-                <label className="search-label" htmlFor="search-input">
-                </label>
-                <input
-                    id="search-input"
-                    type="search"
-                    placeholder="Search for anything"
-                    // onChange={this.handleChange("query")}
-                    // onKeyPress={(e) => this.handleKeypress(e)}
-                />
-                <button
-                    className="search-icon-button"
-                    // onClick={(e) => this.handleSubmit(e)}
-                >
-                    <FaSearch />
-                </button>
+            <div className='search-wrap'>
+                <div className="search-bar">
+                    <form action="" className='nav-bar-search-container'>
+                        <input
+                            id="search-input"
+                            type="search"
+                            placeholder="Search for gift"
+                            className='searchTerm'
+                            // onChange={this.handleChange("query")}
+                            // onKeyPress={(e) => this.handleKeypress(e)}
+                        />
+                        <button
+                            className="search-icon-button"
+                            // onClick={(e) => this.handleSubmit(e)}
+                        >
+                            <FaSearch />
+                        </button>
+                    </form>
 
-                {/* {this.state.search ?
-                    <Redirect to={{
-                        pathname: '/search',
-                        state: { stateName: this.state.query },
-                        search: "?" + this.state.query,
-                        fetchProducts: this.props.fetchProducts,
-                    }} /> : null} */}
+                    {/* {this.state.search ?
+                        <Redirect to={{
+                            pathname: '/search',
+                            state: { stateName: this.state.query },
+                            search: "?" + this.state.query,
+                            fetchProducts: this.props.fetchProducts,
+                        }} /> : null} */}
+                </div>
             </div>
         )
     }

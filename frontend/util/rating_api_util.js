@@ -1,5 +1,4 @@
 export const receiveRatings = () => {
-    // debugger
     return ($.ajax({
         method: 'GET',
         url: 'api/ratings'
@@ -7,7 +6,6 @@ export const receiveRatings = () => {
 }
 
 export const receiveRating = (ratingId) => {
-    // debugger
     return ($.ajax({
         method: 'GET',
         url: `api/ratings/${ratingId}`
@@ -15,7 +13,6 @@ export const receiveRating = (ratingId) => {
 }
 
 export const createRating = (rating, productId) => {
-    debugger
     return (
         $.ajax({
             method: 'POST',
@@ -25,21 +22,22 @@ export const createRating = (rating, productId) => {
     )
 } 
 
-export const updateRating = (productId, rating) => {
+export const updateRating = (rating) => {
+    // debugger
     return (
         $.ajax({
             method: 'PATCH',
-            url: `/api/products/${productId}/${rating.id}`,
+            url: `/api/ratings/${rating.id}`,
             data: { rating }
         })
     )
 }
 
-export const deleteRating = (productId, ratingId) => {
+export const deleteRating = (ratingId) => {
     return (
         $.ajax({
             method: 'DELETE',
-            url: `/api/products/${productId}/${ratingId}`,
+            url: `/api/ratings/${ratingId}`,
         })
     )
 }

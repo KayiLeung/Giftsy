@@ -19,9 +19,8 @@ const Splash = ({ currentUser, logout, openModal}) => {
                 <div className='nav-bar'>
                     <ul className='top-nav'>
                         <div className='nav-side'>
-                            {/* <button onClick={()=>index()}><h1 className='giftsy'>Giftsy</h1></button> */}
                             <Link to="/" ><p className='giftsy'>Giftsy</p></Link>
-                            <li className='nav-searchbar'><Search /></li>
+                            <Search />
                             <li className='nav-buttons'>
                                 <a href=""><button className='nav-contact-button'>< FaLinkedinIn /></button></a>
                                 <a href=""><button className='nav-contact-button'>< FaGithub /></button></a>
@@ -34,9 +33,7 @@ const Splash = ({ currentUser, logout, openModal}) => {
                     </ul>
                 </div>
                 </header>
-                <main>
-                    
-                </main>
+                <main></main>
             </div>
         
 

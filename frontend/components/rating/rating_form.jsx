@@ -5,10 +5,13 @@ import Rating from '@mui/material/Rating';
 //pass in product and users already
 class RatingForm extends React.Component {
     constructor(props) {
-        // debugger
         super(props);
 
-        this.state = {
+        // this.state = {
+        //     score: this.props.rating.score,
+        //     comment: this.props.rating.comment
+        // }
+            this.state = {
             score: 2.5,
             comment: '',
         }
@@ -17,31 +20,36 @@ class RatingForm extends React.Component {
 
 
     handleSubmit(e) {
-        debugger
+        // debugger
         e.preventDefault();
         if (!this.props.user) {
             this.props.openModal('login')
         } else {
-            debugger
+            // debugger
+            if (this.props.formType === 'create_rating') {
             const productId = this.props.product.id;
             const buyerId = this.props.user
-            debugger
-            const rating = Object.assign(
-                {}, {...this.state, 
+            // debugger
+                const rating = Object.assign({}, {...this.state, 
                     buyer_id: buyerId,
                     product_id: productId
-                }
-                )
-                debugger
-        this.props.createRating(rating, productId);
+                })
+                this.props.action(rating, productId)
+            } 
+            
+            
+            // else {
+            //     const rating = Object.assign({}, this.state)
+            //     this.props.action(rating)
+            // }
+            // this.setState( {comment: ''})
             
         }
-
     }
 
     componentDidMount(){
-        this.props.fetchProduct(this.props.match.params.productId)
-
+            this.props.fetchProduct(this.props.match.params.productId)
+            // this.props.fetchRating(this.props.match.params.ratingId)
     }
 
     handleInput(field) {
@@ -50,11 +58,7 @@ class RatingForm extends React.Component {
 
     render() {
         const {users, product, user, currentUser} = this.props
-        console.log('users:',users)
-        console.log('user:',user)
-        console.log('currentUser:', currentUser)
-        // debugger
-        if (!users && product) return null
+        if (!users && !product) return null
         return(
             <div>
                 <div>
@@ -68,7 +72,7 @@ class RatingForm extends React.Component {
                             <Rating
                                 style={{color: 'black'}}
                                 name='Rating Rank'
-                                value={this.state.score.toString()}
+                                value={this.state.score}
                                 precision={0.5}
                                 onChange={this.handleInput('score')} 
                             />
@@ -80,7 +84,7 @@ class RatingForm extends React.Component {
                                 cols='70'
                                 rows='4'
                             />
-                        <input type="submit" className="rating-submit-button"/>
+                        <button type="submit">submit</button>
                         </form>
                     </div>
                 </div>

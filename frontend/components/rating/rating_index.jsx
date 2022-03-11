@@ -1,5 +1,6 @@
 import React from "react";
 import Rating from '@mui/material/Rating';
+import ReviewIndexItem from "./rating_index_item";
 
 class RatingIndex extends React.Component{
     constructor(props) {
@@ -14,7 +15,7 @@ class RatingIndex extends React.Component{
 
     render(){
         // debugger
-        const {ratings, users, currentUser, product} = this.props
+        const { ratings, users, currentUser, product, deleteRating, openModal, updateRating} = this.props
         const productId = product.id
         const productRatings = ratings.filter(rating => rating.product_id === productId)
         
@@ -24,20 +25,23 @@ class RatingIndex extends React.Component{
 
             <div className='rating-index-container'>
                 {productRatings.map((rating, idx) => {
+
                 return (
-                <div className='rating-details'>
-                    <Rating
-                        style={{ color: 'black' }}
-                        name='Rating Rank'
-                        value={rating.score}
-                        precision={0.5}
-                        key={`rating-${rating.id}`}
-                    />
-                    <p></p>
-                    <p>customer: {users[rating.buyer_id].fname}</p>
-                    <p>comment:  {rating.comment}</p>
-                </div>
-                )
+                    <div className='rating-index-details' key={idx}>
+                        <p id='customer-fname'>{users[rating.buyer_id].fname}</p>
+                        <br />
+                        < ReviewIndexItem
+                            rating={rating}
+                            deleteRating={deleteRating}
+                            ratingId={rating.id}
+                            openModal={openModal}
+                            updateRating={updateRating}
+                        />
+                        
+                        
+                        <p id='customer-comment'>{rating.comment}</p>
+                    </div>
+                    )
                 })
             }
             </div>

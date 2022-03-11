@@ -3,6 +3,9 @@
 
 .footer-container{
     justify-content: bottom;
+        display: flex;
+    align-items: stretch;
+    flex-direction: column-reverse;
 }
 .footer-line{
     border: none;

@@ -1,40 +1,70 @@
-.thumbnail-container{
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(4, [col]150px);
-    grid-template-rows: repeat(4, [row] auto);
-    color: black;
-    justify-content: space-evenly;
-    margin: 50px;
-    position: sticky;
- 
-           
-}
+@import '../../variable.scss';
 
-.grid-products .grid-products{
-    background-color: white;
-}
+    .grid-products .grid-products{
+        background-color: white;
+    }
 
-.grid-products-title{
-    display: inline-block;
-    border: black;
-    color: white
-}
+    .grid-products-title{
+        display: inline-block;
+        border: black;
+        color: white
+    }
 
-.grid-products{
-    // display: flex;
-    // width: 100px;
-    // height: 100px;
-    // border-radius: 50px;
-    // justify-content: space-between;
-    grid-column: 1;
-    grid-row: 2;
-    block-size: inherit;
-    width: 200px;
-    height: 200px;
-    border-radius: 50px;
-    border-right: rgb(219, 219, 219) 1px solid;
-    border-bottom: rgb(219, 219, 219) 2px solid;
-       
+     #price-tag{
+            margin-top: -50px;
+            display: block;
+            font-family:$product-price;
+            border-radius: 15px;
+            color: inherit;
+            line-height: 1;
+            padding: 6px 9px 6px 9px;
+            text-align:center;
+            width: 80px;
+            z-index: 99;
+            background: #D4E9D7;
+            
+    }
+
+    .grid-products{
+        grid-column: 1;
+        grid-row: 2;
+        block-size: inherit;
+        width: 220px;
+        height: 220px;
+        border-radius: 10%;
+    }
+
+
+    .product-index-page{
+        justify-content: center;
+        .product-show-container{
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 36px !important;
+            padding-right: 36px !important;
+            margin-top: 100px;       
+            display: block;
+        }
+    }
+
+    .thumbnail-container{
+        
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        row-gap: 40px;
+        column-gap: 18px;
+        justify-items: stretch;
+    }
     
-}
+ 
+
+  
+
+   
+   
+
+    .small-category-container{
+        // position:absolute;
+        margin-top: -100px;
+    }

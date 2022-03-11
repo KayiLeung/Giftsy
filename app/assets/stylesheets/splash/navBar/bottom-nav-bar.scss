@@ -11,13 +11,16 @@
     text-align: center;
     display: flex;
     justify-content: space-between;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+
 }
 .nav-categroy {
     background-color: white;
     color: navTextColor;
     font-family: $open-sans;
     text-align: center;
-    padding: 5px 5px;
+    // padding: 5px 5px;
     text-decoration: none;
     border: none;
     justify-content: space-between;

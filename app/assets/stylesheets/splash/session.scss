@@ -1,15 +1,19 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
-
+@import '../variable.scss';
 //Font Variables
-$roboto-slab: 'Roboto Slab', serif;   
-$open-sans: 'Open Sans', sans-serif;
+
+.session-form{
+    width: 200px;
+    height: 200px;
+
+}
+
 
 .session-button{
-    border: 2px solid rgb(160, 158, 155); 
+    border: 2px solid black; 
     background-color: transparent;
     font-size: 16px;
-    font-family: $roboto-slab;
+    font-family: $product-price;
     color:rgb(160, 158, 155);
     border: none;
     
@@ -22,6 +26,7 @@ $open-sans: 'Open Sans', sans-serif;
 .session-button:hover{
     color: black;
     background-color: whitesmoke;
+    font-family: $product-price;
 }
 
 .session-button::before{
@@ -30,3 +35,28 @@ $open-sans: 'Open Sans', sans-serif;
     
 }
 
+.login-form-container{
+    display: center;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+
+
+    h3{
+        font-size: 20px;
+        font-family:$product-price ;
+    }
+
+    p{
+        font-size: 15px;
+        font-family:$product-price ;
+    }
+    label{
+        font-size: 15px;
+        font-family:$product-price ;
+    
+    }
+    
+
+
+}

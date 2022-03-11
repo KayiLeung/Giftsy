@@ -1,7 +1,7 @@
 // @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Smooch+Sans&display=swap');
 // $roboto-slab: 'Roboto Slab', serif;   
 // $open-sans: 'Open Sans', sans-serif;
-$modalColor : white;
+@import '../variable.scss';
  
  
  .modal-background {
@@ -11,8 +11,8 @@ $modalColor : white;
    right: 0;
    left: 0;
    background: black(0, 0, 0, 0.7);
-   border: cadetblue;
    z-index: 10;
+    backdrop-filter: blur(8px);
  }
 
  .modal-child {
@@ -21,15 +21,21 @@ $modalColor : white;
    left: 50%;
    background-color: $modalColor;
    transform: translate(-50%, -50%);
-    border-radius: 30px;
+  border-radius: 30px;
  }
 
  .close-x {
+   display: flex;
    position:-webkit-sticky;
    top: 5px;
    right: 5px;
    cursor: pointer;
    justify-content:right;
+   &hover{
+    color: white;
+    background-color:none ;
+    cursor: pointer;
+   }
  }
 
  .login-form-container {
@@ -38,6 +44,8 @@ $modalColor : white;
    padding: 15px;
    block-size: auto;
     border-radius: 30px;
-   border:2px solid rgb(107, 101, 92);
-   color: rgb(107, 101, 92);
+   border:3px solid $widthborder;
+   color: $widthborder;
+   width: 200px;
  }
+

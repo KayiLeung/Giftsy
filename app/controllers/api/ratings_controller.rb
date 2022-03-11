@@ -12,9 +12,7 @@ class Api::RatingsController < ApplicationController
 
 
     def create
-        debugger
         @rating = Rating.new(rating_params)
-        debugger
         if @rating.save
             render :show
         else
@@ -24,10 +22,11 @@ class Api::RatingsController < ApplicationController
 
 
     def update
+        # debugger
         @rating = Rating.find(params[:id])
-
-        if @rating.update(raing_params)
-            render 'api/ratings/show'
+        # debugger
+        if @rating.update(rating_params)
+            render :show
         else 
             render json @rating.errors.full_messages
         end
@@ -35,9 +34,11 @@ class Api::RatingsController < ApplicationController
 
 
     def destroy
-        @review = Review.find(params[:id])
-        @review.destroy
-        render json: ['deleted']
+        # debugger
+        @rating = Rating.find(params[:id])
+        # debugger
+        @rating.destroy
+        render :show
     end
 
     private

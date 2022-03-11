@@ -202,6 +202,522 @@ product14 = Product.create!(
 productpic14 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/retirement_1.jpg')
 product14.photo.attach(io: productpic14, filename: 'retirement_1.jpg')
 
+product15 = Product.create!(
+    title: 'Retirement Gift Box | Succulent Gift Box | Retirement | Retirement Gift | Gift for Retiree | Send a Gift', 
+    description: 'Is there someone you think is truly awesome – a coworker, friend, neighbor? Then let them know by sending them one of our truly lovely gift boxes packed with thoughtful items …. and we can mail directly to them!',
+    quantity: 10, 
+    price: 36.80, 
+    seller_id: user4.id,
+    category_id: category8.id
+)
+productpic15 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement1.jpg')
+product15.photo.attach(io: productpic15, filename: 'new-db/new-retirement1.jpg')
+# new-retirement1
+
+product16 = Product.create!(
+    title: 'Funny Retirement Card - Fucking Quitter', 
+    description: 'NOTE: All cards are printed without censoring. If you would like the card printed with censoring please leave a note to seller.
+Thank You
+
+Card Size measures 4.25 x 5.5 inches (size A2 Folded)
+Shipped with a Kraft Envelope
+Printed on High Quality Acid-Free White Cardstock
+Inside is Blank',
+    quantity: 10, 
+    price: 4.00, 
+    seller_id: user4.id,
+    category_id: category8.id
+)
+productpic16 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement2.jpg')
+product16.photo.attach(io: productpic16, filename: 'new-db/new-retirement2.jpg')
+#new-retirement2
+
+product17 = Product.create!(
+    title: 'Pairs well with Retirement. Retirement gift for her. Retirement gift for him. Funny retirement gift.', 
+    description: "Hi there! Thanks for shopping The Pretty Little Mess!
+
+**This listing is for the label only.**
+
+♥ABOUT OUR LABELS♥
+
+Our labels are water-resistant and repositionable!
+Need to chill your wine or keep it in the fridge, no problem!
+Didn't place it right the first time, no problem!
+Our labels are so simple... they simply peel and stick!
+All labels come cut to the specific size you ordered to fit your bottle with ease.
+
+♥AVAILABLE SIZES♥
+
+Our Large and Small Wine Labels will fit most standard 750ml bottles of wine. Best to select a bottle with straight edges to prevent your label from wrinkling.
+
+Our Champagne labels will fit most standard champagne and prosecco bottles. Best to select a bottle with the least amount of curving to prevent wrinkles. We also recommend this label for Sutter Home Mini wines, and beer bottles.",
+    quantity: 10, 
+    price: 2.50, 
+    seller_id: user4.id,
+    category_id: category8.id
+)
+productpic17 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement3.jpg')
+product17.photo.attach(io: productpic17, filename: 'new-db/new-retirement3.jpg')
+#new-retirement3
+
+product18 = Product.create!(
+    title: 'Queen Has Retired-Socks-Retired AF-Retirement Gift-Retirement Socks-Retired 2022-Retirement Party-Funny Retirement-65th Birthday', 
+    description: "Welcome to If the Sock Fitz - We specialize in finding you the perfect pair of socks for any occasion (or no occasion at all)!
+These comfortable and warm socks are perfect for the person retiring in your life!
+Be stylish and send the right message all at the same time. Put your feet up and let your socks do the talking!
+",
+    quantity: 10, 
+    price: 16.89, 
+    seller_id: user4.id,
+    category_id: category8.id
+)
+productpic18 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement4.jpg')
+product18.photo.attach(io: productpic18, filename: 'new-db/new-retirement4.jpg')
+# new-retirement4
+
+product19 = Product.create!(
+    title: 'Personalized Retirement Beer Glass - Retirement Gift, Custom Year, Etched Pint Glasses, Retirement Gifts for Men or Women, Design: RETIRED', 
+    description: 'RETIREMENT GIFTS BEER GLASS ITEM DETAILS
+
+These glass mugs are etched with our popular retired design. By etching the glass, it creates a permanent effect that is dishwasher safe and will last a lifetime! Snag these retirement coffee mugs for your coworker, boss, friend or loved one!
+
+-Glasses are dishwasher safe
+-Engraving is permanent and requires no maintenance
+-Each glass comes carefully packaged
+-Great gifts for retired Dad, Boss, Friend, or Colleague',
+    quantity: 10, 
+    price: 12.41, 
+    seller_id: user4.id,
+    category_id: category8.id
+)
+productpic19 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement5.jpg')
+product19.photo.attach(io: productpic19, filename: 'new-db/new-retirement5.jpg')
+# new-retirement5
+
+product20 = Product.create!(
+    title: 'Retirement Gift for Men or Women | Work Anniversary Gift | Retirement Card Poster Sign | Retirement Party Decoration | ANY YEAR | Digital', 
+    description: 'Retirement Gift for Men or Women | Work Anniversary Gift | Retirement Card Poster Sign | Retirement Party Decoration | ANY YEAR | Digital
+
+AVAILABLE FOR ANY YEAR!',
+    quantity: 10, 
+    price: 36.80, 
+    seller_id: user4.id,
+    category_id: category8.id
+)
+productpic20 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement6.jpg')
+product20.photo.attach(io: productpic20, filename: 'new-db/new-retirement6.jpg')
+# new-retirement6
+
+product21 = Product.create!(
+    title: 'Housewarming Gift Glassware| Personal Housewarming Beer & Wine Glasses | Recent Move or New Home | Multiple Glassware and Designs Available', 
+    description: 'HOUSEWARMING GIFT:
+
+This unique housewarming gift is intended to cater to those looking for an engravement on a glass that is more personalized than you can find elsewhere. Our design was inspired by housewarming gifts that are specific to the last name and new location one is moving to.
+
+ENGRAVED GLASSES:
+
+We offer a variety of hand crafted glassware that is paired with the state design of your choice. Every glass is made to order and professionally hand engraved in the middle of each glass. Give a gift your loved ones will appreciate and that is sure to last a lifetime.',
+    quantity: 10, 
+    price: 10.95, 
+    seller_id: user2.id,
+    category_id: category7.id
+)
+productpic21 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-housewarming1.jpg')
+product21.photo.attach(io: productpic21, filename: 'new-db/new-housewarming1.jpg')
+# housewarming1
+
+product22 = Product.create!(
+    title: 'Home portrait, house painting, housewarming gift, our first home sign, home sweet home sign, watercolor home, house portrait, realtor gift', 
+    description: '(Home portrait, house painting, housewarming gift, our first home sign, home sweet home sign, watercolor home, house portrait, realtor gift)',
+    quantity: 10, 
+    price: 19.99, 
+    seller_id: user4.id,
+    category_id: category7.id
+)
+productpic22 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-housewarming2.jpg')
+product22.photo.attach(io: productpic22, filename: 'new-db/new-housewarming2.jpg')
+# housewarming2
+
+product23 = Product.create!(
+    title: 'Personalized First Home Christmas Ornament / Address / Housewarming Gift / Clay', 
+    description: "The perfect simple ornament to adorn your tree in your first home! Each ornament is hand stamped and personalized with the address and year of your choosing. Made from a custom rustic blend of polymer clay, these ornaments are durable and will withstand drops and falls off the tree. Because kids and cats happen! Tied with natural jute twine, this will be a treasured keepsake for years and years to come.
+
+Each ornament is hand made and hand stamped, so please do not anticipate machine made symmetry and perfection. In fact, we LOVE all things imperfectly perfect here, so small variances in each ornament make them full of character and uniquely charming.
+
+Please include only your street address in the personalization box. Most addresses will fit onto the ornament, but if you have a particularly long address please know that I may reach out to make sure we can make your design as beautifully fit as possible.",
+    quantity: 10, 
+    price: 25.00, 
+    seller_id: user2.id,
+    category_id: category7.id
+)
+productpic23 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-housewarming3.jpg')
+product23.photo.attach(io: productpic23, filename: 'new-db/new-housewarming3.jpg')
+# new-housewarming3
+
+product24 = Product.create!(
+    title: 'Wood World Map Wall Art Large Wall Decor Weltkarte Holz Travel Home Decor Housewarming Gift Anniversary Gift For Husband, Him Enjoy The Wood', 
+    description: 'Wood World Map Wall Art Large Wall Decor Weltkarte Holz Travel Home Decor Housewarming Gift Anniversary Gift For Husband, Him Enjoy The Wood
+
+If you feel your home lacks the modern centerpiece detail this is it. Made of high-quality birch plywood with flawless engraving details 3D Wooden World Map is the most amazing decor for any interior: minimalistic, meaningful, and really inspiring! Truly admired by homies and travelers.
+
+Wood World Map was created to become the perfect present for travelers with great taste in interior design. Explore the world from the comfort of your own home with our Map!',
+    quantity: 10, 
+    price: 39.50, 
+    seller_id: user2.id,
+    category_id: category7.id
+)
+productpic24 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-housewarming4.jpg')
+product24.photo.attach(io: productpic24, filename: 'new-db/new-housewarming4.jpg')
+# new-housewarming4
+
+product25 = Product.create!(
+    title: 'Flower Resin Coasters | Unique Coasters Set | Black Resin Coasters | Floral Coasters | Housewarming Gift - Gift for Teacher', 
+    description: 'Welcome to HomemadeFate! We’re a small, mother-daughter company that specializes in homemade resin products! Our black and gold flower coasters are made with clear epoxy resin. You can choose between a coaster set of 2,3,4 or 6 and if you don’t want a set, we offer single coasters as well! These unique flower coasters are a perfect addition to your home this summer!
+
+Colors:
+1. Black Shimmer
+2. Gold Flakes
+
+Materials: We use clear epoxy resin with gold flakes in the middle. We use a gold permanent marker for the trim!',
+    quantity: 10, 
+    price: 10.50, 
+    seller_id: user4.id,
+    category_id: category7.id
+)
+productpic25 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-housewarming5.jpg')
+product25.photo.attach(io: productpic25, filename: 'new-db/new-housewarming5.jpg')
+# new-housewarming5
+
+product26 = Product.create!(
+    title: 'Funny Home Decor | Funny Housewarming Gift | Prank Gift | Housewarming Gift | House Warming Gift', 
+    description: 'This funny Jesus home decor is the best prank gift for friends. Leave somewhere at the next housewarming party you attend or stealthily place in a friends house.
+
+Our Jesus door hanger measures 8.5” wide by 6.7” tall and fits on the left side of standard door frames. There is no need to physically attach the item as it sits by itself without adhesive.
+
+It is made from 1/4” thick plywood and has a solid black back.
+
+Item is cut and engraved in our home studio.',
+    quantity: 10, 
+    price: 19.95, 
+    seller_id: user1.id,
+    category_id: category7.id
+)
+productpic26 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-housewarming6.jpg')
+product26.photo.attach(io: productpic26, filename: 'new-db/new-housewarming6.jpg')
+# new-housewarming6
+
+product27 = Product.create!(
+    title: 'Embroidered Anniversary Date Hoodie, Roman Numerals Couples Sweatshirt, Gifts for Her, Gifts for Him, Valentines Gift, Khaki Hoodie,', 
+    description: 'THIS LISTING IS FOR ONE HOODIE
+
+Embroidered Anniversary Date Hoodie, Roman Numerals Anniversary Date Sweatshirt, Gifts for Her, Gifts for Him, Anniversary GIft, Wedding Gift',
+    quantity: 10, 
+    price: 40.00, 
+    seller_id: user4.id,
+    category_id: category6.id
+)
+productpic27 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-anniversary1.jpg')
+product27.photo.attach(io: productpic27, filename: 'new-db/new-anniversary1.jpg')
+# anniversary1
+
+product28 = Product.create!(
+    title: 'Personalised Couple Print, Couples Gift, Gift for Her, Boyfriend Girlfriend Print, Customised Couple Gift, , Anniversary Gift, Valentine', 
+    description: "★ PERSONALISED COUPLES PRINT ★
+
+
+SIZING
+-----------------------------------------------------
+• 8 x 10 inches
+• A5 - 5.8 x 8.3 inches, 14.8 x 21.0 cm
+• A4 - 8.27 x 11.69 inches, 21.0 x 29.7cm
+• A3 - 11.69 x 16.53 inches, 29.7 x 42.0cm
+• A2 - 16.53 x 23.39 inches, 42.0 x 59.4cm
+• A1 - 23.39 x 33.11 inches, 59.4 x 84.1cm
+
+* Please contact us if you require a size that is not listed",
+    quantity: 10, 
+    price: 7.65, 
+    seller_id: user4.id,
+    category_id: category6.id
+)
+productpic28 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-anniversary2.jpg')
+product28.photo.attach(io: productpic28, filename: 'new-db/new-anniversary2.jpg')
+# anniversary2
+
+# product29 = Product.create!(
+#     title: '', 
+#     description: '',
+#     quantity: 10, 
+#     price: 36.80, 
+#     seller_id: user4.id,
+#     category_id: category6.id
+# )
+# productpic29 = URI.open('')
+# product29.photo.attach(io: productpic29, filename: '')
+# # anniversary2
+
+product30 = Product.create!(
+    title: 'Personalized 3D Illusion Lamp Gift for Her. Custom Acrylic Lamp Gift. 3D Night Light Gift for Wife. Custom Led Lamp Gift for Girlfriend.', 
+    description: "❤ This 3D Illusion Lamp personalized as a gift for her. A beautiful 3D Night light can be bought as a gift for wife. Customized Led Lamp for a Girlfriend.
+
+❤ If you want to give a special gift to your girlfriend or boyfriend, then you are in the right place. You can prefer this customized led lamp as a gift for your wife or husband. This would be the best surprise for your beloved ones on Valentina's Day. Also, this present is suitable for the anniversary day of your mother and father. Our first duty is to make you pleasant. Therefore, we customize this led lamp for your pleasure.",
+    quantity: 10, 
+    price: 40.80, 
+    seller_id: user4.id,
+    category_id: category6.id
+)
+productpic30 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-anniversary2.jpg')
+product30.photo.attach(io: productpic30, filename: 'new-db/new-anniversary3.jpg')
+# anniversary3
+
+product31 = Product.create!(
+    title: 'custom line drawing from photo, custom wedding line art, custom newlyweds line drawing, anniversary gift, personalized hand drawn art', 
+    description: "⚡ CUSTOM LINE ART IS 100% HAND-DRAWN BY A PROFESSIONAL DESIGNER ⚡
+
+THIS IS DIGITAL FILE, NO PHYSICAL PRODUCT WILL BE SHIPPED (print + ship available, see below)
+
+PROCESS
+1. Purchase listing
+2. Send your picture via Etsy messages (remember this is line art, so details like faces will not be included)
+3. Your final art will be sent to the email address on your Etsy account within 3-10 business days
+4. You will receive your art as 8x10 unless you specify another size",
+    quantity: 10, 
+    price: 30.00, 
+    seller_id: user2.id,
+    category_id: category6.id
+)
+productpic31 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-anniversary4.jpg')
+product31.photo.attach(io: productpic31, filename: 'new-db/new-anniversary4.jpg')
+# anniversary4
+
+product32 = Product.create!(
+    title: 'Personalized Valentines Day Gift / Love Couples Name Pallet Sign / Boyfriend Girlfriend Gift / Fiance Wedding Anniversary Gift / Custom Name', 
+    description: "This Couples Name Pallet Sign makes a great gift for your Fiance, Boyfriend or Girlfriend. This Custom Wood Sign is a great, simple idea for a Wedding, Anniversary or Valentine's Day. Not married yet? This can also be a great gift idea for your Fiance, Boyfriend or Girlfriend.",
+    quantity: 10, 
+    price: 36.00, 
+    seller_id: user1.id,
+    category_id: category6.id
+)
+productpic32 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-anniversary5.jpg')
+product32.photo.attach(io: productpic32, filename: 'new-db/new-anniversary5.jpg')
+# anniversary5
+
+product33 = Product.create!(
+    title: 'Reasons why I love you, valentines day gift, boyfriend, husband, wife, partner, gifts for him, love, scrapbook, memories, journal, our story', 
+    description: "The perfect gift for someone who doesn't like a lot of fuss on Valentines day, yet still appreciates a thoughtful sentiment. The Little Book of Us is a mini scrapbook enabling you to capture your love story so far. Tell them the reasons you love them, record the milestones of your journey together and note down some of your most treasured memories using the prompts in this little book.
+
+With a plain, elegant and timeless design, this makes a beautiful gift for him on valentines day. It's also popular for first anniversaries, birthdays, or 'just because…'
+
+For every page with prompts, there is a blank page beside for those of you who do want to use this like a scrapbook (however as you can see from the pictures, it is equally lovely if you just prefer to fill out the text sections.",
+    quantity: 10, 
+    price: 14.09, 
+    seller_id: user4.id,
+    category_id: category6.id
+)
+productpic33 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-anniversary6.jpg')
+product33.photo.attach(io: productpic33, filename: 'new-db/new-anniversary6.jpg')
+# anniversary6
+
+product34 = Product.create!(
+    title: 'Actual Baby Footprint Necklace Stamp in Gold / Silver / Rose Gold, Birthstone Locket Coin Handprint Kids Name Engraved Birthday Day Necklace', 
+    description: 'Baby Footprint Birthstone Necklace in Gold / Silver / Rose Gold, Locket Coin Handprint Kids Name Engraved Birthday Memorial Day Necklace',
+    quantity: 10, 
+    price: 26.64, 
+    seller_id: user4.id,
+    category_id: category5.id
+)
+productpic34 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/newborn1.jpg')
+product34.photo.attach(io: productpic34, filename: 'new-db/newborn1.jpg')
+# newborn1
+
+
+product35 = Product.create!(
+    title: 'PERSONALIZED Baby Bathrobe -Animal -Infant Bath robe -Custom Monogram /Name Embroidered Gift /Elephant /Infant /Baby Shower /Baby Bath Robe', 
+    description: 'FREE Personalized Name or Monogram on the front of the bathrobe !
+
+Personalization of the BACK of the Robe at extra cost.
+
+This adorable hooded bathrobe is made of super soft plush fabric to keep baby snug and warm! Bathrobe features a Giraffe print, hood with animal ears and a sash tie. The generously sized robe fits most babies size 0 - 9 months. Perfect for after bath or pool time. Makes a great gift for a precious new baby!
+Generously sized robe fits 0 - 9 months
+Hood features animal ears
+Beige and white Giraffe print
+Machine washable',
+    quantity: 10, 
+    price: 22.49, 
+    seller_id: user4.id,
+    category_id: category5.id
+)
+productpic35 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/newborn2.jpg')
+product35.photo.attach(io: productpic35, filename: 'new-db/newborn2.jpg')
+# newborn2
+
+product36 = Product.create!(
+    title: 'Personalized Baby Blanket, Rosewater Pink Hide Minky and You Choose Minky Dot Color, Newborn Girl gift, Baby Shower Gift, BOW NOT INCLUDED', 
+    description: "Welcome to Baby Boo's!
+
+Featured Blanket :
+Our Minky Blanket has a designer Rosewater Hide Minky and Super Soft Minky Back that you will choose the color for. Our minky and blankets are handmade in the USA. Blankets can be used as your baby grows and often become a treasure used for many years to come.We offer a variety of fun and fresh designer prints pairing them with minky backs. We combine originality with functionality for both mom and baby.",
+    quantity: 10, 
+    price: 24.00, 
+    seller_id: user3.id,
+    category_id: category5.id
+)
+productpic36 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/newborn3.jpg')
+product36.photo.attach(io: productpic36, filename: 'new-db/newborn3.jpg')
+# newborn3
+
+
+product37 = Product.create!(
+    title: 'Personalized Toy Gifts, Puzzle Piece Names, Custom Wooden Baby Name Puzzle for Toddlers, Baby Keepsake, Best Baby Gift, Toys for 18 Months', 
+    description: "A well designed name puzzle will be a unique toy gift for 1-4 years old. It's could be a great early learning toy and beautiful name sign as nursery decor.
+
+As listed is a personalized wooden name puzzle with 2 lines of adorable animal heads. Babies could learn to spell their names and tell animals while playing with this name puzzle. Below the animals, the name of each will be laser engraved so it could also be played as a matching game.",
+    quantity: 10, 
+    price: 14.40, 
+    seller_id: user3.id,
+    category_id: category5.id
+)
+productpic37 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/newborn4.jpg')
+product37.photo.attach(io: productpic37, filename: 'new-db/newborn4.jpg')
+# newborn4
+
+
+
+product38 = Product.create!(
+    title: '3 Piece Fox Rattle | New Born Gift | Baby Gift | Easter Baby Gift | 100% Cotton Crochet | Rattle Set | Handmade Toy | Baby rattle | Eco', 
+    description: "BPA free Wooden Crochet baby Rattle.
+
+- Designed for newborn babies and sensitive little ones. All our crochet rattle sets are made from eco friendly beech wood and 100% cotton yarn. Perfect for children with allergies.
+
+- Handmade and untreated.
+
+- Promotes your babies hand eye coordination and helps differentiate between shapes, sizes, colours and textures engaging all the senses.
+
+- The sound of the rattle will keep the baby entertained for hours.",
+    quantity: 10, 
+    price: 34.34, 
+    seller_id: user3.id,
+    category_id: category5.id
+)
+productpic38 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/newborn6.jpg')
+product38.photo.attach(io: productpic38, filename: 'new-db/newborn6.jpg')
+# newborn6
+
+
+product39 = Product.create!(
+    title: 'Personalized bunny | baby shower gift | stuffed animal | Easter Basket | baby boy gift | baby girl gift| Sweet Nibble |Custom Baby Gift', 
+    description: "Sweet Nibble Size bunny. This is our largest size bunny.
+
+Best Baby Shower Gift! Beautiful stuffed bunny with name embroidered on the ear. Bunnies By The Bay provides me with a gorgeous plush bunny, then we make it even more special by adding your child's name to an ear. Beautiful keepsake gift.
+
+EMBROIDERY SHOWS ON THE BACK OF THE EAR. IT IS NOT HIDDEN.
+",
+    quantity: 10, 
+    price: 39.80, 
+    seller_id: user3.id,
+    category_id: category5.id
+)
+productpic39 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/newborn5.jpg')
+product39.photo.attach(io: productpic39, filename: 'new-db/newborn5.jpg')
+# newborn5
+
+product40 = Product.create!(
+    title: "Unique Wedding Gift for Couple - USA Photo Map - FREE SHIPPING", 
+    description: "==== 𝗠𝗮𝗽 𝗱𝗲𝘁𝗮𝗶𝗹𝘀 ====
+
+• Measures - 24 x 36 inches
+• Available in gray and blue colors
+• Includes a set of glue dots to attach photos
+• Comes rolled in a cardboard gift tube
+• Comes without a frame, fits 24 x 36 frames
+
+==== 𝗛𝗼𝘄 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗲 𝗺𝗮𝗽? ====
+
+𝟭. Cut out your travel photos
+𝟮. Stick photos to the background with included glue dots
+𝟯. Place the upper plastic map over the background
+𝟰. Put the map in a frame (not included)",
+    quantity: 10, 
+    price: 48.99, 
+    seller_id: user2.id,
+    category_id: category1.id
+)
+productpic40 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/wedding2.jpg')
+product40.photo.attach(io: productpic40, filename: 'new-db/wedding2.jpg')
+# wedding2
+
+product41 = Product.create!(
+    title: "Surname Wedding Neon Sign, Wedding Decoration, Reception LED Sign, Neon Sign Custom, Wedding Backdrop Neon Light, Wedding Gift, Home Decor", 
+    description: "❗️❗️This product listing is a special offer with low margin as a blessing to the wedding couples. We ONLY accept family names as content for this listing
+
+【Standard order】Ship out in 1-2 weeks.
+【Rush order + $40】Ship out in 3-5 days.
+✈️ Delivery by DHL/Fedex/TNT takes 3-7 days.",
+    quantity: 10, 
+    price: 43.80, 
+    seller_id: user2.id,
+    category_id: category1.id
+)
+productpic41 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/wedding1.jpg')
+product41.photo.attach(io: productpic41, filename: 'new-db/wedding1.jpg')
+# wedding1
+
+product42 = Product.create!(
+    title: "Personalized Bamboo Cheese Board Set / Charcuterie Board Set, Custom Engraved Cutting Board, Wedding gifts, Christmas gifts, Couple Gifts", 
+    description: "You’ll be so excited to unwrap this high quality, thoughtfully designed bamboo cheese board. This comes with an adorable slide out drawer with initialed specialty knives, slates, markers and a wine opener. Packed lovingly, as a luxury item deserves, you’ll also get a white cloth bag to keep the wooden cheese tray in.
+
+The personalization makes it so much more special than any plain board. You’ll be eager to give this high-quality gift, because it comes out gorgeous.",
+    quantity: 10, 
+    price: 39.99, 
+    seller_id: user2.id,
+    category_id: category1.id
+)
+productpic42 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/wedding3.jpg')
+product42.photo.attach(io: productpic42, filename: 'new-db/wedding3.jpg')
+# wedding3
+
+# product40 = Product.create!(
+#     title: "", 
+#     description: "",
+#     quantity: 10, 
+#     price: 40.80, 
+#     seller_id: user2.id,
+#     category_id: category1.id
+# )
+# productpic40 = URI.open('')
+# product40.photo.attach(io: productpic40, filename: '')
+# # wedding4
+
+# product40 = Product.create!(
+#     title: "", 
+#     description: "",
+#     quantity: 10, 
+#     price: 40.80, 
+#     seller_id: user2.id,
+#     category_id: category1.id
+# )
+# productpic40 = URI.open('')
+# product40.photo.attach(io: productpic40, filename: '')
+# # wedding5
+
+# product40 = Product.create!(
+#     title: "", 
+#     description: "",
+#     quantity: 10, 
+#     price: 40.80, 
+#     seller_id: user2.id,
+#     category_id: category1.id
+# )
+# productpic40 = URI.open('')
+# product40.photo.attach(io: productpic40, filename: '')
+# # wedding6
+
+
+
+
+
+
+
 rating1 = Rating.create!(score: 4 ,buyer_id: user2.id,product_id: product1.id ,comment:'Love it!')
 rating2 = Rating.create!(score: 5 ,buyer_id: user4.id,product_id: product2.id ,comment:'Love it!')
 rating3 = Rating.create!(score: 5 ,buyer_id: user3.id,product_id: product3.id ,comment:'Love it!')
@@ -211,8 +727,13 @@ rating6 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product6.id
 rating7 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product7.id ,comment:'Love it!')
 rating8 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product8.id ,comment:'Love it!')
 rating9 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product9.id ,comment:'Love it!')
-rating10 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product10.id ,comment:'Love it!')
+rating10 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product10.id ,comment:'Great product and shift for a friend. Requested for them to make sure the lettering is darker and not too light and they made a note for it to be checked for that prior to shipping. It turned out great! They are very understanding. Thank you guys!!!')
 rating11 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product11.id ,comment:'Love it!')
 rating12 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product12.id ,comment:'Love it!')
 rating13 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product13.id ,comment:'Love it!')
 rating14 = Rating.create!(score: 5 ,buyer_id: userDemo.id,product_id: product14.id ,comment:'Love it!')
+rating16 = Rating.create!(score: 4 ,buyer_id: user1.id,product_id: product15.id ,comment:'Love it!')
+rating17 = Rating.create!(score: 4 ,buyer_id: user1.id,product_id: product16.id ,comment:'Great product and shift for a friend. Requested for them to make sure the lettering is darker and not too light and they made a note for it to be checked for that prior to shipping. It turned out great! They are very understanding. Thank you guys!!!')
+rating18 = Rating.create!(score: 4 ,buyer_id: user1.id,product_id: product17.id ,comment:'Love it!')
+rating19 = Rating.create!(score: 4 ,buyer_id: user1.id,product_id: product18.id ,comment:'Love it!')
+rating20 = Rating.create!(score: 4 ,buyer_id: user1.id,product_id: product19.id ,comment:'Great product and shift for a friend. Requested for them to make sure the lettering is darker and not too light and they made a note for it to be checked for that prior to shipping. It turned out great! They are very understanding. Thank you guys!!!')
