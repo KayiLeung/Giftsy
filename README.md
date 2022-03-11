@@ -1,24 +1,19 @@
-# README
+# Giftsy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## About
+Giftsy is a full stack Etsy clone that displays various handmade gifts for sale. Users are able to search for gifts for different occasion.
 
-* Ruby version
+[Live Demo](http://https://giftsy.herokuapp.com/)
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+* Ruby on Rails
+* HTML
+* SCSS
+* JavaScript
+* React
+* AWs
+* PostgreSQL
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Features
