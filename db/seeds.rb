@@ -10,6 +10,7 @@
 User.delete_all
 Product.delete_all
 Category.delete_all
+Rating.delete_all
 # ApplicationRecord.connection.reset_pk_sequence!('users')
 
 category1 = Category.create!(title: 'Wedding')
@@ -210,9 +211,10 @@ product15 = Product.create!(
     seller_id: user4.id,
     category_id: category8.id
 )
-productpic15 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement1.jpg')
+productpic15 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirment1.jpg')
 product15.photo.attach(io: productpic15, filename: 'new-db/new-retirement1.jpg')
-# new-retirement1
+# new-retirement1   
+# aws link is not working
 
 product16 = Product.create!(
     title: 'Funny Retirement Card - Fucking Quitter', 
@@ -256,24 +258,24 @@ Our Champagne labels will fit most standard champagne and prosecco bottles. Best
     seller_id: user4.id,
     category_id: category8.id
 )
-productpic17 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement3.jpg')
-product17.photo.attach(io: productpic17, filename: 'new-db/new-retirement3.jpg')
+productpic17 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirment3.jpg')
+product17.photo.attach(io: productpic17, filename: 'new-db/new-retirment3.jpg')
 #new-retirement3
 
-product18 = Product.create!(
-    title: 'Queen Has Retired-Socks-Retired AF-Retirement Gift-Retirement Socks-Retired 2022-Retirement Party-Funny Retirement-65th Birthday', 
-    description: "Welcome to If the Sock Fitz - We specialize in finding you the perfect pair of socks for any occasion (or no occasion at all)!
-These comfortable and warm socks are perfect for the person retiring in your life!
-Be stylish and send the right message all at the same time. Put your feet up and let your socks do the talking!
-",
-    quantity: 10, 
-    price: 16.89, 
-    seller_id: user4.id,
-    category_id: category8.id
-)
-productpic18 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement4.jpg')
-product18.photo.attach(io: productpic18, filename: 'new-db/new-retirement4.jpg')
-# new-retirement4
+# product18 = Product.create!(
+#     title: 'Queen Has Retired-Socks-Retired AF-Retirement Gift-Retirement Socks-Retired 2022-Retirement Party-Funny Retirement-65th Birthday', 
+#     description: "Welcome to If the Sock Fitz - We specialize in finding you the perfect pair of socks for any occasion (or no occasion at all)!
+# These comfortable and warm socks are perfect for the person retiring in your life!
+# Be stylish and send the right message all at the same time. Put your feet up and let your socks do the talking!
+# ",
+#     quantity: 10, 
+#     price: 16.89, 
+#     seller_id: user4.id,
+#     category_id: category8.id
+# )
+# productpic18 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement4.jpg')
+# product18.photo.attach(io: productpic18, filename: 'new-db/new-retirement4.jpg')
+# # new-retirement4
 
 product19 = Product.create!(
     title: 'Personalized Retirement Beer Glass - Retirement Gift, Custom Year, Etched Pint Glasses, Retirement Gifts for Men or Women, Design: RETIRED', 
