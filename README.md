@@ -17,3 +17,18 @@ Giftsy is a full stack Etsy clone that displays various handmade gifts for sale.
 * PostgreSQL
 
 ## Features
+
+### Product Listing
+
+* Displays products which user can view and select.
+* The products are listed in sections of rows which display he products by category or row style
+
+### Reviews
+
+* Users may leave rating for an item and leave review if they are logged in.  User are able to edit or delete after reviews are made.
+
+
+### Future directions
+
+* Allow users to add products to their cart with the number of products.
+* 
