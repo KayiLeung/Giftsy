@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# require 'open-uri'
+require 'open-uri'
 
 User.delete_all
 Product.delete_all
@@ -444,17 +444,6 @@ productpic28 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-
 product28.photo.attach(io: productpic28, filename: 'new-db/new-anniversary2.jpg')
 # anniversary2
 
-# product29 = Product.create!(
-#     title: '', 
-#     description: '',
-#     quantity: 10, 
-#     price: 36.80, 
-#     seller_id: user4.id,
-#     category_id: category6.id
-# )
-# productpic29 = URI.open('')
-# product29.photo.attach(io: productpic29, filename: '')
-# # anniversary2
 
 product30 = Product.create!(
     title: 'Personalized 3D Illusion Lamp Gift for Her. Custom Acrylic Lamp Gift. 3D Night Light Gift for Wife. Custom Led Lamp Gift for Girlfriend.', 
@@ -466,7 +455,7 @@ product30 = Product.create!(
     seller_id: user4.id,
     category_id: category6.id
 )
-productpic30 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-anniversary2.jpg')
+productpic30 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-anniversary3.jpg')
 product30.photo.attach(io: productpic30, filename: 'new-db/new-anniversary3.jpg')
 # anniversary3
 
