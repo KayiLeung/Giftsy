@@ -39,10 +39,12 @@ class SessionForm extends React.Component {
 
     renderErrors() {
         if (this.props.errors) {
+            console.log(this.props.errors)
             return (
                 <ul className="form-errors">
                     {this.props.errors.map((error, i) => (
                         <li key={i} className="session-errors">
+
                             {error}
                         </li>
                     ))}
@@ -68,17 +70,10 @@ class SessionForm extends React.Component {
                                 value={this.state.fname}
                                 onChange={this.handleInput('fname')}
                             />
-                        {/* <input
-                            type="text"
-                            value={this.state.fname}
-                                onChange={this.handleInput('fname')} /> */}
                     </label>
                     <br />
                     <label><br />Last Name<br />
-                        {/* <input
-                            type="text"
-                            value={this.state.lname}
-                                onChange={this.handleInput('lname')} /> */}
+   
                             <TextField
                                 required
                                 id="filled-required"

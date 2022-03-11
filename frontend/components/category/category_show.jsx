@@ -82,7 +82,7 @@ class CategoryShow extends React.Component {
                         ))} */}
                         {catProducts.map((product, idx) => (
                             <Link to={`/products/${product.id}`}>
-                                <ImageListItem key={idx}>
+                                <ImageListItem key={`${product.title}-${idx}`}>
                                     <img
                                         src={`${product.photoUrl}?w=164&h=164&fit=crop&auto=format`}
                                         // srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`

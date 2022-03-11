@@ -66,7 +66,7 @@ class RatingForm extends React.Component {
                 </div>
                 <div className='rating-form-container'>
                     <div>
-                        <label>Leave Reviews:</label>
+                        <label>Leave a review:</label>
                         <form onSubmit={this.handleSubmit}>
 
                             <Rating
