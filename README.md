@@ -13,7 +13,7 @@ Giftsy is a full stack Etsy clone that displays various handmade gifts for sale.
 * SCSS
 * JavaScript
 * React
-* AWs
+* AWS
 * PostgreSQL
 
 ## Features
@@ -23,6 +23,8 @@ Giftsy is a full stack Etsy clone that displays various handmade gifts for sale.
 * Displays products which user can view and select.
 * The products are listed in sections of rows which display he products by category or row style
 
+
+
 ### Reviews
 
 * Users may leave rating for an item and leave review if they are logged in.  User are able to edit or delete after reviews are made.
@@ -31,4 +33,35 @@ Giftsy is a full stack Etsy clone that displays various handmade gifts for sale.
 ### Future directions
 
 * Allow users to add products to their cart with the number of products.
-* 
+
+
+### Code Snippet
+* I want user to be able to read ratings and reviews
+* user can edit or delete by on click
+```  
+return (
+        <div className='rating-container'>
+            <div className='customer-ratings'>
+                <Rating
+                    style={{ color: 'black' }}
+                    name='Rating Rank'
+                    value={props.rating.score}
+                    precision={0.5}
+                    key={`rating-${props.rating.id}`}
+                />
+            </div>
+                <RatingEditSubmitFormContainer
+                    rating={props.rating}
+                    updateRating={updateRating}
+                />
+            <div className='rating-edit-delete-btn'>
+            <Link to={`/ratings/${props.ratingId}`}>Edit</Link>
+
+            <button onClick={() => props.deleteRating(props.ratingId)
+            }>            
+                Delete
+            </button>
+            </div>
+            
+        </div>
+    )
