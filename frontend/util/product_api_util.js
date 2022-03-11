@@ -1,5 +1,4 @@
 export const fetchProducts = () => {
-    // debugger
     return ( $.ajax({
         method: 'GET',
         url: 'api/products'

@@ -8,7 +8,7 @@ import { fetchRating } from "../../actions/rating_action";
 import RatingForm from "./rating_form";
 
 const mSTP = (state, ownProps) => {
-    // debugger
+ 
     return {
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],
@@ -18,7 +18,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    // debugger
+   
     return {
         action: (rating, productId) => dispatch(createRating(rating, productId)),
         openModal: modal => dispatch(openModal(modal)),

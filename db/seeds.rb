@@ -262,20 +262,20 @@ productpic17 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-
 product17.photo.attach(io: productpic17, filename: 'new-db/new-retirment3.jpg')
 #new-retirement3
 
-# product18 = Product.create!(
-#     title: 'Queen Has Retired-Socks-Retired AF-Retirement Gift-Retirement Socks-Retired 2022-Retirement Party-Funny Retirement-65th Birthday', 
-#     description: "Welcome to If the Sock Fitz - We specialize in finding you the perfect pair of socks for any occasion (or no occasion at all)!
-# These comfortable and warm socks are perfect for the person retiring in your life!
-# Be stylish and send the right message all at the same time. Put your feet up and let your socks do the talking!
-# ",
-#     quantity: 10, 
-#     price: 16.89, 
-#     seller_id: user4.id,
-#     category_id: category8.id
-# )
-# productpic18 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement4.jpg')
-# product18.photo.attach(io: productpic18, filename: 'new-db/new-retirement4.jpg')
-# # new-retirement4
+product18 = Product.create!(
+    title: 'Queen Has Retired-Socks-Retired AF-Retirement Gift-Retirement Socks-Retired 2022-Retirement Party-Funny Retirement-65th Birthday', 
+    description: "Welcome to If the Sock Fitz - We specialize in finding you the perfect pair of socks for any occasion (or no occasion at all)!
+These comfortable and warm socks are perfect for the person retiring in your life!
+Be stylish and send the right message all at the same time. Put your feet up and let your socks do the talking!
+",
+    quantity: 10, 
+    price: 16.89, 
+    seller_id: user4.id,
+    category_id: category8.id
+)
+productpic18 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirment4.jpg')
+product18.photo.attach(io: productpic18, filename: 'new-db/new-retirement4.jpg')
+# new-retirement4
 
 product19 = Product.create!(
     title: 'Personalized Retirement Beer Glass - Retirement Gift, Custom Year, Etched Pint Glasses, Retirement Gifts for Men or Women, Design: RETIRED', 
@@ -292,21 +292,19 @@ These glass mugs are etched with our popular retired design. By etching the glas
     seller_id: user4.id,
     category_id: category8.id
 )
-productpic19 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement5.jpg')
+productpic19 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirment5.jpg')
 product19.photo.attach(io: productpic19, filename: 'new-db/new-retirement5.jpg')
 # new-retirement5
 
 product20 = Product.create!(
     title: 'Retirement Gift for Men or Women | Work Anniversary Gift | Retirement Card Poster Sign | Retirement Party Decoration | ANY YEAR | Digital', 
-    description: 'Retirement Gift for Men or Women | Work Anniversary Gift | Retirement Card Poster Sign | Retirement Party Decoration | ANY YEAR | Digital
-
-AVAILABLE FOR ANY YEAR!',
+    description: 'Retirement Gift for Men or Women | Work Anniversary Gift | Retirement Card Poster Sign | Retirement Party Decoration | ANY YEAR | Digital AVAILABLE FOR ANY YEAR!',
     quantity: 10, 
     price: 36.80, 
     seller_id: user4.id,
     category_id: category8.id
 )
-productpic20 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirement6.jpg')
+productpic20 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirment6.jpg')
 product20.photo.attach(io: productpic20, filename: 'new-db/new-retirement6.jpg')
 # new-retirement6
 

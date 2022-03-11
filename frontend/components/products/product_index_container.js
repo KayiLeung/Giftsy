@@ -5,7 +5,6 @@ import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_action';
 
 const mSTP = ({ session, entities: { users, products } }) => {
-    // debugger
     return { 
         products : Object.values(products),
         currentUser: users[session.id],
@@ -13,7 +12,7 @@ const mSTP = ({ session, entities: { users, products } }) => {
 }
 
 const mDTP = dispatch => {
-    // debugger
+
     return {
         fetchAllProducts: () => dispatch(fetchAllProducts()),
         fetchProduct: productId => dispatch(fetchProduct(productId)),

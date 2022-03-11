@@ -7,15 +7,15 @@ import { FaShippingFast } from 'react-icons/fa'
 class ProductIndex extends React.Component {
     constructor(props) {
         super(props)
-        // debugger
+       
     }
     componentDidMount(){
-        // debugger
+       
         this.props.fetchAllProducts()
     }
 
     render(){
-        // debugger
+       
         const sessionLinks = () => (
             <>
                 <div className='nav-buttons'>

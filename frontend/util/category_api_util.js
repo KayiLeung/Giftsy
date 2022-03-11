@@ -1,5 +1,5 @@
 export const fetchCategories = () => {
-    // debugger
+
     return( 
         $.ajax({ 
             method: "GET",
@@ -9,7 +9,6 @@ export const fetchCategories = () => {
 }
 
 export const fetchCategory = categoryId => {
-    // debugger
     return (
         $.ajax({
         method: "GET",

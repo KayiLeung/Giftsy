@@ -41,7 +41,7 @@ export const createRating = (productId, rating) => dispatch => {
 }
 
 export const updateRating = (rating) => dispatch => {
-        // debugger
+
         return (
         RatingApiUtil.updateRating(rating)
                 .then(rating => {

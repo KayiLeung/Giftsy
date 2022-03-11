@@ -23,7 +23,6 @@ export const createRating = (rating, productId) => {
 } 
 
 export const updateRating = (rating) => {
-    // debugger
     return (
         $.ajax({
             method: 'PATCH',

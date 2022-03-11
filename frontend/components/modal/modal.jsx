@@ -20,12 +20,11 @@ function Modal({ modal , closeModal, signupForm, loginForm }) {
             component = <SignupFormContainer />;
             break;
         case 'edit':
-            // debugger
+
             component = <EditRatingContainer />
         default:
             return null;
     }
-    // debugger
     return (
         <div className='modal-content '>
 

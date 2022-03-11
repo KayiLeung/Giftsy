@@ -14,11 +14,9 @@ export const receiveProduct = product => ({
 })
 
 export const fetchAllProducts = () => dispatch => {
-    // debugger
     return (
         ProductApiUtil.fetchProducts()
         .then((products) => {
-            // debugger
             return (
                 dispatch(receiveAllProducts(products))
             )

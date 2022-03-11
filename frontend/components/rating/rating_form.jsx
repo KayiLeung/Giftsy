@@ -20,16 +20,16 @@ class RatingForm extends React.Component {
 
 
     handleSubmit(e) {
-        // debugger
+    
         e.preventDefault();
         if (!this.props.user) {
             this.props.openModal('login')
         } else {
-            // debugger
+       
             if (this.props.formType === 'create_rating') {
             const productId = this.props.product.id;
             const buyerId = this.props.user
-            // debugger
+           
                 const rating = Object.assign({}, {...this.state, 
                     buyer_id: buyerId,
                     product_id: productId

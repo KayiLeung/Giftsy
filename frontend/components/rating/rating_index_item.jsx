@@ -8,10 +8,9 @@ import RatingEditSubmitForm from '../rating/rating_edit_submit_form'
 import { updateRating } from '../../util/rating_api_util';
 const ReviewIndexItem = props => {
 
-    const editRating = (e) => {
-        // debugger
-        props.openModal('edit')
-    }
+    // const editRating = (e) => {
+    //     props.openModal('edit')
+    // }
 
     return (
         <div className='rating-container'>

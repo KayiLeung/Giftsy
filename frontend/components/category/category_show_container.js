@@ -5,7 +5,6 @@ import { fetchAllProducts } from "../../actions/product_action"
 
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
         category: state.entities.categories[ownProps.match.params.categoryId],
         products: Object.values(state.entities.products)
@@ -14,7 +13,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    // debugger
+
     return {
         fetchCategory: id => dispatch(fetchCategory(id)),
         fetchAllProducts: () => dispatch(fetchAllProducts()),

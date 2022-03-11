@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const UserAccount = ({ currentUser, logout, setModalToOpen }) => {
-    // debugger
     const display = currentUser ? (
         <div>
             <p>Hello, {currentUser.fname}</p>
@@ -18,7 +17,7 @@ const UserAccount = ({ currentUser, logout, setModalToOpen }) => {
         </div>
     );
 
-    // debugger
+
     return (
         <div>
             {display}

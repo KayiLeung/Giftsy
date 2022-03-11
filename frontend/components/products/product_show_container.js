@@ -5,7 +5,7 @@ import { fetchAllRatings } from '../../actions/rating_action'
 import { fetchUsers} from '../../actions/user_actions'
 
 const mSTP = (state, ownProps) => {
-    // debugger
+    
     return {
         product: state.entities.products[ownProps.match.params.productId],
         users: state.entities.users,
@@ -13,7 +13,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    // debugger
+    
     return {
         fetchProduct: productId => dispatch(fetchProduct(productId)),
         fetchAllRatings: () => dispatch(fetchAllRatings()),

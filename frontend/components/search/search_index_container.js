@@ -4,7 +4,6 @@
 
 // const mSTP = (state, ownProps) => {
 
-//     debugger
 //     return {
 //         product: state.entitites.products[ownProps.match.params.productId]
 //     }

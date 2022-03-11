@@ -1,6 +1,5 @@
 class Api::ProductsController < ApplicationController
     def index 
-        # debugger
         @products = Product.all
         render :index
     end

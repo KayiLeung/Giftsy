@@ -6,7 +6,6 @@ import Splash from './splash_page';
 
 
 const mSTP = ({ session, entities: { users, categories } }, ownProps) => {
-    // debugger
     return {
         currentUser: users[session.id],
     }

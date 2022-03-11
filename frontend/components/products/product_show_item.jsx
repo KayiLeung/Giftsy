@@ -18,8 +18,6 @@ class ProductShowPage extends React.Component{
         if (!product) {
             return null;
         }
-        console.log( product.photoUrl)
-        debugger
         return (
             <div className='product-whole-container'>
             <div className='product-show-page'>

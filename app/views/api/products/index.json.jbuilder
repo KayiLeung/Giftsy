@@ -3,10 +3,10 @@
     #     # [{"id": 1, "title": "cup".....}, {"id": 2, "title": "plate"....}]
     #     json.photoUrl url_for(product.photo)
     # end
-# debugger
+
 
 @products.each do |product|
-    # debugger
+   
     json.set! product.id do 
         json.partial! 'product',  product: product
         json.photoUrl url_for(product.photo)

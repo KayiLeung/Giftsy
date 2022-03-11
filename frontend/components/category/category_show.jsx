@@ -21,7 +21,7 @@ class CategoryShow extends React.Component {
             return null;
         }
         const catProducts = products.filter(product => product.category_id === category.id)
-        debugger
+
         return (
             <div className='category-show-container'>
                 
@@ -59,9 +59,9 @@ class CategoryShow extends React.Component {
                     // })
                 }
                    
-                    <ImageList sx={{ width: 900, height: 500}} cols={4} rowHeight={50}>
+                    <ImageList sx={{ width: 1400, height: 700}} cols={4} rowHeight={500}>
                         
-                        {catProducts.map((product, idx) => (
+                        {/* {catProducts.map((product, idx) => (
                             <Link to={`/products/${product.id}`}>
                                 <ImageListItem key={idx}>
                                     <img
@@ -74,12 +74,12 @@ class CategoryShow extends React.Component {
                                             {product.title}
                                         </Typography>
                                         <Typography display="block" variant="caption" color="text.secondary">
-                                            {product.price} <span>Free Shipping</span>
+                                            {`$ ${product.price}`} <span>Free Shipping</span>
                                         </Typography>
                                     </Box>
                                 </ImageListItem>
                             </Link>
-                        ))}
+                        ))} */}
                         {catProducts.map((product, idx) => (
                             <Link to={`/products/${product.id}`}>
                                 <ImageListItem key={idx}>

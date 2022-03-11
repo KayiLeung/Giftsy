@@ -4,17 +4,16 @@ import ReviewIndexItem from "./rating_index_item";
 
 class RatingIndex extends React.Component{
     constructor(props) {
-        // debugger
         super(props)
     }
 
     componentDidMount() {
-        // debugger
+
         this.props.fetchAllRatings();
     }
 
     render(){
-        // debugger
+
         const { ratings, users, currentUser, product, deleteRating, openModal, updateRating} = this.props
         const productId = product.id
         const productRatings = ratings.filter(rating => rating.product_id === productId)

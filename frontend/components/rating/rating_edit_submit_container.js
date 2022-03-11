@@ -9,7 +9,7 @@ import { fetchProduct} from '../../actions/product_action'
 import RatingEditSubmitForm from '../rating/rating_edit_submit_form'
 
 const mSTP = (state, ownProps) => {
-    // debugger
+ 
     return {
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],
@@ -18,7 +18,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    // debugger
+
     return {
         action: rating => dispatch(updateRating(rating)),
         fetchRating: ratingId => dispatch(fetchRating(ratingId)),

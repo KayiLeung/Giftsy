@@ -22,9 +22,8 @@ class Api::RatingsController < ApplicationController
 
 
     def update
-        # debugger
         @rating = Rating.find(params[:id])
-        # debugger
+
         if @rating.update(rating_params)
             render :show
         else 
@@ -34,9 +33,7 @@ class Api::RatingsController < ApplicationController
 
 
     def destroy
-        # debugger
         @rating = Rating.find(params[:id])
-        # debugger
         @rating.destroy
         render :show
     end

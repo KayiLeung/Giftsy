@@ -4,7 +4,7 @@ import { FaSearch } from '@react-icons/all-files/fa/FaSearch'
 
 class Search extends React.Component {
     constructor(props) {
-        // debugger
+
         super(props)
         this.state = {
             query: "",
@@ -14,7 +14,7 @@ class Search extends React.Component {
     }
 
     // componentDidMount() {
-    //     debugger
+
     //     this.props.fetchAllProducts();
     // }
 

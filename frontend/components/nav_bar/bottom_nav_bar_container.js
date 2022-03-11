@@ -4,7 +4,6 @@ import BottomNavBar from "./bottom_nav_bar";
 
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
         categories: Object.values(state.entities.categories),
     }
@@ -12,7 +11,6 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    // debugger
     return {
         fetchAllCategories: () => dispatch(fetchAllCategories()),
     }
