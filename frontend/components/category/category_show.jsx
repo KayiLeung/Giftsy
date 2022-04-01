@@ -24,62 +24,32 @@ class CategoryShow extends React.Component {
 
         return (
             <div className='category-show-container'>
-                
+                <div className='product-box'>
                   <div className='category-show-right'>
                   <h1>Find something you love</h1>  
-                  <br />
-                  <br />
+
                 {
-                    // catProducts.map((product, idx) => {
-                    //     return (
-                    //         <section>
-                    //             <div className='all-product'>
-                    //             <Link to={`/products/${product.id}`}>
-                    //                 <div className='catproduct-thumbnail' key={idx}>
-                    //                     <img className="catproduct-thumbnail-img" src={product.photoUrl} alt="" />
-                    //                     <div className='product-details'>
-                    //                             <Box sx={{ pr: 2 }}>
-                    //                                 <Typography gutterBottom variant="body2">
-                    //                                     {product.title}
-                    //                                 </Typography>
-                    //                                 <Typography display="block" variant="caption" color="text.secondary">
-                    //                                     {product.price} <span>Free Shipping</span>
-                    //                                 </Typography>
-                    //                             </Box>
-                    //                         {/* <li id='title'>{product.title}</li>
-                    //                         <li id='rating'>rating</li>
-                    //                         <li id='price'>{ `$ ${product.price}`}</li> */}
-                    //                         {/* <li id='free-shipping'>FREE shipping</li> */}
-                    //                     </div>
-                    //                 </div>
-                    //             </Link>
-                    //             </div>
-                    //         </section>
-                    //     )
-                    // })
+                    catProducts.map((product, idx) => {
+                        return (
+                                <div className='all-product'>
+                                <Link to={`/products/${product.id}`}>
+                                    <div className='catproduct-thumbnail' key={idx}>
+                                        <img className="catproduct-thumbnail-img" src={product.photoUrl} alt="" />
+                                        <div className='product-details'>
+                                            <li id='title'>{product.title}</li>
+                                            <li id='rating'>rating</li>
+                                            <li id='price'>{ `$ ${product.price}`}</li> 
+                                            <li id='free-shipping'>FREE shipping</li>
+                                        </div>
+                                    </div>
+                                </Link>
+                                </div>
+                        )
+                    })
                 }
                    
-                    <ImageList sx={{ width: 1400, height: 700}} cols={4} rowHeight={500}>
+                    {/* <ImageList sx={{ width: 1400, height: 700}} cols={4} rowHeight={300}>
                         
-                        {/* {catProducts.map((product, idx) => (
-                            <Link to={`/products/${product.id}`}>
-                                <ImageListItem key={idx}>
-                                    <img
-                                        src={`${product.photoUrl}?w=164&h=164&fit=crop&auto=format`}
-                                        // srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`
-                                        loading="lazy"
-                                    />
-                                    <Box sx={{ pr: 1 }}>
-                                        <Typography gutterBottom variant="body2" color="black">
-                                            {product.title}
-                                        </Typography>
-                                        <Typography display="block" variant="caption" color="text.secondary">
-                                            {`$ ${product.price}`} <span>Free Shipping</span>
-                                        </Typography>
-                                    </Box>
-                                </ImageListItem>
-                            </Link>
-                        ))} */}
                         {catProducts.map((product, idx) => (
                             <Link to={`/products/${product.id}`}>
                                 <ImageListItem key={`${product.title}-${idx}`}>
@@ -100,8 +70,9 @@ class CategoryShow extends React.Component {
                             </Link>
                         ))}
                         
-                    </ImageList>
+                    </ImageList> */}
                 </div>
+            </div>
             </div>
         )
     }
