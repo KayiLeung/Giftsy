@@ -2,7 +2,7 @@ import React from "react";
 import RatingFormContainer from "../rating/rating_create_container";
 import RatingIndexContainer from '../rating/rating_index_container'
 import { FcCheckmark } from 'react-icons/fc'
-// import Cartform from "../cart/cart_form";
+import CartFormContainer from '../cart/cart_form_container'
 
 class ProductShowPage extends React.Component{
     constructor(props){
@@ -16,12 +16,11 @@ class ProductShowPage extends React.Component{
         this.props.fetchUsers();
     }
 
-    addCartItem() {
 
-    }
 
     render() {
         const {product, users, currentUserId} = this.props;
+        console.log(currentUserId)
         if (!product) {
             return null;
         }
@@ -49,10 +48,9 @@ class ProductShowPage extends React.Component{
                     </div>
                 </div>
             <br />
-            {/* <Cartform 
-                product={product}
-                productId={productId}
-
+            {/* <CartFormContainer
+                product={product} 
+                buyerId={currentUserId}
             /> */}
             <div className='bottom-container'>
                 <div className='rated-reviews'>

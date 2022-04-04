@@ -19,11 +19,10 @@ export const fetchCart = cartId => dispatch => (
 )
 
 export const createCart = (userId, cart) => dispatch => {
+    debugger
     return (
         CartApiUtil.createCart(userId, cart)
-        .then((cart) => {
-            return (dispatch(receiveCart(cart)))
-        })
+        .then(cart => dispatch(receiveCart(cart)))
     )
 }
 

@@ -6,6 +6,7 @@ const cartReducer = (state={} , action) => {
 
     switch (action.type) {
         case RECEIVECART:
+            debugger
             return action.cart
         case DELETECART:
             delete nextState[action.cartId];

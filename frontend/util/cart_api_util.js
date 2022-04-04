@@ -7,7 +7,8 @@ export const fetchCart = (userId, cartId) => {
     )
 }
 
-export const createCart = (cart, userId) => {
+export const createCart = (userId, cart) => {
+    debugger
     $.ajax({
         method: 'POST',
         url: `/api/users/${userId}/cart/`,

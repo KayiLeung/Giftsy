@@ -11,15 +11,22 @@ class Api::CartsController < ApplicationController
     end
 
     def create
+
         @cart = Cart.new(cart_params)
         if @cart.save
             render json: ['cart created']
         else
-            render json: @cart.errors.full_messages, status: 401
+            render json: @cart.errors.full_messages
     end
 
     def destroy
 
+    end
+
+    private
+
+    def cart_params
+        params.require(:cart).permit(:quantity, :buyer_id, :product_id)
     end
 
 end
