@@ -6,11 +6,13 @@ class Product < ApplicationRecord
     
     has_many :ratings
 
+    has_and_belongs_to_many :shopping_cart
+
     belongs_to :category
 
-    belongs_to :seller,
-        foreign_key: :seller_id,
-        class_name: :User
+    # belongs_to :seller,
+    #     foreign_key: :seller_id,
+    #     class_name: :User
         
     # belongs_to :order
 

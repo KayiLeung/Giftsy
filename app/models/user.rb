@@ -8,10 +8,11 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
     
-    has_one :cart, dependent: :destroy
-    has_many :products,
-        foreign_key: :seller_id,
-        class_name: :Product
+    has_one :shopping_cart, dependent: :destroy
+    
+    # has_many :products,
+    #     foreign_key: :seller_id,
+    #     class_name: :Product
 
     has_many :review,
         foreign_key: :buyer_id,
