@@ -19,9 +19,9 @@ function Modal({ modal , closeModal, signupForm, loginForm }) {
             otherForm = loginForm
             component = <SignupFormContainer />;
             break;
-        case 'edit':
-
+        case 'edit_rating':
             component = <EditRatingContainer />
+            break;
         default:
             return null;
     }

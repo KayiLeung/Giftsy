@@ -6,10 +6,11 @@ import Rating from '@mui/material/Rating'
 import RatingEditSubmitFormContainer from '../rating/rating_edit_submit_container'
 import RatingEditSubmitForm from '../rating/rating_edit_submit_form'
 import { updateRating } from '../../util/rating_api_util';
+
 const ReviewIndexItem = props => {
 
-    // const editRating = (e) => {
-    //     props.openModal('edit')
+    // const editRating = () => {
+    //     props.openModal('edit_rating')
     // }
 
     return (
