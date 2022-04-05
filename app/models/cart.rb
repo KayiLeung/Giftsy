@@ -6,6 +6,8 @@ class Cart < ApplicationRecord
     class_name: :User,
     optional: true
 
-    has_many :products
+    has_many :products,
+        foreign_key: :cart_id,
+        class_name: :Product
 
 end

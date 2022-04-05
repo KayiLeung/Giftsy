@@ -6,9 +6,10 @@ import Rating from '@mui/material/Rating'
 import RatingEditSubmitFormContainer from '../rating/rating_edit_submit_container'
 import RatingEditSubmitForm from '../rating/rating_edit_submit_form'
 import { updateRating } from '../../util/rating_api_util';
+import { connect } from 'react-redux';
 
 const ReviewIndexItem = props => {
-
+    debugger
     // const editRating = () => {
     //     props.openModal('edit_rating')
     // }
@@ -28,17 +29,25 @@ const ReviewIndexItem = props => {
                     rating={props.rating}
                     updateRating={updateRating}
                 />
-            <div className='rating-edit-delete-btn'>
+            {props.currentUser === props.rating.buyer_id ? 
+            (<div className='rating-edit-delete-btn'>
             <Link to={`/ratings/${props.ratingId}`}>Edit</Link>
-            {/* <button onClick={() => editRating()}>Edit</button> */}
             <button onClick={() => props.deleteRating(props.ratingId)
             }>            
                 Delete
             </button>
-            </div>
-            
+            </div>) : null
+            } 
         </div>
     )
 
 }
-export default ReviewIndexItem;
+// export default ReviewIndexItem;
+
+const mSTP = (state) => {
+    return {
+        currentUser: state.session.id
+    }
+}
+
+export default connect(mSTP, null)(ReviewIndexItem);

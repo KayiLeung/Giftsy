@@ -9,11 +9,13 @@ export const fetchCart = (userId, cartId) => {
 
 export const createCart = (userId, cart) => {
     debugger
-    $.ajax({
+    return(
+         $.ajax({
         method: 'POST',
-        url: `/api/users/${userId}/cart/`,
+        url: `/api/users/${userId}/carts/`,
         data: {cart}
-    })
+        })
+    )
 }
 
 export const deleteCart = (userId, cartId) => {

@@ -35,13 +35,21 @@
         font-family: $open-sans;
     }
 
-    .footer-right > ul {
+    .footer-right > ul { 
         display: flex;
         color: $footerColor;
         text-decoration: none;
         justify-content: space-between;
         font-family: $open-sans;
         content: $roboto-slab;
+
+        #footer-icon{
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+
+       } 
     }
+
 }
 

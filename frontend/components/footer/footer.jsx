@@ -1,6 +1,6 @@
 import React from "react";
 import { IoAccessibilitySharp } from "react-icons/io5";
-// import { FaGithub} from 'react-icon/fa'
+import { FaGithub, FaLinkedin} from 'react-icons/fa'
 
 
 const Footer = () => { 
@@ -22,9 +22,10 @@ const Footer = () => {
                     <div className='footer-right'>
                         <ul>
                             <li>© 2022</li>
-                            <li><a href="#">Git</a></li>
-                            <li><a href="#">LinkedIn</a></li>
+                            <a id='footer-icon' href="https://github.com/KayiLeung" target='_blank'><FaGithub /></a>
+                            <a id='footer-icon' href="https://www.linkedin.com/in/ka-yi-leung-9b0687a3/" target='_blank'><FaLinkedin /></a>
                         </ul>
+                        
                     </div>
                 </div>
             </div>

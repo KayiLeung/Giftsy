@@ -2,12 +2,16 @@ import React from "react";
 import RatingFormContainer from "../rating/rating_create_container";
 import RatingIndexContainer from '../rating/rating_index_container'
 import { FcCheckmark } from 'react-icons/fc'
+import { FaShippingFast, FaHourglassHalf } from 'react-icons/fa'
+
 import CartFormContainer from '../cart/cart_form_container'
 
 class ProductShowPage extends React.Component{
     constructor(props){
 
         super(props)
+      
+
 
     }
 
@@ -21,6 +25,7 @@ class ProductShowPage extends React.Component{
     render() {
         const {product, users, currentUserId} = this.props;
         console.log(currentUserId)
+        console.log()
         if (!product) {
             return null;
         }
@@ -44,14 +49,21 @@ class ProductShowPage extends React.Component{
                                     {/* {this.quantity()} */}
                                     {product.quantity ? <li><FcCheckmark /> In stock</li> : <li>out of stock!</li>}
                             </ul>
+                            <CartFormContainer
+                                product={product}
+                                buyerId={currentUserId}
+                            />
+                            <br />
+                            <ul className='shipping'>
+                                <li><FaHourglassHalf/>  Selling fast! Only {product.quantity} left!</li>
+                                <li><FaShippingFast/>  Hooray! This item ships free.</li>
+                            </ul>
                         </div>
                     </div>
+              
                 </div>
             <br />
-            {/* <CartFormContainer
-                product={product} 
-                buyerId={currentUserId}
-            /> */}
+  
             <div className='bottom-container'>
                 <div className='rated-reviews'>
                 <RatingIndexContainer

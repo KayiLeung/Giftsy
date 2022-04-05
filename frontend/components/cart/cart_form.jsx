@@ -6,7 +6,7 @@ class Cartform extends React.Component {
         console.log(props)
 
         this.state = {
-            quantity: 0,
+            quantity: 1,
         }
 
         this.addCartItem = this.addCartItem.bind(this)
@@ -31,6 +31,7 @@ class Cartform extends React.Component {
     }
 
     update(field) {
+        debugger
         return e => {
             this.setState({
                 [field]: e.target.value
@@ -45,7 +46,7 @@ class Cartform extends React.Component {
         return (
             <div>
             <form className='order-form-wrapper' onSubmit={this.addCartItem}>
-                <select name="amount" id="" onChange={this.update('quantity')}>
+                <select name="amount" id="item_quantity" onChange={this.update('quantity')}>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -56,7 +57,7 @@ class Cartform extends React.Component {
                     <option value="8">8</option>
                     <option value="9">9</option>
                 </select>
-                <button className='cartItem' type='submit'>Add to cart</button>
+                <button className='cartItemBtn' type='submit'>Add to cart</button>
             </form>
             </div>
         )

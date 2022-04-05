@@ -26,6 +26,14 @@
 }
 
 
+.shipping{
+    font-family: $Exo2;
+    font-size: 20px;
+    li {
+        padding: 10px;
+    }
+}
+
 
 .product-show-page{
     display: flex;
@@ -45,7 +53,10 @@
         margin-bottom: auto;
     }
     .product-show-image{
+        border-radius: 10px;
         width: 100%;
+        box-shadow: 0px 0px 20px -2px rgb(68, 77, 80);
+
     }
 }
 
@@ -146,13 +157,17 @@
         background-color: none;
         font-size: 11px;
         
-    &hover{
-        background: rgb(126, 119, 119);
-        color: black;
-        cursor: pointer;
-        
-    }
+        &hover{
+            background: rgb(126, 119, 119);
+            color: black;
+            cursor: pointer;
+            
+        }
 
 
     }
-}
+
+
+
+
+    }

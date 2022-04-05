@@ -33,9 +33,7 @@ handleInput(field) {
 }
 
 render() {
-    // debugger
     const { rating } = this.props
-    // console.log(rating)
     if (!rating) return null
     return (
         <div>

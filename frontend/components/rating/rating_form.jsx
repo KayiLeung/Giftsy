@@ -81,8 +81,8 @@ class RatingForm extends React.Component {
                                 className='rating-content'
                                 value={this.state.comment}
                                 onChange={this.handleInput('comment')}
-                                cols='70'
-                                rows='4'
+                                // cols='70'
+                                // rows='4'
                             />
                         <button type="submit">submit</button>
                         </form>
