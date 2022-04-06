@@ -12,9 +12,6 @@ class Product < ApplicationRecord
         foreign_key: :seller_id,
         class_name: :User
 
-    belongs_to :cart,
-        foreign_key: :cart_id,
-        class_name: :Cart
         
 
 
