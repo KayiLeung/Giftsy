@@ -12,7 +12,9 @@ class Api::RatingsController < ApplicationController
 
 
     def create
+        debugger
         @rating = Rating.new(rating_params)
+        debugger
         if @rating.save
             render :show
         else

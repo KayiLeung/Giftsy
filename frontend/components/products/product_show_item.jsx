@@ -1,6 +1,9 @@
 import React from "react";
 import RatingFormContainer from "../rating/rating_create_container";
 import RatingIndexContainer from '../rating/rating_index_container'
+import CartFormContainer from '../cart_form/cart_form.container'
+import { FcCheckmark } from 'react-icons/fc'
+import { FaShippingFast, FaHourglassHalf } from 'react-icons/fa'
 
 class ProductShowPage extends React.Component{
     constructor(props){
@@ -27,14 +30,24 @@ class ProductShowPage extends React.Component{
                 <div className='right-container'>
                     <div className='product-show-details-div'>
                         <ul className='product-show-details'>
-                                <li className='review'>1451 sales ★★★★★</li>
-                                <br />
-                                <li className='product-title'>{product.title}</li>
-                                <br />
-                                <li className='description'>{product.description}</li>
-                                <br />
-                                <li className='price'>${product.price}+</li>
-                
+                            <li className='review'>1451 sales ★★★★★</li>
+                            <br />
+                            <li className='product-title'>{product.title}</li>
+                            <br />
+                            <li className='description'>{product.description}</li>
+                            <br />
+                            <li className='price'>${product.price}+</li>
+                            <br />
+                            {/* {this.quantity()} */}
+                            {product.quantity ? <li><FcCheckmark /> In stock</li> : <li>out of stock!</li>}
+                        </ul>
+                        <CartFormContainer
+                            product={product}
+                        />
+                        <br />
+                        <ul className='shipping'>
+                            <li><FaHourglassHalf />  Selling fast! Only {product.quantity} left!</li>
+                            <li><FaShippingFast />  Hooray! This item ships free.</li>
                         </ul>
                     </div>
                 </div>
