@@ -51,6 +51,12 @@ ActiveRecord::Schema.define(version: 2022_04_06_220249) do
     t.string "title"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.integer "buyer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "title", null: false
     t.string "description", null: false
@@ -61,7 +67,6 @@ ActiveRecord::Schema.define(version: 2022_04_06_220249) do
     t.datetime "updated_at", null: false
     t.integer "order_id"
     t.integer "category_id"
-    t.integer "cart_id"
   end
 
   create_table "ratings", force: :cascade do |t|
