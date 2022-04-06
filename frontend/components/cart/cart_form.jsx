@@ -1,3 +1,4 @@
+import { tsThisType } from "@babel/types";
 import React, {Componet} from "react";
 
 class Cartform extends React.Component {
@@ -6,6 +7,7 @@ class Cartform extends React.Component {
         // console.log(props)
 
         this.state = {
+            amount: 0,
             quantity: 1,
         }
 

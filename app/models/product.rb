@@ -13,7 +13,7 @@ class Product < ApplicationRecord
         class_name: :User
 
     belongs_to :cart,
-        foreign_key: :cart_id,
+        foreign_key: :product_id,
         class_name: :Cart
         
 

@@ -7,7 +7,7 @@ class Api::CartsController < ApplicationController
         # render :index
         # @user = User.find(params[:id])
         # @product = Product.find(params[:id])
-        # @carts = Cart.where(buyer_id: params[current_user.id]).all
+        @carts = Cart.where(buyer_id: current_user.id).all
 
 
         @carts = Cart.all
