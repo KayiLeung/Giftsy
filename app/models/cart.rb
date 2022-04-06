@@ -11,4 +11,7 @@ class Cart < ApplicationRecord
         foreign_key: :product_id,
         class_name: :Product
 
-end
+    has_many :cart_items
+    has_many :products, through: :cart_items
+
+end 

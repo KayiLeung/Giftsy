@@ -51,7 +51,6 @@ class ProductShowPage extends React.Component{
                             </ul>
                             <CartFormContainer
                                 product={product}
-                                buyerId={currentUserId}
                             />
                             <br />
                             <ul className='shipping'>

@@ -10,10 +10,10 @@ class Api::CartsController < ApplicationController
         @carts = Cart.where(buyer_id: current_user.id).all
 
 
-        @carts = Cart.all
-        # debugger
-        render :index
-    end
+    #     @carts = Cart.all
+    #     debugger
+    #     render :index
+    # end
 
     def show
         @cart = Cart.find(params[:id])
@@ -30,24 +30,26 @@ class Api::CartsController < ApplicationController
         end
     end
 
-    def update
-        @cart = Cart.find(params[:id])
-        if @cart && @cart.update(cart_params)
-            render json: ['cart updated']
-        end
+    # def update
+    #     @cart = Cart.find(params[:id])
+    #     if @cart && @cart.update(cart_params)
+    #         render json: ['cart updated']
+    #     end
 
-    end
+    # end
 
     def destroy
+
         @cart = Cart.find(params[:id])
+        debugger
         @cart.destroy
         render json: ['cart deleted']
     end
 
-    private
+    # private
 
-    def cart_params
-        params.require(:cart).permit(:quantity, :buyer_id, :product_id)
-    end
+    # def cart_params
+    #     params.require(:cart).permit(:buyer_id)
+    # end
 
 end

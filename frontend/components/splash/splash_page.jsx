@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Search from '../search/search'
 import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedinIn, FaShoppingCart} from 'react-icons/fa';
 
-const Splash = ({ currentUser, logout, openModal}) => {
+const Splash = ({ currentUser, logout, openModal, fetchCart, createCart, cart}) => {
+    console.log(currentUser)
 
-
+    const [state, setState] = useState(cart)
     const signIn = (e) => {
         openModal('login')
+    }
+
+    const Cart =(e) => {
+        (<Link to='/carts' />)
     }
 
 
@@ -28,7 +33,8 @@ const Splash = ({ currentUser, logout, openModal}) => {
                                 {currentUser ? (
                                     <div>
                                         <button className="nav-contact-button" onClick={logout}>Log Out</button> 
-                                        <Link to={`carts`} ><button className='nav-contact-button'><FaShoppingCart /></button></Link>
+                                        
+                                        <Link to='/carts'><button className='nav-contact-button' onClick={() => Cart()}><FaShoppingCart /></button></Link>
                                         {/* <Link to={`/users/${currentUser.id}/carts`} ><button className='nav-contact-button'><FaShoppingCart /></button></Link> */}
                                     </div>
                                          ) :
