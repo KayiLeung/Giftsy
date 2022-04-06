@@ -15,7 +15,7 @@ import CategoryShowContainer from '../components/category/category_show_containe
 import BottomNavBarContainer from "./nav_bar/bottom_nav_bar_container";
 // import RatingForm from "./rating/rating_form";
 import RatingEditSubmitFormContainer from '../components/rating/rating_edit_submit_container'
-
+import CartIndexContainer from '../components/cart/cart_index_container'
 
 
 const App = () => (
@@ -29,7 +29,10 @@ const App = () => (
             <Route exact path="/categories/:categoryId" component={CategoryShowContainer}/>
             <Route path='/products/:productId' component={ProductShowContainer} />
             <Route path='/ratings/:ratingId' component={RatingEditSubmitFormContainer} />
+            <Route path='/carts' component={CartIndexContainer} />
+            {/* <Route path='/users/:userId/carts' component={CartIndexContainer} /> */}
             {/* <Route path='/ratings/:ratingId' component={RatingEditSubmitForm} /> */}
+
         </Switch>
         <Footer />
     </div>

@@ -11,7 +11,7 @@ const entitiesReducer = combineReducers({
     products: productReducer,
     categories: categoryReducer,
     ratings: ratingReducer,
-    cart: cartReducer 
+    carts: cartReducer 
 })
 
 export default entitiesReducer;

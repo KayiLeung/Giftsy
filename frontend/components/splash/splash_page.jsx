@@ -24,8 +24,14 @@ const Splash = ({ currentUser, logout, openModal}) => {
                             <li className='nav-buttons'>
                                 <a href="https://www.linkedin.com/in/ka-yi-leung-9b0687a3/"><button className='nav-contact-button'>< FaLinkedinIn /></button></a>
                                 <a href="https://github.com/KayiLeung?tab=repositories"><button className='nav-contact-button'>< FaGithub /></button></a>
-                                <a href=""><button className='nav-contact-button'><FaShoppingCart/></button></a>
-                                {currentUser ? (<button className="nav-contact-button" onClick={logout}>Log Out</button>) :
+                                
+                                {currentUser ? (
+                                    <div>
+                                        <button className="nav-contact-button" onClick={logout}>Log Out</button> 
+                                        <Link to={`carts`} ><button className='nav-contact-button'><FaShoppingCart /></button></Link>
+                                        {/* <Link to={`/users/${currentUser.id}/carts`} ><button className='nav-contact-button'><FaShoppingCart /></button></Link> */}
+                                    </div>
+                                         ) :
                                ( <button className="nav-contact-button" onClick={() => signIn()}>Sign In</button>)
                             }
                             </li>

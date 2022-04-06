@@ -3,7 +3,7 @@ import React, {Componet} from "react";
 class Cartform extends React.Component {
     constructor(props) {
         super(props)
-        console.log(props)
+        // console.log(props)
 
         this.state = {
             quantity: 1,
@@ -14,8 +14,9 @@ class Cartform extends React.Component {
 
 
     addCartItem(e) {
-        debugger
+
         e.preventDefault();
+
         if (!this.props.currentUser) {
             this.props.openModal('login')
         } else {
@@ -28,6 +29,34 @@ class Cartform extends React.Component {
             })
             this.props.createCart(buyerId, cart)
         }
+
+        // if (!this.props.currentUser) {
+        //     this.props.openModal('login')
+        // } else {
+        //     const buyerId = this.props.currentUser;
+
+
+        //     if (!this.props.fetchAllCarts(buyerId)) {
+        //         const productId = this.props.product.id;
+
+        //         const cart = Object.assign({}, {
+        //             ...this.state,
+        //             buyer_id: buyerId,
+        //             product_id: productId
+        //         })
+        //         this.props.createCart(buyerId, cart)
+        //     } else {
+
+        //     }
+
+        // }
+
+        
+    }
+
+    componentDidMount(){
+        this.props.fetchAllCarts(this.props.currentUser)
+        // console.log(this.props.fetchAllCarts(this.props.currentUser))
     }
 
     update(field) {
@@ -40,8 +69,10 @@ class Cartform extends React.Component {
     }
 
     render() {
-        console.log(`this is cart: ${this.props}`)
-        if (!this.props.product) return null
+        const { carts } = this.props
+        debugger
+        console.log(`this is the first cart: ${carts[0]}`)
+        if (!this.props.product || !carts) return null
         debugger
         return (
             <div>

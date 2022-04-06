@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:index, :show, :create] do
       resources :order, only:[:create, :show]
-      resources :carts, only:[:index, :show, :create, :destroy]
+      # resources :carts, only: [:index, :show. :update, :destroy]
+      resources :carts, only: [:create]
     end
     resource :session, only: [:create, :destroy]
     resources :products, only: [:show, :index] do
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
     end
     resources :categories, only: [:show, :index]
     resources :ratings, only: [:index, :show, :update, :destroy]
+    resources :carts, only: [:index, :show, :update, :destroy]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

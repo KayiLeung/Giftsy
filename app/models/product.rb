@@ -16,6 +16,6 @@ class Product < ApplicationRecord
         foreign_key: :cart_id,
         class_name: :Cart
         
-    # belongs_to :order
+
 
 end

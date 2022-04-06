@@ -3,7 +3,8 @@ import ProductShowPage from './product_show_item'
 import { fetchProduct } from '../../actions/product_action'
 import { fetchAllRatings } from '../../actions/rating_action'
 import { fetchUsers} from '../../actions/user_actions'
-import { createCart} from '../../actions/cart_action'
+import { createCart, fetchCart} from '../../actions/cart_action'
+
 const mSTP = (state, ownProps) => {
     // debugger
     return {
@@ -19,7 +20,8 @@ const mDTP = dispatch => {
         fetchProduct: productId => dispatch(fetchProduct(productId)),
         fetchAllRatings: () => dispatch(fetchAllRatings()),
         fetchUsers: () => dispatch(fetchUsers()),
-        createCart: (userId, cart) => dispatch(createCart(userId, cart))
+        createCart: (userId, cart) => dispatch(createCart(userId, cart)),
+        // fetchCart: (cartId, userId) => dispatch(fetchCart(cartId, userId))
     }
 }
 
