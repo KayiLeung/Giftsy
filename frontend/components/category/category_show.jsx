@@ -24,14 +24,15 @@ class CategoryShow extends React.Component {
 
         return (
             <div className='category-show-container'>
-                <div className='product-box'>
-                  <div className='category-show-right'>
-                  <h1>Find something you love</h1>  
-
+                  <div className='cat-show-title'> <h1>Find something you love</h1>  </div>
+                    {/* state-name */}
+                  <div className='category-show-right'> 
+                  {/* post item */}
                 {
                     catProducts.map((product, idx) => {
                         return (
-                                <div className='all-product'>
+                                <div className='all-product' >
+                                    {/* post-box */}
                                 <Link to={`/products/${product.id}`}>
                                     <div className='catproduct-thumbnail' key={idx}>
                                         <img className="catproduct-thumbnail-img" src={product.photoUrl} alt="" />
@@ -72,7 +73,6 @@ class CategoryShow extends React.Component {
                         
                     </ImageList> */}
                 </div>
-            </div>
             </div>
         )
     }

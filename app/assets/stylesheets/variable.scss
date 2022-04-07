@@ -32,7 +32,19 @@ $blue: rgb(31, 54, 97);
 $deepBlue:rgb(12, 12, 70);
 $footerColor: white;
 
+//grid
 
 @mixin margin() {
     
+}
+
+@mixin grid($cols, $mgn) {
+    float: left;
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% - (($cols - 1) * $mgn)) / $cols);
+    // height: ((100% - (($cols - 1) * $mgn)) / $cols);
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
 }

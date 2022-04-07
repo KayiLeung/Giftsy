@@ -9,6 +9,7 @@ const mSTP = (state, ownProps) => {
     return {
         product: state.entities.products[ownProps.match.params.productId],
         users: state.entities.users,
+        buyerId: state.session.id
     }
 }
 
