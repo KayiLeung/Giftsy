@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
     
-    has_many :cart,
+    has_many :carts, 
         foreign_key: :buyer_id,
         class_name: :Cart
         

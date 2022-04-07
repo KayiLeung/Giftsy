@@ -22,8 +22,9 @@ class Api::CartsController < ApplicationController
 
     def create
         @cart = Cart.new(cart_params)
-        debugger
+        # debugger
         if @cart.save
+            # debugger
             render json: ['cart created']
         else
             render json: @cart.errors.full_messages

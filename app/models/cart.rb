@@ -1,11 +1,12 @@
 class Cart < ApplicationRecord
 
-    # belongs_to :buyer,
-    #     foreign_key: :buyer_id,
-    #     class_name: :User
-    #     optional: true
-    belongs_to :buyer
+    belongs_to :buyer,
+        foreign_key: :buyer_id,
+        class_name: :User,
+        optional: true
+    # belongs_to :user
 
-    has_many :products
-
+    belongs_to :product,
+        foreign_key: :product_id,
+        class_name: :Product
 end
