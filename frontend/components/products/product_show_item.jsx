@@ -1,7 +1,7 @@
 import React from "react";
 import RatingFormContainer from "../rating/rating_create_container";
 import RatingIndexContainer from '../rating/rating_index_container'
-// import CartFormContainer from '../cart_form/cart_form.container'
+import CartFormContainer from '../cart/cart_container'
 import { FcCheckmark } from 'react-icons/fc'
 import { FaShippingFast, FaHourglassHalf } from 'react-icons/fa'
 
@@ -41,9 +41,9 @@ class ProductShowPage extends React.Component{
                             {/* {this.quantity()} */}
                             {product.quantity ? <li><FcCheckmark /> In stock</li> : <li>out of stock!</li>}
                         </ul>
-                        {/* <CartFormContainer
+                        <CartFormContainer
                             product={product}
-                        /> */}
+                        />
                         <br />
                         <ul className='shipping'>
                             <li><FaHourglassHalf />  Selling fast! Only {product.quantity} left!</li>
