@@ -2,16 +2,12 @@ class Api::CartsController < ApplicationController
 
     # skip_before_action :verify_authenticity_token  
     def index
-        # @user = User.find(params[:id])
-        # @product = Product.find(params[:id])
-        # render :index
-        # @user = User.find(params[:id])
-        # @product = Product.find(params[:id])
-        # @carts = Cart.where(buyer_id: current_user.id).all
 
-
-        @carts = Cart.all
         # debugger
+        @carts = Cart.where(buyer_id: current_user.id).all
+
+        debugger
+
         render :index
     end
 

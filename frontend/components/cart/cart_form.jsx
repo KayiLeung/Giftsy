@@ -31,7 +31,7 @@ class Cartform extends React.Component {
                 buyer_id: buyerId,
                 product_id: productId,
             })
-            this.props.createCart(buyerId, cart)
+            this.props.createCart( cart)
         }
 
     }
