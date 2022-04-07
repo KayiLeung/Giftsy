@@ -22,7 +22,7 @@ class Api::CartsController < ApplicationController
 
     def create
         @cart = Cart.new(cart_params)
-        # debugger
+        debugger
         if @cart.save
             render json: ['cart created']
         else
@@ -49,7 +49,7 @@ class Api::CartsController < ApplicationController
     private
 
     def cart_params
-        params.require(:cart).permit(:buyer_id, :product_id, :quantity, :amount)
+        params.require(:cart).permit(:buyer_id, :product_id, :quantity)
     end
 
 end

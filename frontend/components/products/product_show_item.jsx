@@ -17,7 +17,7 @@ class ProductShowPage extends React.Component{
     }
 
     render() {
-        const {product, users } = this.props;
+        const { product, users, buyerId} = this.props;
         if (!product) {
             return null;
         }
@@ -43,6 +43,7 @@ class ProductShowPage extends React.Component{
                         </ul>
                         <CartFormContainer
                             product={product}
+                            buyerId={buyerId}
                         />
                         <br />
                         <ul className='shipping'>

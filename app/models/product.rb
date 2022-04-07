@@ -12,6 +12,8 @@ class Product < ApplicationRecord
         foreign_key: :seller_id,
         class_name: :User
         
-    # belongs_to :order
+    belongs_to :cart,
+        foreign_key: :product_id,
+        class_name: :Cart
 
 end
