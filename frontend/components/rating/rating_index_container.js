@@ -17,7 +17,6 @@ const mSTP = (state, ownProps) => {
     return {
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],
-
         ratings: Object.values(state.entities.ratings),
 
     }

@@ -6,7 +6,7 @@ class Api::CartsController < ApplicationController
         # debugger
         @carts = Cart.where(buyer_id: current_user.id).all
 
-        debugger
+        # debugger
 
         render :index
     end

@@ -27,7 +27,7 @@ class RatingIndex extends React.Component{
 
                 return (
                     <div className='rating-index-details' key={idx}>
-                        <p id='customer-fname'>{users[rating.buyer_id].fname}</p>
+                        {/* <p className='customer-fname'>{users[rating.buyer_id].fname}</p> */}
                         <br />
                         < ReviewIndexItem
                             rating={rating}
