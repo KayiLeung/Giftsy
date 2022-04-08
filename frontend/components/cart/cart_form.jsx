@@ -1,4 +1,3 @@
-// import { tsThisType } from "@babel/types";
 import React, { Componet } from "react";
 
 class Cartform extends React.Component {
@@ -18,20 +17,24 @@ class Cartform extends React.Component {
 
         e.preventDefault();
         debugger
+        const { currentUser, product } = this.props
         if (!this.props.currentUser) {
             this.props.openModal('login')
         } else {
             debugger
-            const buyerId = this.props.currentUser;
-            const productId = this.props.product.id;
-            const amount = (this.props.product.price * this.state.quantity)
-
+            const buyerId = currentUser;
+            // const productId = product.id;
+            debugger
             const cart = Object.assign({}, {
                 ...this.state,
                 buyer_id: buyerId,
-                product_id: productId,
+                product_id: product.id,
+                price: product.price,
+                productUrl: product.photoUrl,
+                title: product.title
             })
-            this.props.createCart( cart)
+            debugger
+            this.props.createCart(cart)
         }
 
     }
@@ -46,7 +49,7 @@ class Cartform extends React.Component {
     }
 
     update(field) {
-        debugger
+        // debugger
         return e => {
             this.setState({
                 [field]: e.target.value
@@ -55,15 +58,13 @@ class Cartform extends React.Component {
     }
 
     render() {
-        debugger
         const { currentUser, cart } = this.props
         console.log(`this is the first cart: ${cart}`)
         if (!this.props.product) return null
-        debugger
         return (
             <div>
                 <form className='order-form-wrapper' onSubmit={this.addCartItem}>
-                    <select name="amount" id="item_quantity" onChange={this.update('quantity')}>
+                    <select name="subamount" id="item_quantity" onChange={this.update('quantity')}>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
