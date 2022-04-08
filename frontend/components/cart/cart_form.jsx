@@ -18,19 +18,24 @@ class Cartform extends React.Component {
 
         e.preventDefault();
         debugger
+        const { currentUser, product } = this.props
         if (!this.props.currentUser) {
             this.props.openModal('login')
         } else {
             debugger
-            const buyerId = this.props.currentUser;
-            const productId = this.props.product.id;
-            const amount = (this.props.product.price * this.state.quantity)
+            const buyerId = currentUser;
+            // const productId = product.id;
+            const amount = (product.price * this.state.quantity)
 
             const cart = Object.assign({}, {
                 ...this.state,
                 buyer_id: buyerId,
-                product_id: productId,
+                product_id: product.id,
+                amount : amount,
+                productUrl: product.photoUrl,
+                title: product.title
             })
+            debugger
             this.props.createCart( cart)
         }
 
@@ -46,7 +51,7 @@ class Cartform extends React.Component {
     }
 
     update(field) {
-        debugger
+        // debugger
         return e => {
             this.setState({
                 [field]: e.target.value
@@ -55,11 +60,9 @@ class Cartform extends React.Component {
     }
 
     render() {
-        debugger
         const { currentUser, cart } = this.props
         console.log(`this is the first cart: ${cart}`)
         if (!this.props.product) return null
-        debugger
         return (
             <div>
                 <form className='order-form-wrapper' onSubmit={this.addCartItem}>

@@ -8,7 +8,7 @@ import { createCart } from '../../actions/cart_action'
 
 
 const mSTP = (state, ownProps) => {
-    debugger
+    // debugger
     console.log(ownProps)
     return {
         currentUser: state.session.id

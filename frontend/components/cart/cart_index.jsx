@@ -11,23 +11,37 @@ class CartIndex extends React.Component {
         this.props.fetchAllCarts()
     }
 
+
+
     render() {
-        // if (!cartItems) return null
-        const { buyerId, cartItems, products} = this.props
-        console.log(`this is cartItems: ${cartItems.length}`)
-        // cartItems.forEach(cartItem => console.log(cartItem))
+
+        const { buyerId, cartItems} = this.props
+
         return (
             <div>
-                {
-                    cartItems.length === 0 ? (<div>The cart is empty!!</div>) :
-                        (
+                <h1>You have {cartItems.length} in the cart!</h1>
+                    <div className='cart-item-wrapper'>
+                        <div className='cart-item-box'>
+                        {
+                            cartItems.map((cartItem, idx) => {
+                                console.log(cartItem)
+                                return (
+                                    <div className='cart-item-thumbnail' key={idx}>
+                                        <img className='cart-item-img' src={cartItem.productUrl} />
+                                        <div className='cart-item-details'>
+                                            <ul>
+                                                <li id='cart-title'>{cartItem.title}</li>
+                                                <li id='cart-quantity'>{cartItem.quantity}</li>
+                                                <li id='cart-amount'>{cartItem.amount}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                )
                             
-                        <div>The cart is not empty!! You have {cartItems.length} in the cart!</div>
-                        )
-                }
-
-
-
+                            })
+                        }        
+                        </div>
+                    </div>
             </div>
         )
     }

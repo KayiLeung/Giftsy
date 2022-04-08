@@ -9,7 +9,7 @@ const cartReducer = (state = {}, action) => {
             return action.carts
 
         case RECEIVECART:
-            debugger
+            // debugger
             nextState[action.cart.id] = action.rating;
             return nextState;
 
