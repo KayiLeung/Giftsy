@@ -23,10 +23,10 @@ const ReviewIndexItem = props => {
                     key={`rating-${props.rating.id}`}
                 />
             </div>
-                <RatingEditSubmitFormContainer
+                {/* <RatingEditSubmitFormContainer
                     rating={props.rating}
                     updateRating={updateRating}
-                />
+                /> */}
             <div className='rating-edit-delete-btn'>
             <Link to={`/ratings/${props.ratingId}`}>Edit</Link>
             {/* <button onClick={() => editRating()}>Edit</button> */}

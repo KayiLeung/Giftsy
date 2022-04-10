@@ -39,29 +39,3 @@ Giftsy is a full stack Etsy clone that displays various handmade gifts for sale.
 * I want user to be able to read ratings and reviews
 * user can edit or delete by on click
 ```  
-return (
-        <div className='rating-container'>
-            <div className='customer-ratings'>
-                <Rating
-                    style={{ color: 'black' }}
-                    name='Rating Rank'
-                    value={props.rating.score}
-                    precision={0.5}
-                    key={`rating-${props.rating.id}`}
-                />
-            </div>
-                <RatingEditSubmitFormContainer
-                    rating={props.rating}
-                    updateRating={updateRating}
-                />
-            <div className='rating-edit-delete-btn'>
-            <Link to={`/ratings/${props.ratingId}`}>Edit</Link>
-
-            <button onClick={() => props.deleteRating(props.ratingId)
-            }>            
-                Delete
-            </button>
-            </div>
-            
-        </div>
-    )

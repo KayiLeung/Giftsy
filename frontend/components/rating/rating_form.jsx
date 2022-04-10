@@ -33,20 +33,11 @@ class RatingForm extends React.Component {
                 this.props.action(rating, productId)
             } 
             
-            
-            // else {
-            //     const rating = Object.assign({}, this.state)
-            //     this.props.action(rating)
-            // }
-            // this.setState( {comment: ''})
-            
         }
     }
 
     componentDidMount(){
-            debugger
             this.props.fetchProduct(this.props.match.params.productId)
-            this.props.fetchRating(this.props.match.params.ratingId)
     }
 
     handleInput(field) {

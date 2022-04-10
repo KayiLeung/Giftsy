@@ -31,7 +31,7 @@ const App = () => (
             <Route path='/products/:productId' component={ProductShowContainer} />
             <Route path='/ratings/:ratingId' component={RatingEditSubmitFormContainer} />
             <Route path='/carts' component={CartIndexContainer} />
-            {/* <Route path='/ratings/:ratingId' component={RatingEditSubmitForm} /> */}
+            <Route path='/ratings/:ratingId' component={RatingEditSubmitForm} />
             {/* <Route path='/orders' component={OrderFormContainer}/> */}
         </Switch>
         <Footer />
