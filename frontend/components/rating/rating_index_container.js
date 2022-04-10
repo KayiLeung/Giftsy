@@ -11,9 +11,6 @@ import {openModal} from '../../actions/modal_action'
 import RatingIndex from './rating_index'
 
 const mSTP = (state, ownProps) => {
-    // users: state.entities.users,
-    // product: state.entities.products[ownProps.match.params.productId]
-    //get users and product from parent component Product show page
     return {
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],

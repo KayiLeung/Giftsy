@@ -6,7 +6,9 @@ class Api::RatingsController < ApplicationController
     end
 
     def show
+        debugger
         @rating = Rating.find(params[:id])
+        debugger
         render :show
     end
 

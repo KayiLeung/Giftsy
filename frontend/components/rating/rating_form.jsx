@@ -7,10 +7,6 @@ class RatingForm extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state = {
-        //     score: this.props.rating.score,
-        //     comment: this.props.rating.comment
-        // }
             this.state = {
             score: 2.5,
             comment: '',
@@ -48,8 +44,9 @@ class RatingForm extends React.Component {
     }
 
     componentDidMount(){
+            debugger
             this.props.fetchProduct(this.props.match.params.productId)
-            // this.props.fetchRating(this.props.match.params.ratingId)
+            this.props.fetchRating(this.props.match.params.ratingId)
     }
 
     handleInput(field) {
