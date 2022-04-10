@@ -1,7 +1,8 @@
 import React, { Componet } from "react";
-import { FaLeaf} from 'react-icons/fa'
-import {OrderFormContainer} from '../order/order_form_container'
+
+import OrderFormContainer from '../order/order_form_container'
 import { Link } from 'react-router-dom';
+import CartEditContainer from './cart_edit_container'
 
 class CartIndex extends React.Component {
     constructor(props) {
@@ -17,20 +18,22 @@ class CartIndex extends React.Component {
 
 
     render() {
-        const { buyerId, cartItems, products } = this.props
-        if (!products && !cartItems) return null;
-        debugger
+        const { carts, products } = this.props
+        if (!products && !carts) return null;
         return (
-            <div>
+            <div className='cart-index-container'>
+                <div className='cart-header'>
+                    { carts.length <= 1 ?
+                        (<h1>{carts.length} item in the cart</h1>) : (<h1>{carts.length} items in the cart</h1>) 
+                    }
+
+                    <Link to='/'><p>Keep shopping</p></Link>
+                </div>
                 <div className='cart-item-wrapper'>
-                    <div className='cart-header'>
-                        <h1>{cartItems.length} item in the cart</h1>
-                        <Link to='/'><p>Keep shopping</p></Link>
-                    </div>
 
                     <div className='cart-item-box'>
                         {
-                            cartItems.map((cartItem, idx) => {
+                            carts.map((cartItem, idx) => {
                                 let itemDetails = products[cartItem.product_id]
                                 let amount = (itemDetails.price * cartItem.quantity * 1.00)
                                 return (
@@ -39,12 +42,13 @@ class CartIndex extends React.Component {
                                         <div className='cart-item-details'>
                                             <ul>
                                                 <li id='cart-title'>{itemDetails.title}</li>
-                                                {/* <li id='cart-title'>Baby Bear Hat, Diaper Cover and Booties - Baby Photo Prop - Baby Shower Gift - Baby Bear Hat - Available in 0 to 6 Months - Any Color Combo</li> */}
-                                                <li id='cart-quantity'> {cartItem.quantity}</li>
+                                                {/* <CartEditContainer
+                                                    cart={cartItem}
+                                                /> */}
+                                                <li id='cart-quantity'>{cartItem.quantity}</li>
                                                 <li id='cart-amount'>$ {amount}</li>
-                                                {/* <li id='cart-amount'>$66.00</li> */}
                                                 <li id='return'>Returns not accepted</li>
-                                                <button className='remove-item'>Remove</button>
+                                                <button className='remove-item' onClick={() => this.props.deleteCart(cartItem.id)} >Remove</button>
                                             </ul>
                                         </div>
                                     </div>
@@ -52,14 +56,47 @@ class CartIndex extends React.Component {
                                 
                             })
                         }
-                    <p id='delivery'><FaLeaf/>Gifty offsets carbon emissions from every delivery</p>
+                    
+                    </div>
+                    <OrderFormContainer
+                        carts={carts}
+                    />
+                    
+                </div>
+                {/* <div className='check-out-wrapper'>
+                    <div className='check-out-box'>
+                        <ul>
+                            <li className='order-header'>How you'll pay</li>
+                            <form className="place-order">
+                                <div className='radio-button'>
+                                    <input type='radio' /><label><img width='50%' src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/25928-1-credit-card-visa-and-master-card-file.png" alt="" /></label>
+                                </div>
+                                <div className='radio-button'>
+                                    <input type="radio" /><label><img width='25%' src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/580b57fcd9996e24bc43c530.png" alt="" /></label>
+                                </div>
+                                <div className='total-amount'>
+                                    <li>Item(s) total</li>
+                                    <li>$33.00</li>
+                                </div>
+                                <div className='shipping'>
+                                    <li id='shipping'>Shipping</li>
+                                    <li id='free' color='green'>FREE</li>
+                                </div>
+                                <hr />
+                                <div className='summary'>
+                                    {carts.length <= 1 ?
+                                        (<li>{carts.length} Total( {carts.length} item)</li>) : (<li>{carts.length} Total( {carts.length} items)</li>)
+                                    }
+                                    <li></li>
+                                </div>
+
+                                <button>Proceed to checkout</button>
+                            </form>
+                        </ul>
                     </div>
                 </div>
-                <div>
-                    {/* <OrderFormContainer/> */}
-                </div>
+                <p id='delivery'><FaLeaf />Gifty offsets carbon emissions from every delivery</p> */}
             </div>
-
             
         )
     }

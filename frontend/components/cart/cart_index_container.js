@@ -1,15 +1,16 @@
 import CartIndex from './cart_index'
 import { connect } from "react-redux";
-import { fetchAllCarts} from '../../actions/cart_action'
+import { fetchAllCarts, deleteCart, updateCart} from '../../actions/cart_action'
 import { fetchAllProducts } from '../../actions/product_action';
 import { openModal} from '../../actions/modal_action'
 
 const mSTP = (state, ownProps) => {
 
     console.log(state, ownProps)
+    debugger
     return {
         buyerId: ownProps.match.params.userId,
-        cartItems : Object.values(state.entities.carts),
+        carts : Object.values(state.entities.carts),
         products: state.entities.products,
     }
 }
@@ -18,6 +19,8 @@ const mDTP = dispatch => ({
     fetchAllCarts: () => dispatch(fetchAllCarts()),
     fetchAllProducts: () => dispatch(fetchAllProducts()),
     openModal: modal => dispatch(openModal(modal)),
+    deleteCart: cartId => dispatch(deleteCart(cartId)),
+    updateCart: ( cart) => dispatch(updateCart( cart))
 })
 
 

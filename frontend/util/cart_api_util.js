@@ -9,6 +9,7 @@ export const fetchCarts = (userId) => {
 }
 
 export const fetchCart = (cartId) => {
+    debugger
     return (
         $.ajax({
             method: 'GET',
@@ -29,20 +30,21 @@ export const createCart = (cart) => {
 }
 
 export const updateCart = (cart) => {
+    debugger
     return (
         $.ajax({
             method: 'PATCH',
-            url: `/api/carts/${cartId}`,
+            url: `/api/carts/${cart.id}`,
             data: { cart }
         })
     )
 }
 
-export const deleteCart = (userId, cartId) => {
+export const deleteCart = (cartId) => {
     return (
         $.ajax({
             method: 'DELETE',
-            url: `/api/users/${userId}/carts/${cartId}`
+            url: `/api/carts/${cartId}`
         })
     )
 }

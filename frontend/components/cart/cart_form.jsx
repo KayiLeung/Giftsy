@@ -17,26 +17,68 @@ class Cartform extends React.Component {
 
         e.preventDefault();
         debugger
-        const { currentUser, product } = this.props
-        if (!this.props.currentUser) {
-            this.props.openModal('login')
-        } else {
-            debugger
-            const buyerId = currentUser;
-            // const productId = product.id;
-            debugger
-            const cart = Object.assign({}, {
-                ...this.state,
-                buyer_id: buyerId,
-                product_id: product.id,
-                price: product.price,
-                productUrl: product.photoUrl,
-                title: product.title
-            })
-            debugger
-            this.props.createCart(cart)
-        }
+        const { currentUser, product , carts} = this.props
+        // if (!this.props.currentUser) {
+        //     this.props.openModal('login')
+        // } else {
+        //     debugger
+        //     const buyerId = currentUser;
+        //     // const productId = product.id;
+        //     debugger
+        //     const cart = Object.assign({}, {
+        //         ...this.state,
+        //         buyer_id: buyerId,
+        //         product_id: product.id,
+        //         price: product.price,
+        //         productUrl: product.photoUrl,
+        //         title: product.title
+        //     })
+        //     debugger
+        //     this.props.createCart(cart)
+        // }
+        // carts.forEach(cart => {
+        //     if (cart.product_id === cart.id && cart.quantity !== this.state.quantity) {
+        //         const rating = Object.assign(this.state)
+        //         debugger
+        //         this.props.updateCart(cart);
+        //     } else {
+        //         const buyerId = currentUser;
 
+        //         const cart = Object.assign({}, {
+        //             ...this.state,
+        //             buyer_id: buyerId,
+        //             product_id: product.id,
+        //             price: product.price,
+        //             productUrl: product.photoUrl,
+        //             title: product.title
+        //         })
+        //         this.props.createCart(cart)
+        //     }
+           
+        // })
+        let cartExist = false
+        let oldcart = {}
+        carts.forEach (cart => {
+            if (cart.product_id === product.id) {
+                cartExist = true
+                oldcart = cart
+                debugger
+            }
+        })
+        if (cartExist) {
+            oldcart.quantity = this.state.quantity
+            debugger
+            this.props.updateCart(oldcart)
+        } else {
+            const buyerId = currentUser;
+
+                const cart = Object.assign({}, {
+                    ...this.state,
+                    buyer_id: buyerId,
+                    product_id: product.id
+                })
+                this.props.createCart(cart)
+        }
     }
 
 
@@ -44,12 +86,12 @@ class Cartform extends React.Component {
 
 
     componentDidMount() {
-        // this.props.fetchAllCarts(this.props.currentUser)
+        this.props.fetchAllCarts(this.props.currentUser)
         // console.log(this.props.fetchAllCarts(this.props.currentUser))
     }
 
     update(field) {
-        // debugger
+        debugger
         return e => {
             this.setState({
                 [field]: e.target.value
@@ -58,9 +100,9 @@ class Cartform extends React.Component {
     }
 
     render() {
-        const { currentUser, cart } = this.props
-        console.log(`this is the first cart: ${cart}`)
-        if (!this.props.product) return null
+
+        if (!this.props.product ) return null
+        debugger
         return (
             <div>
                 <form className='order-form-wrapper' onSubmit={this.addCartItem}>

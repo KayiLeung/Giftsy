@@ -39,10 +39,10 @@ export const createCart = ( cart) => dispatch => {
     )
 }
 
-export const updateCart = (cartId, cartItem) => dispatch => {
+export const updateCart = (cart) => dispatch => {
     return (
-        CartApiUtil.updateCart( cartId, cartItem)
-            .then(cartItem => dispatch(receiveCart(cartItem)))
+        CartApiUtil.updateCart(cart)
+            .then(cart => dispatch(receiveCart(cart)))
     )
 }
 
