@@ -47,8 +47,8 @@ class ProductShowPage extends React.Component{
                         />
                         <br />
                         <ul className='shipping'>
-                            <li><FaHourglassHalf />  Selling fast! Only {product.quantity} left!</li>
-                            <li><FaShippingFast />  Hooray! This item ships free.</li>
+                            <li><FaHourglassHalf /> <p> Selling fast! </p> <p>Only {product.quantity} left! </p></li>
+                                <li><FaShippingFast /> <p> Hooray! </p><p>This item ships free.</p></li>
                         </ul>
                     </div>
                 </div>

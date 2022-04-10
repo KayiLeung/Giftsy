@@ -1,10 +1,10 @@
 import { fetchUser } from "../../actions/user_actions";
 import Cartform from "./cart_form";
-import { connect } from "react-redux";
+
 import { openModal } from "../../actions/modal_action";
 import { withRouter } from "react-router-dom";
 import { createCart, updateCart, fetchAllCarts } from '../../actions/cart_action'
-
+import { connect } from "react-redux";
 
 
 const mSTP = (state, ownProps) => {

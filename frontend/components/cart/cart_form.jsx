@@ -69,6 +69,7 @@ class Cartform extends React.Component {
             oldcart.quantity = this.state.quantity
             debugger
             this.props.updateCart(oldcart)
+                .then(res => console.log(this.props.history))
         } else {
             const buyerId = currentUser;
 
@@ -77,7 +78,11 @@ class Cartform extends React.Component {
                     buyer_id: buyerId,
                     product_id: product.id
                 })
+                debugger
                 this.props.createCart(cart)
+                    .then(res => console.log(this.props.history))
+                    // .then(res => this.props.history.push(`/products/${product.product_id}`), console.log('push'))
+                
         }
     }
 
@@ -106,6 +111,7 @@ class Cartform extends React.Component {
         return (
             <div>
                 <form className='order-form-wrapper' onSubmit={this.addCartItem}>
+                    <p>Quantity</p>
                     <select name="subamount" id="item_quantity" onChange={this.update('quantity')}>
                         <option value="1">1</option>
                         <option value="2">2</option>
