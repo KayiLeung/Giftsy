@@ -1,14 +1,16 @@
 
 import React from "react";
-import { SiVisa, SiAmericanexpress } from 'react-icons/si'
-import { FaCcMastercard, FaCcDiscover, FaPaypal} from 'react-icons/fa'
 
+import { FaLeaf } from 'react-icons/fa'
 
 class OrderForm extends React.Component {
 
 
     render(){
+        console.log(this.props)
         return(
+        <div>
+       
         <div className='check-out-wrapper'>
             <div className='check-out-box'>
                 <ul>
@@ -39,6 +41,8 @@ class OrderForm extends React.Component {
                     </form>
                 </ul>
             </div>
+        </div>
+            <p id='delivery'><FaLeaf />Gifty offsets carbon emissions from every delivery</p>
         </div>
         )
     }

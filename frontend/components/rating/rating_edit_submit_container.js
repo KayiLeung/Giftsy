@@ -26,4 +26,4 @@ const mDTP = dispatch => {
     // fetchProduct: productId => dispatch(fetchProduct(productId)),
 }
 
-export default withRouter(connect(mSTP, mDTP)(RatingEditSubmitForm))
+export default (connect(mSTP, mDTP)(RatingEditSubmitForm))
