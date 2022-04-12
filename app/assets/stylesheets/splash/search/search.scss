@@ -3,12 +3,16 @@
  margin: 4%;
  h1 {
      font-size: 50px;
+     font-family: $Exo2 ;
+     font-size: x-large;
  }
 }
 
 .search-wrapper{
    
     display: flex;
+    flex-wrap: wrap;
+        margin-top: 5%;
 }
 
 .search-item{
@@ -17,20 +21,36 @@
 }
 
 .search-result{
-    height: 60%;
+    height: 80%;
     display: flex;
      align-items: stretch;
+     border: #f2ecea 1px solid;
     img{
         width: 100%;
+        max-height: 100%;
         
     }
 }
 
 .search-result-details{
-
-    height: 40%; 
+    border: #f2ecea 1px solid;
+    height: 20%; 
+        ul > li {
+        margin-top: 2%;
+        text-overflow: ellipsis;
+        // display: inline;
+        overflow: hidden;
+white-space: nowrap;
+    }
     a{
         text-decoration: none;
         color: black;
+    }
+    .result-name{
+        font-family: $product-description;
+        font-weight: Light;
+    }
+    .result-price{
+        font-family: $product-price;
     }
 }

@@ -14,32 +14,70 @@ font-family: 'Shadows Into Light', cursive; */
 .category-show-right{
     display: flex;
         flex-wrap: wrap;
+        margin-top: 5%;
 }
 
 .all-product{
 
     font-family: 'Fredoka', sans-serif;
+  
         @include grid(5, 2%);
 
 }
 
-.catproduct-thumbnail{
-    height: 60%;
-    display: flex;
-        align-items: stretch;
+.cat-show-title{
+    h1 {
+        font-size: x-large;
+        // font-family: $Flamenco;
+        font-family: $Exo2 ;
+    }
+}
 
+.catproduct-thumbnail{
+    height: 75%;
+    display: flex;
+    align-items: stretch;
+        border: #f2ecea 1px solid;
     img{
         max-height: 100%;
         width: 100%;
+        
     }
 }
 
 .product-details{
-    height: 40%;
+      border: #f2ecea 1px solid;
+      border-top: none;
+    margin-top: 2%;
+    height: 25%;
+    ul > li {
+        margin-top: 2%;
+        text-overflow: ellipsis;
+        // display: inline;
+        overflow: hidden;
+white-space: nowrap;
+    }
         a{
         text-decoration: none;
         color: black;
     }
+    #title{
+        font-family: $product-description;
+        font-weight: Light;
+    }
+    #price{
+        font-family: $product-price;
+    }
+
 }
 
 
+#free-shipping{
+    background-color: #9cba7e;
+    border-radius: 15px;
+    padding: 3px;
+    text-align: center;
+    display: inline-block;
+    font-size: 60%;
+    
+}

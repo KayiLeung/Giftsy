@@ -16,18 +16,15 @@ class Search extends React.Component {
 
     handleFilter = (e) => {
         let searchWord = e.target.value
-        debugger
+
         const newFilter = this.props.products.filter((product => {
             return product.title.toLowerCase().includes(searchWord.toLowerCase())
         }));
-        debugger
         this.setState({query: newFilter})
-        debugger
     }
 
     handleSubmit = e => {
         e.preventDefault();
-        debugger
         this.setState({
             searchRes: true
         })

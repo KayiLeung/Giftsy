@@ -3,7 +3,6 @@ import { fetchAllProducts, fetchProduct} from '../../actions/product_action'
 import SearchIndex from "./search_index";
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
         filteredProducts: ownProps.location.state.stateName,
     }

@@ -18,44 +18,7 @@ class Cartform extends React.Component {
         e.preventDefault();
         debugger
         const { currentUser, product , carts} = this.props
-        // if (!this.props.currentUser) {
-        //     this.props.openModal('login')
-        // } else {
-        //     debugger
-        //     const buyerId = currentUser;
-        //     // const productId = product.id;
-        //     debugger
-        //     const cart = Object.assign({}, {
-        //         ...this.state,
-        //         buyer_id: buyerId,
-        //         product_id: product.id,
-        //         price: product.price,
-        //         productUrl: product.photoUrl,
-        //         title: product.title
-        //     })
-        //     debugger
-        //     this.props.createCart(cart)
-        // }
-        // carts.forEach(cart => {
-        //     if (cart.product_id === cart.id && cart.quantity !== this.state.quantity) {
-        //         const rating = Object.assign(this.state)
-        //         debugger
-        //         this.props.updateCart(cart);
-        //     } else {
-        //         const buyerId = currentUser;
 
-        //         const cart = Object.assign({}, {
-        //             ...this.state,
-        //             buyer_id: buyerId,
-        //             product_id: product.id,
-        //             price: product.price,
-        //             productUrl: product.photoUrl,
-        //             title: product.title
-        //         })
-        //         this.props.createCart(cart)
-        //     }
-           
-        // })
         let cartExist = false
         let oldcart = {}
         carts.forEach (cart => {

@@ -38,7 +38,7 @@ $item-title: 'Lato', sans-serif;
     display: flex;
     flex-direction: row;
     font-family: $product-title;
-
+        flex-direction: column;
     li {
         display: flex;
         svg{

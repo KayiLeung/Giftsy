@@ -12,6 +12,9 @@
 
      #price-tag{
             margin-top: -50px;
+            position: absolute;
+            // margin-top: 160px;
+            margin-left: 10px;
             display: block;
             font-family:$product-price;
             border-radius: 15px;

@@ -11,13 +11,10 @@ const Search = ({products, fetchAllProducts, history}) => {
 
 const handleFilter = e => {
     const searchWord = e.target.value;
-    debugger
     const newFilter = products.filter(( product => {
         return product.title.toLowerCase().includes(searchWord.toLowerCase())
     }));
-    debugger
     setFilteredData(newFilter)
-    debugger
 }
 
 // const handleChange = e => {

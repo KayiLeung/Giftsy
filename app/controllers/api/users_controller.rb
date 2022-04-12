@@ -2,7 +2,9 @@ class Api::UsersController < ApplicationController
 #   skip_before_action :verify_authenticity_token  
     before_action :ensure_logged_in, only: [:destroy, :show]
     def index
+
         @users = User.all
+        debugger
         render 'api/users/index'
     end
     
