@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import CartEditForm from './cart_edit_form'
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
         cart: state.entities.carts[ownProps.cart.id]
     }

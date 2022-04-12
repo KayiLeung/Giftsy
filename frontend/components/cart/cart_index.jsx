@@ -19,7 +19,8 @@ class CartIndex extends React.Component {
 
     render() {
         const { carts, products } = this.props
-        if (!products && !carts) return null;
+        if (Object.values(products).length === 0 || !carts) return null;
+        // if (Object.values(products).length === 0 || carts.length === 0) return null;
         let total = 0
         return (
             <div className='cart-index-container'>

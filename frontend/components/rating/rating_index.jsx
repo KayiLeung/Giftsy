@@ -21,7 +21,6 @@ class RatingIndex extends React.Component{
         
     
         if (!ratings && !allUsers) return null;
-        debugger
         return (
 
             <div className='rating-index-container'>

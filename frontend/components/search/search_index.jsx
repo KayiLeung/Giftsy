@@ -1,6 +1,6 @@
 
 import React from 'react';
-import SearchIndexItem from './search_index_item';
+import SearchIndexItem from '../../unuse/search_index_item';
 import { Link } from 'react-router-dom';
 
 
@@ -46,28 +46,19 @@ const SearchIndex = ({ filteredProducts}) => {
             </div>
         </div>)
     )
-
-    // return (
-    //     filteredProducts.length === 0 ? (<div>No result found! Search again?</div>) :
-    //     (
-    //         <div>
-    //         {
-    //             filteredProducts.map((product, idx) => {
-    //             return (
-    //                 <div>
-
-    //                 </div>
-    //             )
-    //         } 
-
-        
-        
-    //         }
-
-    //         </div>
-    //     )
-    // )
 }
+
+// class SearchIndex extends React.Component {
+//     constructor(props) {
+//         super(props)
+//     }
+
+//     render() {
+//         return{
+
+//         }
+//     }
+// }
 
 
 export default SearchIndex;

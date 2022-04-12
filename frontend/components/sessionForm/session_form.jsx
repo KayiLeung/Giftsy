@@ -102,16 +102,56 @@ class SessionForm extends React.Component {
         };
 
         return (
-            <div>
+            <div className='session-form-wrapper'>
                 <div className="login-form-container">
                     {this.renderErrors()}
                     <form onSubmit={this.handleSubmit} className='session-form-box'>
                         <div onClick={this.props.closeModal} className="close-x">X</div>
-                        <h3>Create your account</h3>
-                        <h3>Registration is easy.</h3>
-                        <p>Please {this.props.formType} or {this.props.otherForm}</p>
+                        <div className='session-form-header'>
+                            <h3>Create your account</h3>
+                            <h3>Registration is easy.</h3>
+                            <p>Please {this.props.formType} or {this.props.otherForm}</p>
+                        </div>
                         <br />
-                        {/* <label>Email Address
+                        <div className='text-field'>
+                            <label><br />Email Address<br />
+                            <TextField
+                                required
+                                id="filled-required"
+                                label="Required"
+                                defaultValue="Email"
+                                variant="filled"
+                                value={this.state.email}
+                                onChange={this.handleInput('email')}
+                            />
+                            </label>
+                            <label><br />Password<br />
+                            <TextField
+                                id="filled-password-input"
+                                label="Password"
+                                type="password"
+                                autoComplete="current-password"
+                                value={this.state.password}
+                                onChange={this.handleInput('password')}
+                                variant="filled"
+                            />
+                            </label>
+                        </div>
+
+                        {signingUp()}
+                        <br /><br />
+                        <button className='session-button'>{this.props.formType}</button>
+                        <br /><br />
+                        {loggingIn()}
+                        <br /><br />
+                    </form>
+                </div >
+            </div >
+        );
+    }
+}
+
+{/* <label>Email Address
                             <br />
                             <input
                                 type="text"
@@ -130,41 +170,5 @@ class SessionForm extends React.Component {
                                 id='password-input'
                             />
                         </label> */}
-                        <label><br />Email Address<br />
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="Required"
-                            defaultValue="Email"
-                            variant="filled"
-                            value={this.state.email}
-                            onChange={this.handleInput('email')}
-                        />
-                        </label>
-                        <label><br />Password<br />
-                        <TextField
-                            id="filled-password-input"
-                            label="Password"
-                            type="password"
-                            autoComplete="current-password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                            variant="filled"
-                        />
-                        </label>
-
-
-                        {signingUp()}
-                        <br /><br />
-                        <button className='session-button'>{this.props.formType}</button>
-                        <br /><br />
-                        {loggingIn()}
-                        <br /><br />
-                    </form>
-                </div >
-            </div >
-        );
-    }
-}
 
 export default SessionForm;

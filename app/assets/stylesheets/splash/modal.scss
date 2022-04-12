@@ -2,8 +2,21 @@
 // $roboto-slab: 'Roboto Slab', serif;   
 // $open-sans: 'Open Sans', sans-serif;
 @import '../variable.scss';
- 
- 
+ .session-form-wrapper{
+   border: rgb(0, 0, 0) 5px solid;
+   border-radius: 30px;
+   width: 300px;
+   height: 400px;
+       display: flex;
+    justify-content: center;
+    padding: 10px;
+ }
+ .close-x{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+ }
+
  .modal-background {
    position: fixed;
    top: 0;
@@ -11,8 +24,9 @@
    right: 0;
    left: 0;
    background: black(0, 0, 0, 0.7);
-   z-index: 10;
+   z-index: 100;
     backdrop-filter: blur(8px);
+    
  }
 
  .modal-child {
@@ -24,28 +38,30 @@
   border-radius: 30px;
  }
 
- .close-x {
-   display: flex;
-   position:-webkit-sticky;
-   top: 5px;
-   right: 5px;
-   cursor: pointer;
-   justify-content:right;
-   &hover{
-    color: white;
-    background-color:none ;
-    cursor: pointer;
-   }
- }
 
- .login-form-container {
-   display: flex;
-   justify-content: center;
-   padding: 15px;
-   block-size: auto;
-    border-radius: 30px;
-   border:3px solid $widthborder;
-   color: $widthborder;
-   width: 200px;
- }
+//  .close-x {
+//    display: flex;
+//    position:-webkit-sticky;
+//    top: 5px;
+//    right: 5px;
+//    cursor: pointer;
+//    justify-content:right;
+//    &hover{
+//     color: white;
+//     background-color:none ;
+//     cursor: pointer;
+//    }
+//  }
+
+//  .login-form-container {
+//    display: flex;
+//    justify-content: center;
+//    padding: 15px;
+//    block-size: auto;
+//     border-radius: 30px;
+//    border:3px solid $widthborder;
+//    color: $widthborder;
+//    width: 200px;
+//    flex-direction:column-reverse;
+//  }
 

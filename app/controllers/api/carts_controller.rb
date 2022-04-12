@@ -3,11 +3,7 @@ class Api::CartsController < ApplicationController
     # skip_before_action :verify_authenticity_token  
     def index
 
-        # debugger
         @carts = Cart.where(buyer_id: current_user.id).all
-
-        # debugger
-
         render :index
     end
 
@@ -18,10 +14,8 @@ class Api::CartsController < ApplicationController
 
     def create
         @cart = Cart.new(cart_params)
-        # debugger
         if @cart.save
-            # debugger
-            render json: ['cart created']
+            render :show
         else
             render json: @cart.errors.full_messages
         end
@@ -30,7 +24,7 @@ class Api::CartsController < ApplicationController
     def update
         @cart = Cart.find(params[:id])
         if @cart && @cart.update(cart_params)
-            render json: ['cart updated']
+            render :show
         end
 
     end
@@ -38,7 +32,6 @@ class Api::CartsController < ApplicationController
     def destroy
 
         @cart = Cart.find(params[:id])
-        # debugger
         @cart.destroy
         render json: ['cart deleted']
     end

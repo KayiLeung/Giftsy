@@ -16,7 +16,6 @@ class Cartform extends React.Component {
     addCartItem(e) {
 
         e.preventDefault();
-        debugger
         const { currentUser, product , carts} = this.props
 
         let cartExist = false
@@ -25,14 +24,12 @@ class Cartform extends React.Component {
             if (cart.product_id === product.id) {
                 cartExist = true
                 oldcart = cart
-                debugger
             }
         })
         if (cartExist) {
             oldcart.quantity = this.state.quantity
-            debugger
             this.props.updateCart(oldcart)
-                .then(res => console.log(this.props.history))
+                .then(alert('Cart Updated!'))
         } else {
             const buyerId = currentUser;
 
@@ -41,10 +38,10 @@ class Cartform extends React.Component {
                     buyer_id: buyerId,
                     product_id: product.id
                 })
-                debugger
                 this.props.createCart(cart)
-                    .then(res => console.log(this.props.history))
-                    // .then(res => this.props.history.push(`/products/${product.product_id}`), console.log('push'))
+                    .then(alert('Item added!'))
+                    debugger
+
                 
         }
     }
@@ -59,7 +56,6 @@ class Cartform extends React.Component {
     }
 
     update(field) {
-        debugger
         return e => {
             this.setState({
                 [field]: e.target.value
@@ -70,7 +66,6 @@ class Cartform extends React.Component {
     render() {
 
         if (!this.props.product ) return null
-        debugger
         return (
             <div>
                 <form className='order-form-wrapper' onSubmit={this.addCartItem}>

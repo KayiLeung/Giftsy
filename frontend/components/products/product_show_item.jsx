@@ -38,7 +38,6 @@ class ProductShowPage extends React.Component{
                             <br />
                             <li className='price'>${product.price}+</li>
                             <br />
-                            {/* {this.quantity()} */}
                             {product.quantity ? <li><FcCheckmark /> In stock</li> : <li>out of stock!</li>}
                         </ul>
                         <CartFormContainer

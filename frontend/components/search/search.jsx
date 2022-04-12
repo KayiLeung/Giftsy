@@ -17,27 +17,6 @@ const handleFilter = e => {
     setFilteredData(newFilter)
 }
 
-// const handleChange = e => {
-//     setQuery(e.currentTarget.value)
-// }
-
-// const handleSubmit = e => {
-//     debugger
-//     e.preventDefault();
-//     // return <SearchIndexContainer
-//     //     filterProduct={filteredData}>
-
-    
-   
-// }
-
-// const handleEnterKey = e => {
-//     if(e.key === 'enter') {
-//         handleSubmit(e)
-//     }
-// }
-
-    
     return (
             <div className='search-wrap'>
                 <div className="search-bar">
