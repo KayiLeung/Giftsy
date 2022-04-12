@@ -8,7 +8,6 @@ import { fetchRating } from "../../actions/rating_action";
 import RatingForm from "./rating_form";
 
 const mSTP = (state, ownProps) => {
- 
     return {
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],

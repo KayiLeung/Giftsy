@@ -9,13 +9,12 @@ import {
         } from '../../actions/rating_action'
 import {openModal} from '../../actions/modal_action'
 import RatingIndex from './rating_index'
+import {fetchUsers} from '../../actions/user_actions'
 
 const mSTP = (state, ownProps) => {
-    // users: state.entities.users,
-    // product: state.entities.products[ownProps.match.params.productId]
-    //get users and product from parent component Product show page
+    debugger
     return {
-        user: state.session.id,
+        allUsers: Object.values(state.entities.users),
         currentUser: state.entities.users[state.session.id],
         ratings: Object.values(state.entities.ratings),
 
@@ -29,6 +28,7 @@ const mDTP = dispatch => {
         updateRating: (rating) => dispatch(updateRating(rating)),
         deleteRating: (ratingId) => dispatch(deleteRating(ratingId)),
         fetchAllRatings: (() => dispatch(fetchAllRatings())),
+        fetchUsers:(() => dispatch(fetchUsers())),
         fetchRating: (ratingId => dispatch(fetchRating(ratingId))),
     }
     // openModal: (() => dispatch(openModal('edit')))

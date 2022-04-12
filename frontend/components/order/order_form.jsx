@@ -4,10 +4,27 @@ import React from "react";
 import { FaLeaf } from 'react-icons/fa'
 
 class OrderForm extends React.Component {
+    constructor(props){
+        super(props)
+    }
 
+    handleCheckOut(e){
+        e.preventDefault();
+        debugger
+        const {carts, deleteCart} = this.props
+        debugger
+        carts.map((cart) =>{
+            deleteCart(cart.id)
+        }) 
+    }
 
+    componentDidMount() {
+        this.props.fetchAllCarts()
+    }
     render(){
-        console.log(this.props)
+        debugger
+
+        const {carts, total} = this.props
         return(
         <div>
        
@@ -23,9 +40,10 @@ class OrderForm extends React.Component {
                         {/* <input type="radio" /><label><FaPaypal/></label> */}
                             <input type="radio" /><label><img width='25%'src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/580b57fcd9996e24bc43c530.png" alt="" /></label>
                         </div>
+              
                     <div className='total-amount'>
                         <li>Item(s) total</li>
-                        <li>$33.00</li>
+                        <li>${total}</li>
                     </div>
                     <div className='shipping'>
                         <li id='shipping'>Shipping</li>
@@ -33,16 +51,19 @@ class OrderForm extends React.Component {
                     </div>
                     <hr />
                     <div className='summary'>
-                        <li>Total(1 item)</li>
-                        <li>$33.00</li>
+                        <li>Total({carts.length} item)</li>
+                        <li>${total}</li>
                     </div>
-
-                    <button>Proceed to checkout</button>
+             
+                    <button className='check-out' onClick={this.handleCheckOut}>Proceed to checkout</button>
+                        
+           
                     </form>
+                    
                 </ul>
             </div>
         </div>
-            <p id='delivery'><FaLeaf />Gifty offsets carbon emissions from every delivery</p>
+            {/* <p id='delivery'><FaLeaf />Gifty offsets carbon emissions from every delivery</p> */}
         </div>
         )
     }

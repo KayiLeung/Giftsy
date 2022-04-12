@@ -1,20 +1,18 @@
-// import { connect } from "react-redux";
-// import { fetchAllProducts, fetchproduct} from '../../actions/product_action'
-// import SearchIndex from "./search_index";
+import { connect } from "react-redux";
+import { fetchAllProducts, fetchProduct} from '../../actions/product_action'
+import SearchIndex from "./search_index";
 
-// const mSTP = (state, ownProps) => {
+const mSTP = (state, ownProps) => {
+    return {
+        filteredProducts: ownProps.location.state.stateName,
+    }
+}
 
-//     return {
-//         product: state.entitites.products[ownProps.match.params.productId]
-//     }
-// }
-
-// const mDTP = dispatch => {
+const mDTP = dispatch => {
     
-//     return {
-//         fetchAllProducts: () => dispatch(fetchAllProducts()),
-//         fetchproduct: id => dispatch(fetchproduct(id))
-//     }
-// }
+    return {
+        fetchProduct: productId => dispatch(fetchProduct(productId))
+    }
+}
 
-// export default connect(mSTP, mDTP)(SearchIndex)
+export default connect(mSTP, mDTP)(SearchIndex)

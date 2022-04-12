@@ -20,8 +20,10 @@ function Modal({ modal , closeModal, signupForm, loginForm }) {
             component = <SignupFormContainer />;
             break;
         case 'edit':
-
             component = <EditRatingContainer />
+            break;
+        // case 'create_cart'
+        //     return {'Item added'}
         default:
             return null;
     }

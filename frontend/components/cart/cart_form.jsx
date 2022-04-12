@@ -18,44 +18,7 @@ class Cartform extends React.Component {
         e.preventDefault();
         debugger
         const { currentUser, product , carts} = this.props
-        // if (!this.props.currentUser) {
-        //     this.props.openModal('login')
-        // } else {
-        //     debugger
-        //     const buyerId = currentUser;
-        //     // const productId = product.id;
-        //     debugger
-        //     const cart = Object.assign({}, {
-        //         ...this.state,
-        //         buyer_id: buyerId,
-        //         product_id: product.id,
-        //         price: product.price,
-        //         productUrl: product.photoUrl,
-        //         title: product.title
-        //     })
-        //     debugger
-        //     this.props.createCart(cart)
-        // }
-        // carts.forEach(cart => {
-        //     if (cart.product_id === cart.id && cart.quantity !== this.state.quantity) {
-        //         const rating = Object.assign(this.state)
-        //         debugger
-        //         this.props.updateCart(cart);
-        //     } else {
-        //         const buyerId = currentUser;
 
-        //         const cart = Object.assign({}, {
-        //             ...this.state,
-        //             buyer_id: buyerId,
-        //             product_id: product.id,
-        //             price: product.price,
-        //             productUrl: product.photoUrl,
-        //             title: product.title
-        //         })
-        //         this.props.createCart(cart)
-        //     }
-           
-        // })
         let cartExist = false
         let oldcart = {}
         carts.forEach (cart => {
@@ -69,6 +32,7 @@ class Cartform extends React.Component {
             oldcart.quantity = this.state.quantity
             debugger
             this.props.updateCart(oldcart)
+                .then(res => console.log(this.props.history))
         } else {
             const buyerId = currentUser;
 
@@ -77,7 +41,11 @@ class Cartform extends React.Component {
                     buyer_id: buyerId,
                     product_id: product.id
                 })
+                debugger
                 this.props.createCart(cart)
+                    .then(res => console.log(this.props.history))
+                    // .then(res => this.props.history.push(`/products/${product.product_id}`), console.log('push'))
+                
         }
     }
 
@@ -106,6 +74,7 @@ class Cartform extends React.Component {
         return (
             <div>
                 <form className='order-form-wrapper' onSubmit={this.addCartItem}>
+                    <p>Quantity</p>
                     <select name="subamount" id="item_quantity" onChange={this.update('quantity')}>
                         <option value="1">1</option>
                         <option value="2">2</option>

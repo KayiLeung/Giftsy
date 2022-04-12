@@ -38,7 +38,7 @@ class Api::CartsController < ApplicationController
     def destroy
 
         @cart = Cart.find(params[:id])
-        debugger
+        # debugger
         @cart.destroy
         render json: ['cart deleted']
     end

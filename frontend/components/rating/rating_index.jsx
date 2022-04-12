@@ -10,16 +10,18 @@ class RatingIndex extends React.Component{
     componentDidMount() {
 
         this.props.fetchAllRatings();
+        this.props.fetchUsers();
     }
 
     render(){
 
-        const { ratings, users, currentUser, product, deleteRating, openModal, updateRating} = this.props
+        const { ratings, allUsers, currentUser, product, deleteRating, openModal, updateRating} = this.props
         const productId = product.id
         const productRatings = ratings.filter(rating => rating.product_id === productId)
         
     
-        if (!ratings && !users) return null;
+        if (!ratings && !allUsers) return null;
+        debugger
         return (
 
             <div className='rating-index-container'>
@@ -35,6 +37,7 @@ class RatingIndex extends React.Component{
                             ratingId={rating.id}
                             openModal={openModal}
                             updateRating={updateRating}
+                            currentUser={currentUser}
                         />
                         
                         

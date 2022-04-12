@@ -5,8 +5,6 @@ import { fetchAllProducts } from '../../actions/product_action';
 import { openModal} from '../../actions/modal_action'
 
 const mSTP = (state, ownProps) => {
-
-    console.log(state, ownProps)
     debugger
     return {
         buyerId: ownProps.match.params.userId,

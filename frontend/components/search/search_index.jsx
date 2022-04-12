@@ -1,61 +1,74 @@
 
 import React from 'react';
 import SearchIndexItem from './search_index_item';
+import { Link } from 'react-router-dom';
 
-class SearchIndex extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
 
-    componentDidMount() {
-        this.props.fetchAllProducts();
-    }
 
-    render() {
-        const { products } = this.props;
-        const query = this.props.location.search.slice(1);
-        if (!products) return null;
+const SearchIndex = ({ filteredProducts}) => {
 
-        const filteredProducts = this.props.products.filter(product => {
-            return product.name.toLowerCase().includes(query.toLowerCase())
-        })
+    return (
+        filteredProducts.length === 0 ? (
+        
+        <div className='search-container'>
+            <h1>Sorry, result no found, search again?</h1>
+        </div>) :
+        (
+        
+        <div className='search-container'>
+            <h1> {filteredProducts.length} item(s) found: </h1>
 
-        const filteredProductsComponents = filteredProducts.map(product => {
-            return (
-                <SearchIndexItem
-                    key={product.id}
-                    product={product}
-                />
-            )
-        })
+        
 
-        if (query !== "" && filteredProductsComponents.length > 0) {
-            return (
-                <div >
-                    <div className='search-index-top'>
-                        {filteredProductsComponents}
-                    </div>
-                    <div className='footer-stopper'></div>
-                </div>
-            )
-        } else {
-            return (
-                <div >
-                    <div className='search-index-top-empty'>
-                        <div className='search-not-found-1'>
-                            {`We couldn't find any results for ${query}`}
+            <div className='search-wrapper'>
+                {
+                    filteredProducts.map((product, idx) => {
+                        return(
+                        <div className='search-item'>
+                            <div className='search-result'>
+                                <Link to={`/products/${product.id}`}>
+                                    <img className='search-result-img' src={product.photoUrl} alt="" key={idx} />
+                                </Link>
+                            </div>
+                            <div className='search-result-details'>
+                                <Link to={`/products/${product.id}`}>
+                                <ul>
+                                    <li className='result-name'>{product.title}</li>
+                                    <li className='result-price'>${product.price}</li>
+                                </ul>
+                                </Link>
+                            </div>
                         </div>
-                        <div className='search-not-found-2'>
-                            Try searching for something else instead?
-                        </div>
-                    </div>
-                    <div className='footer-stopper'></div>
-                </div>
-            )
-        }
-    }
+                        )
+                    })
+                }
+            </div>
+        </div>)
+    )
+
+    // return (
+    //     filteredProducts.length === 0 ? (<div>No result found! Search again?</div>) :
+    //     (
+    //         <div>
+    //         {
+    //             filteredProducts.map((product, idx) => {
+    //             return (
+    //                 <div>
+
+    //                 </div>
+    //             )
+    //         } 
+
+        
+        
+    //         }
+
+    //         </div>
+    //     )
+    // )
 }
+
 
 export default SearchIndex;
 
