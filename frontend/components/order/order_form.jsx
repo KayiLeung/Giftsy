@@ -2,28 +2,29 @@
 import React from "react";
 
 import { FaLeaf } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 class OrderForm extends React.Component {
     constructor(props){
         super(props)
+ 
+        this.handleCheckOut = this.handleCheckOut.bind(this)
     }
 
     handleCheckOut(e){
         e.preventDefault();
-        debugger
         const {carts, deleteCart} = this.props
-        debugger
         carts.map((cart) =>{
             deleteCart(cart.id)
         }) 
+
     }
+
 
     componentDidMount() {
         this.props.fetchAllCarts()
     }
     render(){
-        debugger
-
         const {carts, total} = this.props
         return(
         <div>
@@ -37,7 +38,6 @@ class OrderForm extends React.Component {
                             <input type='radio'/><label><img width='50%'src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/25928-1-credit-card-visa-and-master-card-file.png" alt="" /></label>
                         </div>
                         <div className='radio-button'>
-                        {/* <input type="radio" /><label><FaPaypal/></label> */}
                             <input type="radio" /><label><img width='25%'src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/580b57fcd9996e24bc43c530.png" alt="" /></label>
                         </div>
               
@@ -59,11 +59,9 @@ class OrderForm extends React.Component {
                         
            
                     </form>
-                    
                 </ul>
             </div>
         </div>
-            {/* <p id='delivery'><FaLeaf />Gifty offsets carbon emissions from every delivery</p> */}
         </div>
         )
     }

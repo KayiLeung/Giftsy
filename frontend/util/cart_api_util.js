@@ -9,7 +9,6 @@ export const fetchCarts = (userId) => {
 }
 
 export const fetchCart = (cartId) => {
-    debugger
     return (
         $.ajax({
             method: 'GET',
@@ -19,7 +18,6 @@ export const fetchCart = (cartId) => {
 }
 
 export const createCart = (cart) => {
-    debugger
     return (
         $.ajax({
             method: 'POST',
@@ -30,7 +28,6 @@ export const createCart = (cart) => {
 }
 
 export const updateCart = (cart) => {
-    debugger
     return (
         $.ajax({
             method: 'PATCH',

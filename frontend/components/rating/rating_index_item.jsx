@@ -1,17 +1,15 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router';
 import Rating from '@mui/material/Rating'
 import RatingEditSubmitFormContainer from '../rating/rating_edit_submit_container'
-import RatingEditSubmitForm from '../rating/rating_edit_submit_form'
 import { updateRating } from '../../util/rating_api_util';
 const ReviewIndexItem = props => {
 
     // const editRating = (e) => {
     //     props.openModal('edit')
     // }
-
+ 
     return (
         <div className='rating-container'>
             <div className='customer-ratings'>
@@ -27,6 +25,11 @@ const ReviewIndexItem = props => {
             
                 (<div className='rating-edit-delete-btn'>
                     <Link to={`/ratings/${props.ratingId}`}>Edit</Link>
+
+                    {/* <button onClick={() => 
+                        props.giveRatingId(props.rating.id)
+                            .then(props.openModal('edit'))}>Edit</button> */}
+
                     <button onClick={() => props.deleteRating(props.ratingId)
                     }>
                         Delete

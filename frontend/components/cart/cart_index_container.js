@@ -5,9 +5,8 @@ import { fetchAllProducts } from '../../actions/product_action';
 import { openModal} from '../../actions/modal_action'
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
-        buyerId: ownProps.match.params.userId,
+        // buyerId: ownProps.match.params.userId,
         carts : Object.values(state.entities.carts),
         products: state.entities.products,
     }

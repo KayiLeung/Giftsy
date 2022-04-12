@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { fetchAllProducts, fetchProduct} from '../../actions/product_action'
 import SearchIndex from "./search_index";
 
@@ -15,4 +16,4 @@ const mDTP = dispatch => {
     }
 }
 
-export default connect(mSTP, mDTP)(SearchIndex)
+export default withRouter(connect(mSTP, mDTP)(SearchIndex))

@@ -8,8 +8,6 @@ import { connect } from "react-redux";
 
 
 const mSTP = (state, ownProps) => {
-    debugger
-    console.log(ownProps)
     return {
         currentUser: state.session.id,
         carts: Object.values(state.entities.carts)

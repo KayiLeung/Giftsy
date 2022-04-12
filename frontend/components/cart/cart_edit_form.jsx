@@ -3,17 +3,14 @@ import React, { Componet } from "react";
 
 class CartEditForm extends React.Component {
     constructor(props) {
-        debugger
         super(props)
 
         this.state = this.props.cart
-        debugger
-        this.addCartItem = this.updateCartItem.bind(this)
+        this.updateCartItem = this.updateCartItem.bind(this)
     }
 
 
     updateCartItem(e) {
-        debugger
         e.preventDefault();
         this.props.updateCart(this.state)
     }
@@ -21,7 +18,6 @@ class CartEditForm extends React.Component {
 
     update(field) {
         return e => {
-            debugger
             this.setState({
                 [field]: e.target.value
             })
@@ -31,10 +27,8 @@ class CartEditForm extends React.Component {
 
 
     render() {
-        debugger
         const { cart} = this.props
         if (!cart ) return null
-        debugger
         return (
             <div>
                 <form className='order-form-wrapper' onSubmit={this.updateCartItem}>

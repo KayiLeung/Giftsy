@@ -63,7 +63,7 @@ class Search extends React.Component {
                             onChange={this.handleFilter}
                             onKeyPress={(e) => this.handleEnterKey(e)}
                         />
-                        <button ><FaSearch /></button>
+                        <button onClick={this.handleSubmit}><FaSearch /></button>
                     </form>
                     {this.state.searchRes ?
                         <Redirect to={{
