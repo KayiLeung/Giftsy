@@ -31,20 +31,23 @@ class CategoryShow extends React.Component {
                 {
                     catProducts.map((product, idx) => {
                         return (
-                                <div className='all-product' >
+                            <div className='all-product' >
                                     {/* post-box */}
-                                <Link to={`/products/${product.id}`}>
-                                    <div className='catproduct-thumbnail' key={idx}>
-                                        <img className="catproduct-thumbnail-img" src={product.photoUrl} alt="" />
-                                        <div className='product-details'>
-                                            <li id='title'>{product.title}</li>
-                                            <li id='rating'>rating</li>
-                                            <li id='price'>{ `$ ${product.price}`}</li> 
-                                            <li id='free-shipping'>FREE shipping</li>
-                                        </div>
-                                    </div>
-                                </Link>
+                                <div className='catproduct-thumbnail' >
+                                    <Link to={`/products/${product.id}`}>
+                                        <img className="catproduct-thumbnail-img" src={product.photoUrl} alt="" key={idx} />
+                                    </Link>
                                 </div>
+                                <div className='product-details'>
+                                    <Link to={`/products/${product.id}`}>
+                                   <ul>
+                                        <li id='title'>{product.title}</li>
+                                        <li id='price'>{ `$ ${product.price}`}</li> 
+                                        <li id='free-shipping'>FREE shipping</li>
+                                    </ul>
+                                    </Link>
+                                </div>
+                             </div>
                         )
                     })
                 }

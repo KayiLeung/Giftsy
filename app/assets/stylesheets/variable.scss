@@ -43,7 +43,7 @@ $footerColor: white;
     margin-right: $mgn;
     margin-bottom: $mgn;
     width: ((100% - (($cols - 1) * $mgn)) / $cols);
-    // height: ((100% - (($cols - 1) * $mgn)) / $cols);
+    // height: 500px;
     &:nth-child(#{$cols}n) {
         margin-right: 0;
     }

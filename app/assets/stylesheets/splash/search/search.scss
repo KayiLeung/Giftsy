@@ -1,0 +1,36 @@
+@import '../../variable.scss';
+.search-container{
+ margin: 4%;
+ h1 {
+     font-size: 50px;
+ }
+}
+
+.search-wrapper{
+   
+    display: flex;
+}
+
+.search-item{
+     font-family: 'Fredoka', sans-serif;
+    @include grid(5, 2%);
+}
+
+.search-result{
+    height: 60%;
+    display: flex;
+     align-items: stretch;
+    img{
+        width: 100%;
+        
+    }
+}
+
+.search-result-details{
+
+    height: 40%; 
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}

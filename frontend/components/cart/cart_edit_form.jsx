@@ -6,7 +6,7 @@ class CartEditForm extends React.Component {
         debugger
         super(props)
 
-        this.state = this.props.cart.quantity
+        this.state = this.props.cart
         debugger
         this.addCartItem = this.updateCartItem.bind(this)
     }
@@ -28,8 +28,10 @@ class CartEditForm extends React.Component {
         }
     }
 
-    render() {
 
+
+    render() {
+        debugger
         const { cart} = this.props
         if (!cart ) return null
         debugger

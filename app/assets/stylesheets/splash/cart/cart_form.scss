@@ -5,6 +5,8 @@ $item-title: 'Lato', sans-serif;
 
 .cart-item-wrapper{
     // border: black 1px solid;
+    display: flex;
+    justify-content: space-between;
     margin-left: 2%;
     margin-right: 2%;
     display: -webkit-inline-box;
@@ -14,6 +16,7 @@ $item-title: 'Lato', sans-serif;
 .cart-item-box{
     //  border: red 1px solid;
      width: 50%;
+     min-inline-size: min-content;
 
 }
 

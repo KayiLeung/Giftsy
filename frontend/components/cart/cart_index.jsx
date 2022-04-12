@@ -20,6 +20,7 @@ class CartIndex extends React.Component {
     render() {
         const { carts, products } = this.props
         if (!products && !carts) return null;
+        let total = 0
         return (
             <div className='cart-index-container'>
                 <div className='cart-header'>
@@ -36,17 +37,22 @@ class CartIndex extends React.Component {
                             carts.map((cartItem, idx) => {
                                 let itemDetails = products[cartItem.product_id]
                                 let amount = (itemDetails.price * cartItem.quantity * 1.00)
+                                total += amount
                                 return (
                                     <div className='cart-item-thumbnail' key={idx}>
                                         <img className='cart-item-img' src={itemDetails.photoUrl} />
                                         <div className='cart-item-details'>
                                             <ul>
                                                 <li id='cart-title'>{itemDetails.title}</li>
-                                                {/* <CartEditContainer
+                                                <div className='order-cart'>
+                                                {console.log(cartItem)}
+                                                <CartEditContainer
                                                     cart={cartItem}
-                                                /> */}
-                                                <li id='cart-quantity'>{cartItem.quantity}</li>
+                                                    />
+                                                </div>
+                                                {/* <li id='cart-quantity'>{cartItem.quantity}</li> */}
                                                 <li id='cart-amount'>$ {amount}</li>
+                                                
                                                 <li id='return'>Returns not accepted</li>
                                                 <button className='remove-item' onClick={() => this.props.deleteCart(cartItem.id)} >Remove</button>
                                             </ul>
@@ -60,6 +66,8 @@ class CartIndex extends React.Component {
                     </div>
                     <OrderFormContainer
                         carts={carts}
+                        products={products}
+                        total={total}
                     />
                     
                 </div>
