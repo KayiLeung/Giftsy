@@ -40,9 +40,6 @@ class Cartform extends React.Component {
                 })
                 this.props.createCart(cart)
                     .then(alert('Item added!'))
-                    debugger
-
-                
         }
     }
 

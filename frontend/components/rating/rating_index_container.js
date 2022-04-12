@@ -14,8 +14,9 @@ import {fetchUsers} from '../../actions/user_actions'
 // import { giveRatingId } from "../../actions/modal_info_action";
 
 const mSTP = (state, ownProps) => {
+    debugger
     return {
-        allUsers: Object.values(state.entities.users),
+        users: state.entities.users,
         currentUser: state.entities.users[state.session.id],
         ratings: Object.values(state.entities.ratings),
 
