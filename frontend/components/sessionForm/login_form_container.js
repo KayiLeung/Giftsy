@@ -5,10 +5,12 @@ import { login } from '../../actions/session_actions'
 import SessionForm from './session_form';
 import { clearErrors } from '../../actions/errors_action';
 
-const mSTP = (state) => ({
+const mSTP = (state) => {
+    return {
     errors: Object.values(state.errors.sessionErrors),
     formType: 'login',
-});
+    }
+};
 
 const mDTP = dispatch => {
     return {

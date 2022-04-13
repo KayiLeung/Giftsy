@@ -6,11 +6,6 @@ import { Redirect } from 'react-router-dom'
 class Search extends React.Component {
     constructor(props) {
         super(props)
-        // this.state = {
-        //     searchWord:'',
-        //     query: [],
-        //     searchRes: false
-        // }
         this.state = {
             query: '',
             searchRes: false
@@ -19,11 +14,6 @@ class Search extends React.Component {
     }
 
     handleFilter = (e) => {
-    
-
-        // const newFilter = this.props.products.filter((product => {
-        //     return product.title.toLowerCase().includes(searchWord.toLowerCase())
-        // }));
         this.setState({query: e.target.value})
     }
 
@@ -73,7 +63,6 @@ class Search extends React.Component {
                             pathname: '/search',
                             state: { stateName: this.state.query },
                             search: `?search=${this.state.query}` , 
-                            // fetchAllProducts: this.props.fetchAllProducts,
                         }} /> : null}
                 </div>
             </div>

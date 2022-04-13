@@ -41,12 +41,8 @@ class SessionForm extends React.Component {
         if (this.props.errors) {
             return (
                 <ul className="form-errors">
-                    {this.props.errors.map((error, i) => (
-                        <li key={i} className="session-errors">
 
-                            {error}
-                        </li>
-                    ))}
+                    <li>{this.props.errors[19]}</li>
                 </ul>
             );
         } else {
@@ -151,24 +147,5 @@ class SessionForm extends React.Component {
     }
 }
 
-{/* <label>Email Address
-                            <br />
-                            <input
-                                type="text"
-                                value={this.state.email}
-                                onChange={this.handleInput('email')}
-                                id='email-input'
-                            />
-                        </label>
-                        <br />
-                        <label>Password
-                            <br />
-                            <input
-                                type="password"
-                                value={this.state.password}
-                                onChange={this.handleInput('password')}
-                                id='password-input'
-                            />
-                        </label> */}
 
 export default SessionForm;
