@@ -3,9 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Rating from '@mui/material/Rating'
 import RatingEditSubmitFormContainer from '../rating/rating_edit_submit_container'
-import { updateRating } from '../../util/rating_api_util';
 const ReviewIndexItem = props => {
-
+    debugger
     // const editRating = (e) => {
     //     props.openModal('edit')
     // }

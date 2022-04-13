@@ -2,7 +2,7 @@ import React from "react";
 import { FaSearch } from '@react-icons/all-files/fa/FaSearch'
 import {Redirect} from 'react-router-dom'
 import { useState } from "react";
-import { SearchIndexContainer } from './search_index_container'
+import { SearchIndexContainer } from '../components/search/search_index_container'
 
 
 

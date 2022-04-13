@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import { Redirect } from 'react-router-dom'
 import { FaLeaf } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
@@ -17,6 +17,8 @@ class OrderForm extends React.Component {
         carts.map((cart) =>{
             deleteCart(cart.id)
         }) 
+        .then(alert('Order Placed!')),
+        <Redirect to='/'/>
 
     }
 
@@ -34,11 +36,11 @@ class OrderForm extends React.Component {
                 <ul>
                     <li className='order-header'>How you'll pay</li>
                     <form className="place-order">
-                        <div className='radio-button'>
-                            <input type='radio'/><label><img width='50%'src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/25928-1-credit-card-visa-and-master-card-file.png" alt="" /></label>
+                        <div className='radio-button' >
+                            <input type='radio' name='payment'/><label><img width='50%'src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/25928-1-credit-card-visa-and-master-card-file.png" alt="" /></label>
                         </div>
-                        <div className='radio-button'>
-                            <input type="radio" /><label><img width='25%'src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/580b57fcd9996e24bc43c530.png" alt="" /></label>
+                        <div className='radio-button' >
+                            <input type="radio" name='payment' /><label><img width='25%'src="https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/580b57fcd9996e24bc43c530.png" alt="" /></label>
                         </div>
               
                     <div className='total-amount'>

@@ -14,7 +14,6 @@ import {fetchUsers} from '../../actions/user_actions'
 // import { giveRatingId } from "../../actions/modal_info_action";
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
         users: state.entities.users,
         currentUser: state.entities.users[state.session.id],
@@ -33,7 +32,7 @@ const mDTP = dispatch => {
         fetchUsers:(() => dispatch(fetchUsers())),
         fetchRating: (ratingId => dispatch(fetchRating(ratingId))),
         openModal: (form => dispatch(openModal(form))),
-        // giveRatingId: ratingId => dispatch(giveRatingId(ratingId))
+        giveRatingId: ratingId => dispatch(giveRatingId(ratingId))
     }
 }
 

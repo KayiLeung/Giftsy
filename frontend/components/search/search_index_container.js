@@ -4,8 +4,10 @@ import { fetchAllProducts, fetchProduct} from '../../actions/product_action'
 import SearchIndex from "./search_index";
 
 const mSTP = (state, ownProps) => {
+    let filteredProducts = Object.values(state.entities.products)
+        .filter(product => product.title.toLowerCase().includes(ownProps.location.search.slice(8).toLowerCase()))
     return {
-        filteredProducts: ownProps.location.state.stateName,
+            filteredProducts,
     }
 }
 

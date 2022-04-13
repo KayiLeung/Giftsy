@@ -21,12 +21,10 @@ class RatingIndex extends React.Component{
         
     
         if (!ratings || !users) return null;
-        debugger
         return (
 
             <div className='rating-index-container'>
                 {productRatings.map((rating, idx) => {
-                    debugger
                 return (
                     <div className='rating-index-details' key={idx}>
                         <p className='customer-fname'>{users[rating.buyer_id].fname}</p>
