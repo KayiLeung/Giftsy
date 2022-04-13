@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 
 
 const SearchIndex = ({ filteredProducts}) => {
-
     return (
         filteredProducts.length === 0 ? (
         

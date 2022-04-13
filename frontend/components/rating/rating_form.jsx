@@ -1,8 +1,6 @@
 import React from "react";
 import Rating from '@mui/material/Rating';
 
-
-//pass in product and users already
 class RatingForm extends React.Component {
     constructor(props) {
         super(props);
@@ -31,6 +29,7 @@ class RatingForm extends React.Component {
                     product_id: productId
                 })
                 this.props.action(rating, productId)
+                    .then(res => this.state.comment = '')
             } 
             
         }
@@ -72,7 +71,7 @@ class RatingForm extends React.Component {
                                 cols='70'
                                 rows='4'
                             />
-                        <button type="submit">submit</button>
+                            <input type="submit" className="rating-submit-button"/>
                         </form>
                     </div>
                 </div>

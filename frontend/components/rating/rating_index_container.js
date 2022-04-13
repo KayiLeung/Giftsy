@@ -15,7 +15,7 @@ import {fetchUsers} from '../../actions/user_actions'
 
 const mSTP = (state, ownProps) => {
     return {
-        allUsers: Object.values(state.entities.users),
+        users: state.entities.users,
         currentUser: state.entities.users[state.session.id],
         ratings: Object.values(state.entities.ratings),
 
@@ -32,7 +32,7 @@ const mDTP = dispatch => {
         fetchUsers:(() => dispatch(fetchUsers())),
         fetchRating: (ratingId => dispatch(fetchRating(ratingId))),
         openModal: (form => dispatch(openModal(form))),
-        // giveRatingId: ratingId => dispatch(giveRatingId(ratingId))
+        giveRatingId: ratingId => dispatch(giveRatingId(ratingId))
     }
 }
 

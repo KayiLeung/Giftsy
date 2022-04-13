@@ -34,9 +34,7 @@ $footerColor: white;
 
 //grid
 
-@mixin margin() {
-    
-}
+
 
 @mixin grid($cols, $mgn) {
     float: left;

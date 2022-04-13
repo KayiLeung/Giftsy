@@ -1,3 +1,56 @@
 // Place all the styles related to the Api::ratings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import '../variable.scss';
+.rating-content{
+    border:gray 5px solid;
+    border-radius: 15px;
+}
+
+.rating-submit-button{
+    background-color: black;
+    color: white;
+    font-family: $product-price;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 5pc;
+    display: inline-block;
+    &:hover{
+        background-color: gray;
+    }
+}
+
+
+////edit rating form
+
+.rating-form-wrapper{
+    border: 5px solid black;
+    padding: 10px;
+
+}
+
+.rating-edit-form-container{
+    label{
+        font-family: $product-price;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        display: inline-block;
+    }
+    textarea{
+        border:5px black solid;
+        border-radius: 15px;
+    }
+}
+
+.rating-edit-submit-button{
+    margin-top: 1%;
+    background-color: black;
+    color:white;
+    border-radius: 1pc;
+}

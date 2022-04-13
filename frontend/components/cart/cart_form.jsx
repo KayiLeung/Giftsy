@@ -3,7 +3,6 @@ import React, { Componet } from "react";
 class Cartform extends React.Component {
     constructor(props) {
         super(props)
-        console.log(this.props.product.price)
 
         this.state = {
             quantity: 1,
@@ -40,9 +39,6 @@ class Cartform extends React.Component {
                 })
                 this.props.createCart(cart)
                     .then(alert('Item added!'))
-                    debugger
-
-                
         }
     }
 
@@ -52,7 +48,6 @@ class Cartform extends React.Component {
 
     componentDidMount() {
         this.props.fetchAllCarts(this.props.currentUser)
-        // console.log(this.props.fetchAllCarts(this.props.currentUser))
     }
 
     update(field) {

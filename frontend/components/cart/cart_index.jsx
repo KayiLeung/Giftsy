@@ -46,7 +46,6 @@ class CartIndex extends React.Component {
                                             <ul>
                                                 <li id='cart-title'>{itemDetails.title}</li>
                                                 <div className='order-cart'>
-                                                {console.log(cartItem)}
                                                 <CartEditContainer
                                                     cart={cartItem}
                                                     />

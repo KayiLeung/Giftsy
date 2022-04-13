@@ -36,11 +36,8 @@ render() {
     const { rating } = this.props
     if (!rating) return null
     return (
-        <div>
-            <div>
-
-            </div>
-            <div className='rating-form-container'>
+        <div className='rating-form-wrapper'>
+            <div className='rating-edit-form-container'>
                 <div>
                     <label>Edit Reviews:</label>
                     <form onSubmit={this.handleSubmit}>
@@ -54,13 +51,13 @@ render() {
                         />
 
                         <textarea
-                            className='rating-content'
+                            className='rating-edit-content'
                             value={this.state.comment}
                             onChange={this.handleInput('comment')}
                             cols='70'
                             rows='4'
                         />
-                        <input type="submit" className="rating-submit-button" />
+                        <input type="submit" className="rating-edit-submit-button" />
                     </form>
                 </div>
             </div>
