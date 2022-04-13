@@ -13,13 +13,18 @@ class OrderForm extends React.Component {
 
     handleCheckOut(e){
         e.preventDefault();
+        
         const {carts, deleteCart} = this.props
-        carts.map((cart) =>{
-            deleteCart(cart.id)
-        }) 
-        .then(alert('Order Placed!')),
-        <Redirect to='/'/>
-
+        if (carts.length === 0) {
+            alert("Cart is empty")
+        } else {
+            carts.map((cart) =>{
+                deleteCart(cart.id)
+            }) 
+            .then(alert('Order Placed!')),
+            <Redirect to='/'/>
+        }
+            
     }
 
 
@@ -56,7 +61,7 @@ class OrderForm extends React.Component {
                         <li>Total({carts.length} item)</li>
                         <li>${total}</li>
                     </div>
-             
+
                     <button className='check-out' onClick={this.handleCheckOut}>Proceed to checkout</button>
                         
            
