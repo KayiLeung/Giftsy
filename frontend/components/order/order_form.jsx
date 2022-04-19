@@ -21,8 +21,8 @@ class OrderForm extends React.Component {
             carts.map((cart) =>{
                 deleteCart(cart.id)
             }) 
-            .then(alert('Order Placed!')),
-            <Redirect to='/'/>
+            .then(alert('Order Placed!'))
+            .then(<Redirect to='/'/>)
         }
             
     }
