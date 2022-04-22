@@ -6,14 +6,15 @@
     <%= csp_meta_tag %>
       <meta property="og:title" content="Giftsy" />
       <meta name="author" content="Ka Yi Leung" />
-     <meta property='og:image' content="<%= image_url('giftsy_main.png') %>"/>
+     <%# <meta property='og:image' content="<%= image_url('giftsy_main.png') %>"/> %>
+     <meta property='og:image' content="<%= image_url('gifsty500.gif') %>"/>
      <meta property="og:description"
        content="Giftsy is a full stack Etsy clone that displays various handmade gifts for sale. Users are able to search for gifts for different occasion."
      />
      <meta property="og:url"
        content="http://https//giftsy.herokuapp.com/"
      />
-    <%= favicon_link_tag asset_path('icons8-gift-100.png') %>
+    // <%= favicon_link_tag asset_path('icons8-gift-100.png') %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
