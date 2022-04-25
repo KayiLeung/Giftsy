@@ -39,7 +39,6 @@ class SessionForm extends React.Component {
 
     renderErrors() {
         if (this.props.errors) {
-            debugger
             return (
                 <ul className="form-errors">
 

@@ -13,11 +13,9 @@ class CircleCategoryIndex extends React.Component {
         
         const circleCats = {}
         categories.forEach((category => {
-            console.log(category.title, category.id)
             circleCats[category.title] = category.id
         }))
 
-        console.log(circleCats['Anniversary'])
         return (
             
             <div className='small-category-container'>
