@@ -213,8 +213,7 @@ product15 = Product.create!(
 )
 productpic15 = URI.open('https://giftsy-aa-seeds.s3.us-west-1.amazonaws.com/new-db/new-retirment1.jpg')
 product15.photo.attach(io: productpic15, filename: 'new-db/new-retirement1.jpg')
-# new-retirement1   
-# aws link is not working
+
 
 product16 = Product.create!(
     title: 'Funny Retirement Card - Fucking Quitter', 
