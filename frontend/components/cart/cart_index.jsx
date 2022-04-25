@@ -37,7 +37,8 @@ class CartIndex extends React.Component {
                         {
                             carts.map((cartItem, idx) => {
                                 let itemDetails = products[cartItem.product_id]
-                                let amount = (itemDetails.price * cartItem.quantity * 1.00)
+                                let price = itemDetails.price
+                                let amount = Math.round(price * cartItem.quantity * 100)/100
                                 total += amount
                                 return (
                                     <div className='cart-item-thumbnail' key={idx}>

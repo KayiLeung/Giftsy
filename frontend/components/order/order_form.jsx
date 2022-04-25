@@ -50,7 +50,7 @@ class OrderForm extends React.Component {
               
                     <div className='total-amount'>
                         <li>Item(s) total</li>
-                        <li>${total}</li>
+                        <li>${total.toFixed(2)}</li>
                     </div>
                     <div className='shipping'>
                         <li id='shipping'>Shipping</li>
@@ -59,7 +59,7 @@ class OrderForm extends React.Component {
                     <hr />
                     <div className='summary'>
                         <li>Total({carts.length} item)</li>
-                        <li>${total}</li>
+                                    <li>${total.toFixed(2)}</li>
                     </div>
 
                     <button className='check-out' onClick={this.handleCheckOut}>Proceed to checkout</button>
