@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { fetchAllProducts, fetchProduct} from '../../actions/product_action'
+import { fetchProduct} from '../../actions/product_action'
 import SearchIndex from "./search_index";
 
 const mSTP = (state, ownProps) => {

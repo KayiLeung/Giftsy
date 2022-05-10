@@ -16,18 +16,7 @@ class OrderForm extends React.Component {
 
     handleCheckOut(e){
         e.preventDefault();
-        console.log(`handlecheckout :${this.state.payment}`)
         const {carts, deleteCart} = this.props
-        // if (carts.length === 0) {
-        //     alert("Cart is empty")
-        // } else {
-        //     carts.map((cart) =>{
-        //         deleteCart(cart.id)
-        //     }) 
-        //     .then(alert('Order Placed!'))
-        //     .then(<Redirect to='/'/>)
-        // }
-
         if (carts.length === 0 ) {
             alert("Cart is empty")
         } else if (this.state.payment === null) {
