@@ -27,7 +27,7 @@ Giftsy is a full stack Etsy clone that displays various handmade gifts for sale.
 
 ### User shopping cart
 
-* Users may leave rating for an item and leave review if they are logged in.  User are able to edit or delete after reviews are made.
+* User can add items to cart and can update amount/delete items from cart 
 
 ### Leave Product's Rating
 * Users can leave/edit/delete products's rating and leave comment
